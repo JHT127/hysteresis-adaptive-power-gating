@@ -1,0 +1,113 @@
+# =============================================================================
+# File        : adaptive_pg.upf
+# Description : Unified Power Format (UPF) power intent for the Adaptive
+#               Multi-Level Power Gating Controller.
+#
+#               Power Domains:
+#                 PD_TOP     : Always-on domain (controller logic, FSM, monitors)
+#                 PD_ALU     : Power-gated domain (32-bit ALU functional block)
+#
+#               Power States (maps to power_mode[1:0] from FSM):
+#                 ACTIVE     : PD_ALU at VDD, full operation
+#                 LIGHT_SLEEP: PD_ALU at partial power (VGND = V1, state-retentive)
+#                 DEEP_SLEEP : PD_ALU power off (VGND = VDD, non-state-retentive)
+#
+#               Isolation strategy: ISO_AND cells on all outputs of PD_ALU
+#               Retention strategy: LIGHT SLEEP uses retention FFs (state saved)
+#
+# Reference   : p4 (Agarwal/IBM) — multiple sleep modes with different VGND
+#               p6 (Shiva 2025)  — power domain and isolation methodology
+# =============================================================================
+
+# --------------------------------------------------------------------------
+# Supply network definition
+# --------------------------------------------------------------------------
+create_supply_net VDD   -domain PD_TOP
+create_supply_net VSS   -domain PD_TOP
+create_supply_net VDD   -domain PD_ALU
+create_supply_net VGND  -domain PD_ALU   ;# Virtual ground rail (controlled)
+create_supply_net VSS   -domain PD_ALU
+
+# --------------------------------------------------------------------------
+# Supply ports
+# --------------------------------------------------------------------------
+create_supply_port VDD
+create_supply_port VSS
+connect_supply_net VDD  -ports VDD
+connect_supply_net VSS  -ports VSS
+
+# --------------------------------------------------------------------------
+# Power domain definitions
+# --------------------------------------------------------------------------
+# PD_TOP: Always-on (controller, monitors, predictor, FSM)
+create_power_domain PD_TOP \
+    -elements { u_act_mon u_hyst_pred u_pg_fsm u_sleep_ctrl } \
+    -supply { primary VDD VSS }
+
+# PD_ALU: Power-gated (ALU functional block + isolation cells)
+create_power_domain PD_ALU \
+    -elements { u_alu } \
+    -supply { primary VDD VGND }
+
+# --------------------------------------------------------------------------
+# Power switches (MTCMOS footer transistor model)
+# --------------------------------------------------------------------------
+# The sleep_controller drives footer_sel[1:0]:
+#   2'b11 => ACTIVE  (footer fully on, VGND = VSS)
+#   2'b01 => LIGHT_SLEEP (footer partial, VGND = V1 ~150mV)
+#   2'b00 => DEEP_SLEEP  (footer off,    VGND = VDD)
+create_power_switch MTCMOS_FOOTER \
+    -domain PD_ALU \
+    -output_supply_port  { vgnd_out VGND } \
+    -input_supply_port   { vss_in   VSS  } \
+    -control_port        { sleep_n  sleep_n } \
+    -on_state            { active  sleep_n  {} } \
+    -off_state           { off    {!sleep_n} }
+
+# --------------------------------------------------------------------------
+# Isolation cells: AND-type on all PD_ALU outputs
+# Control: iso_en from power_state_fsm
+# When iso_en=1 (domain sleeping), outputs clamped to 0
+# --------------------------------------------------------------------------
+set_isolation ISO_ALU_OUT \
+    -domain PD_ALU \
+    -applies_to outputs \
+    -clamp_value 0 \
+    -isolation_signal iso_en \
+    -isolation_sense  high \
+    -location parent
+
+set_isolation_control ISO_ALU_OUT \
+    -domain PD_ALU \
+    -isolation_signal iso_en \
+    -isolation_sense  high
+
+# --------------------------------------------------------------------------
+# Retention registers: LIGHT SLEEP is state-retentive
+# Deep Sleep does NOT retain state (non-retention)
+# --------------------------------------------------------------------------
+set_retention RET_ALU \
+    -domain PD_ALU \
+    -retention_power_net VDD \
+    -retention_ground_net VSS \
+    -save_signal   { iso_en posedge } \
+    -restore_signal { wakeup_done posedge }
+
+# --------------------------------------------------------------------------
+# Power state declarations (maps to power_mode[1:0])
+# --------------------------------------------------------------------------
+add_power_state PD_ALU \
+    -state ACTIVE      { -supply_expr { primary == {VDD, VSS}    } } \
+    -state LIGHT_SLEEP { -supply_expr { primary == {VDD, partial} } \
+                         -logic_expr  { iso_en == 1 && sleep_n == 0 } } \
+    -state DEEP_SLEEP  { -supply_expr { primary == {VDD, VDD}    } \
+                         -logic_expr  { iso_en == 1 && sleep_n == 0 } }
+
+# --------------------------------------------------------------------------
+# Timing constraints for power state transitions
+# These inform DC/ICC about wake-up latency (from p4 Agarwal values)
+# --------------------------------------------------------------------------
+# Light Sleep wake-up: 3 clock cycles at 100 MHz = 30 ns
+# Deep  Sleep wake-up: 8 clock cycles at 100 MHz = 80 ns
+set_max_transition 30  [get_ports result]
+set_max_transition 30  [get_ports valid]
