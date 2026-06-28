@@ -51,7 +51,7 @@ Top level ports: 118
 Total ports in all modules: 364
 Total nets in all modules: 1544
 Total instances in all modules: 1164
-Elapsed = 00:00:00.02, CPU = 00:00:00.01
+Elapsed = 00:00:00.02, CPU = 00:00:00.02
 1
 link_design  $DESIGN
 Using libraries: adaptive_pg_top_icc2.dlib 1p9m_tech saed14lvt_frame_timing_ccs
@@ -92,7 +92,7 @@ connect_pg_net -automatic
 Report : Power/Ground Connection Summary
 Design : adaptive_pg_top
 Version: U-2022.12-SP5
-Date   : Sun Jun 28 18:39:06 2026
+Date   : Sun Jun 28 18:41:38 2026
 ****************************************
 P/G net name                  P/G pin count(previous/current)
 --------------------------------------------------------------------------------
@@ -101,45 +101,62 @@ Ground net VSS                0/1156
 --------------------------------------------------------------------------------
 Information: connections of 2312 power/ground pin(s) are created or changed.
 1
-place_opt
-Information: Starting 'place_opt' (FLW-8000)
-Information: Time: 2026-06-28 18:39:06 / Session: 0.00 hr / Command: 0.00 hr / Memory: 402 MB (FLW-8100)
-Information: The command 'place_opt' cleared the undo history. (UNDO-016)
-INFO: place_opt is running in balanced flow mode
-INFO: Total Power Aware Optimization Enabled (Dynamic + Leakage)
+create_placement
+Information: The command 'create_placement' cleared the undo history. (UNDO-016)
+Information: Starting 'create_placement' (FLW-8000)
+Information: Time: 2026-06-28 18:41:38 / Session: 0.00 hr / Command: 0.00 hr / Memory: 402 MB (FLW-8100)
+
+Create Placement Options:
+Effort:                        high_effort         
+Timing Driven:                 false               
+Buffering Aware Timing Driven: false               
+Seed locs:                     false               
+Incremental:                   false               
+Congestion:                    false               
+Fix Macros:                    true                
+Place Macros:                  false               
+Channel Size Macros:           false               
+
+
 Warning: Corner default:  0 process number, 1 process label, 0 voltage, and 0 temperature mismatches. (PVT-030)
 Warning: 1156 cells affected for early, 1156 for late. (PVT-031)
 Warning: 0 port driving_cells affected for early, 0 for late. (PVT-034)
-INFO: disable CRPR-based timing. 
+Corner Scaling is off, multiplier is 1.000000
 Warning: no valid parasitic for default corner(LATE) (NEX-018)
-Warning: no valid parasitic for default corner(EARLY) (NEX-018)
-Warning: no valid parasitic for (all corners) corner((both specs)) (NEX-018)
-Error: Scenario Manager creation failed. Optimization aborted. (OPT-041)
-INFO: Running power improvement flow (1)
 Warning: no valid parasitic for default corner(LATE) (NEX-018)
-Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
-Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
 Warning: no valid parasitic for default corner(LATE) (NEX-018)
-Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
-Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
 Warning: no valid parasitic for default corner(LATE) (NEX-018)
-Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
-Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
-Warning: no valid parasitic for default corner(LATE) (NEX-018)
-Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
-Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
-Warning: no valid parasitic for default corner(LATE) (NEX-018)
-Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
-Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
-Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
-Warning: Skipping clock gate latency estimation because design setup is incomplete/invalid. (OPT-921)
+ORB: timingScenario default timingCorner default
+INFO: Using corner default for worst leakage corner
+Using default layer M4
+new cutoff lpd: 1.98225e-06
+maxCornerId = 0
+ORB: Nominal = 0.0053281  Design MT = 0.400000  Target = 0.0291095 (5.463 nominal)  MaxRC = 0.020085
+ORB: Fast Target = 0.009550 ( 1.792 nominal )
+ORB: stageDelay=0.019338, stageLength=1609839
+nplLib: default vr hor dist = 322
+nplLib: default vr ver dist = 322
+nplLib: default vr buf size = 1
+nplLib: default vr buf size = 1
+Info: embedded eLpp will optimize for scenario default
+Information: Activity propagation will be performed for scenario default.
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FSDPQM4_V2LPY2_1' and will be excluded from sequential mapping. (SQM-1061)
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FSDPQM4_V2Y2_1' and will be excluded from sequential mapping. (SQM-1061)
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FSDPSYNRBQM4_V2LPY2_1' and will be excluded from sequential mapping. (SQM-1061)
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FSDPSYNRBQM4_V2Y2_1' and will be excluded from sequential mapping. (SQM-1061)
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_SRRDPQ4_1' and will be excluded from sequential mapping. (SQM-1061)
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_SRRDPQ4_2' and will be excluded from sequential mapping. (SQM-1061)
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FDNRBSBQ_V2_0P5' and will be excluded from sequential mapping. (SQM-1061)
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FDNRBSBQ_V2_1' and will be excluded from sequential mapping. (SQM-1061)
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FDNRBSBQ_V2_2' and will be excluded from sequential mapping. (SQM-1061)
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FDNRBSBQ_V2_4' and will be excluded from sequential mapping. (SQM-1061)
+Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
+Information: Timer-derived activity data is cached on scenario default (POW-052)
+Information: Running switching activity propagation in scalar mode!
 
-Information: Starting place_opt / initial_place (FLW-8000)
-Information: Time: 2026-06-28 18:39:07 / Session: 0.00 hr / Command: 0.00 hr / Memory: 541 MB (FLW-8100)
-
-
-Information: Starting place_opt / initial_place / Initial Placement (FLW-8000)
-Information: Time: 2026-06-28 18:39:07 / Session: 0.00 hr / Command: 0.00 hr / Memory: 541 MB (FLW-8100)
+ **** Information : No. of simulation cycles = 6 ****
+Info: e-eLpp used with low effort
+Start transferring placement data.
 Warning: no valid parasitic for default corner(LATE) (NEX-018)
 Warning: no valid parasitic for default corner(EARLY) (NEX-018)
 Warning: no valid parasitic for (all corners) corner((both specs)) (NEX-018)
@@ -160,19 +177,108 @@ Clock Reconvergence Pessimism Removal:     disabled
 Advanced Receiver Model:                   disabled
 ML Acceleration:                           off
 ************************************************************
-Information: Ending place_opt / initial_place / Initial Placement (FLW-8001)
-Information: Time: 2026-06-28 18:39:07 / Session: 0.00 hr / Command: 0.00 hr / Memory: 541 MB (FLW-8100)
+****** eLpp weights (no caps)
+Number of nets: 1285, of which 1282 non-clock nets
+Number of nets with 0 toggle rate: 8
+Max toggle rate = 0.4, average toggle rate = 0.0196564
+Max non-clock toggle rate = 0.0713379
+eLpp weight range = (0, 20.3496)
+*** 10 nets are filtered out
+****** Net weight manager: report ******
+Weights included: eLpp  PostEffort  
+Number of nets with non-default weights: 1285
+Amt power = 0.1
+Non-default weight range: (0.9, 6.93496)
+Information: Automatic repeater spreading is enabled.
+Restructuring in 9 hierarchies
+CGRW: importing permutable pins & pairs, size 8 and above
+Completed transferring placement data.
+Running placement using 1 thread(s)
+Information: Enhanced Auto Density Control is used. (PLACE-098)
+Information: Enhanced auto density configuration is 13179.
+Information: Automatic density control has selected the following settings: max_density 0.60, congestion_driven_max_util 0.87. (PLACE-027)
+Information: HFW control 'on' invoked.
+Creating placement from scratch.
+coarse place 0% done.
+coarse place 17% done.
+coarse place 33% done.
+coarse place 50% done.
+coarse place 67% done.
+coarse place 83% done.
+coarse place 100% done.
+Information: Coarse placer weighted wire length estimate = 8.24764e+07
+Transferred 0 BTSR attributes to NDM.
+Information: Estimating clock gate latencies after non timing-driven (non latency-aware) placement.
+Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Warning: Skipping clock gate latency estimation because design setup is incomplete/invalid. (OPT-921)
+Start DFT optimization
+START_CMD: optimize_dft        CPU:     21 s ( 0.01 hr) ELAPSE:     15 s ( 0.00 hr) MEM-PEAK:   579 Mb Sun Jun 28 18:41:43 2026
+DFT optimization is skipped due to no scan chains were found
+END_CMD: optimize_dft          CPU:     21 s ( 0.01 hr) ELAPSE:     15 s ( 0.00 hr) MEM-PEAK:   579 Mb Sun Jun 28 18:41:43 2026
+End DFT optimization
+Start TieCellOpt
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: no valid parasitic for default corner(EARLY) (NEX-018)
+Warning: no valid parasitic for (all corners) corner((both specs)) (NEX-018)
+End TieCellOpt
+Information: Ending 'create_placement' (FLW-8001)
+Information: Time: 2026-06-28 18:41:43 / Session: 0.00 hr / Command: 0.00 hr / Memory: 579 MB (FLW-8100)
+1
+report_timing  -max_paths 5          > $RPT_DIR/timing_place.rpt
+catch { report_power   -analysis_effort high > $RPT_DIR/power_place.rpt }
+1
+clock_opt
+Information: Starting 'clock_opt' (FLW-8000)
+Information: Time: 2026-06-28 18:41:43 / Session: 0.00 hr / Command: 0.00 hr / Memory: 579 MB (FLW-8100)
+INFO: clock_opt is running in balanced flow mode.
+INFO: Total Power Aware Optimization Enabled (Dynamic + Leakage)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: no valid parasitic for default corner(EARLY) (NEX-018)
+Warning: no valid parasitic for (all corners) corner((both specs)) (NEX-018)
+Error: Scenario Manager creation failed. Optimization aborted. (OPT-041)
+TEST: runCore upFront-init
+TEST: runCore upFront-end
+INFO: run stage build_clock (init -> end)
+TEST: runCore bldClkInit-init
+
+
+Information: Starting clock_opt / build_clock (FLW-8000)
+Information: Time: 2026-06-28 18:41:43 / Session: 0.00 hr / Command: 0.00 hr / Memory: 579 MB (FLW-8100)
+
+Information: Starting clock_opt / build_clock / Trial CTS (FLW-8000)
+Information: Time: 2026-06-28 18:41:43 / Session: 0.00 hr / Command: 0.00 hr / Memory: 579 MB (FLW-8100)
+Information: Ending clock_opt / build_clock / Trial CTS (FLW-8001)
+Information: Time: 2026-06-28 18:41:43 / Session: 0.00 hr / Command: 0.00 hr / Memory: 579 MB (FLW-8100)
+TEST: runCore final-init
+TEST: runCore final-end
 Information: Running auto PG connection. (NDM-099)
-Warning: Incomplete place_opt / initial_place (FLW-8004)
-Information: Ending 'place_opt' (FLW-8001)
-Information: Time: 2026-06-28 18:39:07 / Session: 0.00 hr / Command: 0.00 hr / Memory: 541 MB (FLW-8100)
+Warning: Incomplete clock_opt / build_clock (FLW-8004)
+Information: Ending 'clock_opt' (FLW-8001)
+Information: Time: 2026-06-28 18:41:43 / Session: 0.00 hr / Command: 0.00 hr / Memory: 579 MB (FLW-8100)
 Error: 0
         Use error_info for more info. (CMD-013)
 Information: script '/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl'
-                stopped at line 33 due to error. (CMD-081)
+                stopped at line 37 due to error. (CMD-081)
 Extended error info:
 0
     while executing
-"place_opt"
-    (file "/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl" line 33)
+"clock_opt"
+    (file "/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl" line 37)
  -- End Extended Error Info
+Information: 29 out of 39 SQM-1061 messages were not printed due to limit 10  (MSG-3913)

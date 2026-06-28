@@ -15,7 +15,7 @@ Report : timing
         -report_by design
 Design : adaptive_pg_top
 Version: U-2022.12-SP5
-Date   : Sun Jun 28 18:32:44 2026
+Date   : Sun Jun 28 18:41:43 2026
 ****************************************
 
   Startpoint: u_act_mon/clk_gate_idle_count_reg/latch (negative level-sensitive latch clocked by clk)
