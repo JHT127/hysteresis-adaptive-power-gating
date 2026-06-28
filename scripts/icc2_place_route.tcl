@@ -60,7 +60,7 @@ report_timing  -max_paths 5          > $RPT_DIR/timing_cts.rpt
 
 route_opt
 report_timing  -max_paths 10         > $RPT_DIR/timing_postroute.rpt
-report_area                          > $RPT_DIR/area_postroute.rpt
+report_utilization                   > $RPT_DIR/area_postroute.rpt
 catch { report_power   -analysis_effort high > $RPT_DIR/power_postroute.rpt }
 
 write_verilog  $OUT_DIR/${DESIGN}_postroute.v
