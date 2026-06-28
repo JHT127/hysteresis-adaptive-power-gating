@@ -118,7 +118,7 @@ connect_pg_net -automatic
 Report : Power/Ground Connection Summary
 Design : adaptive_pg_top
 Version: U-2022.12-SP5
-Date   : Sun Jun 28 19:55:50 2026
+Date   : Sun Jun 28 20:11:29 2026
 ****************************************
 P/G net name                  P/G pin count(previous/current)
 --------------------------------------------------------------------------------
@@ -129,7 +129,7 @@ Information: connections of 2312 power/ground pin(s) are created or changed.
 1
 place_opt
 Information: Starting 'place_opt' (FLW-8000)
-Information: Time: 2026-06-28 19:55:50 / Session: 0.00 hr / Command: 0.00 hr / Memory: 407 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:29 / Session: 0.00 hr / Command: 0.00 hr / Memory: 407 MB (FLW-8100)
 Information: The command 'place_opt' cleared the undo history. (UNDO-016)
 INFO: place_opt is running in balanced flow mode
 INFO: Total Power Aware Optimization Enabled (Dynamic + Leakage)
@@ -208,11 +208,11 @@ Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
 
 Information: Starting place_opt / initial_place (FLW-8000)
-Information: Time: 2026-06-28 19:55:51 / Session: 0.00 hr / Command: 0.00 hr / Memory: 616 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:31 / Session: 0.00 hr / Command: 0.00 hr / Memory: 616 MB (FLW-8100)
 
 
 Information: Starting place_opt / initial_place / Initial Placement (FLW-8000)
-Information: Time: 2026-06-28 19:55:51 / Session: 0.00 hr / Command: 0.00 hr / Memory: 616 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:31 / Session: 0.00 hr / Command: 0.00 hr / Memory: 616 MB (FLW-8100)
 Information: The RC mode used is VR for design 'adaptive_pg_top'. (NEX-022)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
 Information: Net estimation statistics: timing graph nets = 1285, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
@@ -531,22 +531,22 @@ Information: Estimating clock gate latencies for scenario 'default'. (OPT-909)
 Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-START_CMD: optimize_dft        CPU:     25 s ( 0.01 hr) ELAPSE:     20 s ( 0.01 hr) MEM-PEAK:   660 Mb Sun Jun 28 19:56:00 2026
-END_CMD: optimize_dft          CPU:     25 s ( 0.01 hr) ELAPSE:     20 s ( 0.01 hr) MEM-PEAK:   660 Mb Sun Jun 28 19:56:00 2026
+START_CMD: optimize_dft        CPU:     25 s ( 0.01 hr) ELAPSE:     20 s ( 0.01 hr) MEM-PEAK:   660 Mb Sun Jun 28 20:11:39 2026
+END_CMD: optimize_dft          CPU:     25 s ( 0.01 hr) ELAPSE:     20 s ( 0.01 hr) MEM-PEAK:   660 Mb Sun Jun 28 20:11:39 2026
 ----------------------------------------------------------------
 Information: Ending place_opt / initial_place / Initial Placement (FLW-8001)
-Information: Time: 2026-06-28 19:56:00 / Session: 0.01 hr / Command: 0.00 hr / Memory: 660 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:39 / Session: 0.01 hr / Command: 0.00 hr / Memory: 660 MB (FLW-8100)
 
 
 Information: Ending place_opt / initial_place (FLW-8001)
-Information: Time: 2026-06-28 19:56:00 / Session: 0.01 hr / Command: 0.00 hr / Memory: 660 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:39 / Session: 0.01 hr / Command: 0.00 hr / Memory: 660 MB (FLW-8100)
 
 Information: Starting place_opt / initial_drc (FLW-8000)
-Information: Time: 2026-06-28 19:56:00 / Session: 0.01 hr / Command: 0.00 hr / Memory: 660 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:39 / Session: 0.01 hr / Command: 0.00 hr / Memory: 660 MB (FLW-8100)
 
 
 Information: Starting place_opt / initial_drc / High Fanout Synthesis (FLW-8000)
-Information: Time: 2026-06-28 19:56:00 / Session: 0.01 hr / Command: 0.00 hr / Memory: 660 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:39 / Session: 0.01 hr / Command: 0.00 hr / Memory: 660 MB (FLW-8100)
 Information: The stitching and editing of coupling caps is turned OFF for design 'adaptive_pg_top_icc2.dlib:adaptive_pg_top.design'. (TIM-125)
 Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
@@ -577,10 +577,10 @@ Warning: Library cell saed14lvt_frame_timing_ccs:SAEDLVT14_ISOFSDPQ_PECO_8.frame
 Warning: Library cell saed14lvt_frame_timing_ccs:SAEDLVT14_DCAP_PV1ECO_12.frame is missing supply pins. Its power structure cannot be determined. (LGL-050)
 Total 0.0500 seconds to build cellmap data
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x99372fc0): 144
+INFO: number of GridCells (0x99212cc0): 144
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x99372fc0): 144
-Total 0.0100 seconds to load 1156 cell instances into cellmap, 1156 cells are off site row
+INFO: number of GridCells (0x99212cc0): 144
+Total 0.0200 seconds to load 1156 cell instances into cellmap, 1156 cells are off site row
 Moveable cells: 1156; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6092, cell height 0.6000, cell area 0.3655 for total 1156 placed and application fixed cells
 Information: Current block utilization is '0.46990', effective utilization is '0.46993'. (OPT-055)
@@ -807,7 +807,7 @@ Number of Drivers Sized: 5 [100.00%]
 WINFO: 1263 None; 0 M4; 0 Total
 Zbuf-RUNTIME (Hr:Min:Sec)  CPU 0 hr : 0 min : 1.00 sec ELAPSE 0 hr : 0 min : 1.00 sec
 Zbuf-RUNTIME         (Min) CPU 0 min ELAPSE 0 min
-ZBuf-MEM(max-mem) total 732856 K / inuse 715344 K
+ZBuf-MEM(max-mem) total 732848 K / inuse 715336 K
 Information: The net parasitics of block adaptive_pg_top are cleared. (TIM-123)
 Information: The stitching and editing of coupling caps is turned OFF for design 'adaptive_pg_top_icc2.dlib:adaptive_pg_top.design'. (TIM-125)
 Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
@@ -825,7 +825,7 @@ Information: Net estimation statistics: timing graph nets = 1263, routed nets = 
      ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
       TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
     --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
-      0:00:26     0.000     0.000   419.891     0.000     0.000        23       147         0     0.000       715 
+      0:00:25     0.000     0.000   419.891     0.000     0.000        23       147         0     0.000       715 
 
 
     Scenario default  WNS = 0.000000, TNS = 0.000000, NVP = 0
@@ -833,24 +833,24 @@ Information: Net estimation statistics: timing graph nets = 1263, routed nets = 
      ELAPSED  WORST NEG TOTAL NEG              MAX       MAX     BUFFER    INVERTER   LVTH      LVTH      PEAK   
       TIME      SLACK     SLACK     AREA    TRAN COST CAP COST    COUNT     COUNT     COUNT    PERCENT   MEMORY  
     --------- --------- --------- --------- --------- --------- --------- --------- --------- --------- ---------
-      0:00:26     0.000     0.000   419.891     0.000     0.000        23       147         0     0.000       715 
+      0:00:25     0.000     0.000   419.891     0.000     0.000        23       147         0     0.000       715 
 
 Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
 Information: Ending place_opt / initial_drc / High Fanout Synthesis (FLW-8001)
-Information: Time: 2026-06-28 19:56:06 / Session: 0.01 hr / Command: 0.00 hr / Memory: 716 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:45 / Session: 0.01 hr / Command: 0.00 hr / Memory: 716 MB (FLW-8100)
 
 
 Information: Ending place_opt / initial_drc (FLW-8001)
-Information: Time: 2026-06-28 19:56:06 / Session: 0.01 hr / Command: 0.00 hr / Memory: 716 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:45 / Session: 0.01 hr / Command: 0.00 hr / Memory: 716 MB (FLW-8100)
 
 Information: Starting place_opt / initial_opto (FLW-8000)
-Information: Time: 2026-06-28 19:56:06 / Session: 0.01 hr / Command: 0.00 hr / Memory: 716 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:45 / Session: 0.01 hr / Command: 0.00 hr / Memory: 716 MB (FLW-8100)
 
 
 Information: Starting place_opt / initial_opto / Optimization (FLW-8000)
-Information: Time: 2026-06-28 19:56:06 / Session: 0.01 hr / Command: 0.00 hr / Memory: 716 MB (FLW-8100)
+Information: Time: 2026-06-28 20:11:45 / Session: 0.01 hr / Command: 0.00 hr / Memory: 716 MB (FLW-8100)
 
 Information: The net parasitics of block adaptive_pg_top are cleared. (TIM-123)
 Information: The stitching and editing of coupling caps is turned OFF for design 'adaptive_pg_top_icc2.dlib:adaptive_pg_top.design'. (TIM-125)
@@ -968,9 +968,9 @@ Warning: Library cell saed14lvt_frame_timing_ccs:SAEDLVT14_ISOFSDPQ_PECO_8.frame
 Warning: Library cell saed14lvt_frame_timing_ccs:SAEDLVT14_DCAP_PV1ECO_12.frame is missing supply pins. Its power structure cannot be determined. (LGL-050)
 Total 0.0100 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x9e177110): 361
+INFO: number of GridCells (0x9d28d110): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x9e177110): 361
+INFO: number of GridCells (0x9d28d110): 361
 Total 0.0200 seconds to load 1134 cell instances into cellmap, 1122 cells are off site row
 Moveable cells: 1134; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6171, cell height 0.6000, cell area 0.3703 for total 1134 placed and application fixed cells
@@ -1569,7 +1569,7 @@ Initial. Via VIA9RDL count = 0
 Initial. completed.
 
 Start GR phase 1
-Sun Jun 28 19:56:14 2026
+Sun Jun 28 20:11:53 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:01 
@@ -1647,10 +1647,10 @@ Updating congestion ...
 INFO: Derive row count 9 from GR congestion map (38/4)
 INFO: Derive col count 9 from GR congestion map (38/4)
 Convert timing mode ...
-Place-opt optimization Phase 19 Iter  1         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       844
-Place-opt optimization Phase 19 Iter  2         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       844
-Place-opt optimization Phase 19 Iter  3         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       844
-Place-opt optimization Phase 19 Iter  4         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       844
+Place-opt optimization Phase 19 Iter  1         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       843
+Place-opt optimization Phase 19 Iter  2         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       843
+Place-opt optimization Phase 19 Iter  3         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       843
+Place-opt optimization Phase 19 Iter  4         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       843
 Number of Site types in the design = 1
 INFO: Skipping activation of hold scenarios prior to CUS.
 Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
@@ -1799,25 +1799,25 @@ Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
 INFO: Skipping deactivation of hold scenarios after CUS.
 Number of Site types in the design = 1
-Place-opt optimization Phase 19 Iter 13         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       903
-Place-opt optimization Phase 19 Iter 14         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       903
-Place-opt optimization Phase 19 Iter 15         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       903
-Place-opt optimization Phase 19 Iter 16         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       903
-Place-opt optimization Phase 19 Iter 17         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       903
-Place-opt optimization Phase 19 Iter 18         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       903
+Place-opt optimization Phase 19 Iter 13         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       902
+Place-opt optimization Phase 19 Iter 14         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       902
+Place-opt optimization Phase 19 Iter 15         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       902
+Place-opt optimization Phase 19 Iter 16         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       902
+Place-opt optimization Phase 19 Iter 17         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       902
+Place-opt optimization Phase 19 Iter 18         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       902
 
-Place-opt optimization Phase 20 Iter  1         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       903
+Place-opt optimization Phase 20 Iter  1         0.00        0.00      0.00         0        420.47   152684.27        1134              0.01       902
 
 Disable clock slack update for ideal clocks
-Place-opt optimization Phase 21 Iter  1         0.00        0.00      0.00         0        414.52   149662.61        1115              0.01       903
+Place-opt optimization Phase 21 Iter  1         0.00        0.00      0.00         0        414.52   149662.61        1115              0.01       902
 INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
 
-Place-opt optimization Phase 22 Iter  1         0.00        0.00      0.00         0        414.47   149558.92        1115              0.01       903
+Place-opt optimization Phase 22 Iter  1         0.00        0.00      0.00         0        414.47   149558.92        1115              0.01       902
 Warning: Restoring scoped app option 'xform.commit_density_threshold' to original value 'unset' (from current value '1', which is different from the scoped value '1.0'). (FLW-2892)
 Warning: Restoring scoped app option 'opt.internal.levfilter_arec_slack' to original value 'unset' (from current value '-1', which is different from the scoped value '-1.0'). (FLW-2892)
 
 Place-opt optimization summary            SETUP-COST    R2R-COST HOLD-COST LDRC-COST          AREA     LEAKAGE     INSTCNT            ELAPSE       MEM
-Place-opt optimization Phase 23 Iter  1         0.00        0.00      0.00         0        413.01   149145.17        1100              0.01       903
+Place-opt optimization Phase 23 Iter  1         0.00        0.00      0.00         0        413.01   149145.17        1100              0.01       902
 INFO: New Levelizer turned on
 
 Disable clock slack update for ideal clocks
@@ -1827,30 +1827,30 @@ Information: Timer-derived activity data is cached on scenario default (POW-052)
 Information: Running switching activity propagation in scalar mode!
 
  **** Information : No. of simulation cycles = 6 ****
-Place-opt optimization Phase 24 Iter  1         0.00        0.00      0.00         0        412.70   148983.34        1100              0.01       903
+Place-opt optimization Phase 24 Iter  1         0.00        0.00      0.00         0        412.70   148983.34        1100              0.01       902
 INFO: cellmap features:  adv-rules=(N), pdc=(N), clock-rules=(Y)
 
-Place-opt optimization Phase 25 Iter  1         0.00        0.00      0.00         0        413.99   151291.81        1100              0.01       903
+Place-opt optimization Phase 25 Iter  1         0.00        0.00      0.00         0        413.99   151291.81        1100              0.01       902
 INFO: New Levelizer turned on
 
-Place-opt optimization Phase 26 Iter  1         0.00        0.00      0.00         0        413.99   151079.70        1100              0.01       903
+Place-opt optimization Phase 26 Iter  1         0.00        0.00      0.00         0        413.99   151079.70        1100              0.01       902
 
 
 Information: Ending place_opt / initial_opto / Optimization (FLW-8001)
-Information: Time: 2026-06-28 19:56:27 / Session: 0.01 hr / Command: 0.01 hr / Memory: 903 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:06 / Session: 0.01 hr / Command: 0.01 hr / Memory: 903 MB (FLW-8100)
 
-Place-opt optimization Phase 29 Iter  1         0.00        0.00      0.00         0        413.99   151079.70        1100              0.01       903
+Place-opt optimization Phase 29 Iter  1         0.00        0.00      0.00         0        413.99   151079.70        1100              0.01       902
 
 Information: Ending place_opt / initial_opto (FLW-8001)
-Information: Time: 2026-06-28 19:56:27 / Session: 0.01 hr / Command: 0.01 hr / Memory: 903 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:06 / Session: 0.01 hr / Command: 0.01 hr / Memory: 903 MB (FLW-8100)
 
 Information: Starting place_opt / final_place (FLW-8000)
-Information: Time: 2026-06-28 19:56:27 / Session: 0.01 hr / Command: 0.01 hr / Memory: 903 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:06 / Session: 0.01 hr / Command: 0.01 hr / Memory: 903 MB (FLW-8100)
 
 
 Information: Starting place_opt / final_place / Timing and Congestion Driven Placement with Legalization (FLW-8000)
-Information: Time: 2026-06-28 19:56:27 / Session: 0.01 hr / Command: 0.01 hr / Memory: 903 MB (FLW-8100)
-Place-opt optimization Phase 33 Iter  1         0.00        0.00      0.00         0        413.99   151079.70        1100              0.01       903
+Information: Time: 2026-06-28 20:12:06 / Session: 0.01 hr / Command: 0.01 hr / Memory: 903 MB (FLW-8100)
+Place-opt optimization Phase 33 Iter  1         0.00        0.00      0.00         0        413.99   151079.70        1100              0.01       902
 Running final (timing-driven) placement step.
 ----------------------------------------------------------------
 Running congestion-aware direct-timing-driven placement
@@ -2333,7 +2333,7 @@ Initial. Via VIA9RDL count = 0
 Initial. completed.
 
 Start GR phase 1
-Sun Jun 28 19:56:28 2026
+Sun Jun 28 20:12:07 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:01 
@@ -2641,11 +2641,11 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0100 seconds to build cellmap data
+Total 0.0200 seconds to build cellmap data
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x9daafec0): 144
+INFO: number of GridCells (0xa5dcdec0): 144
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x9daafec0): 144
+INFO: number of GridCells (0xa5dcdec0): 144
 Total 0.0100 seconds to load 1100 cell instances into cellmap, 1100 cells are off site row
 Moveable cells: 1100; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6273, cell height 0.6000, cell area 0.3764 for total 1100 placed and application fixed cells
@@ -2856,14 +2856,14 @@ Information: The RC mode used is VR for design 'adaptive_pg_top'. (NEX-022)
 Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
 Information: Net estimation statistics: timing graph nets = 1229, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 1229, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
 Information: Ending place_opt / final_place / Timing and Congestion Driven Placement with Legalization (FLW-8001)
-Information: Time: 2026-06-28 19:56:33 / Session: 0.01 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:12 / Session: 0.01 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
 
 
 Information: Ending place_opt / final_place (FLW-8001)
-Information: Time: 2026-06-28 19:56:33 / Session: 0.01 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:12 / Session: 0.01 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
 
 Information: Starting place_opt / final_opto (FLW-8000)
-Information: Time: 2026-06-28 19:56:33 / Session: 0.01 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:12 / Session: 0.01 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
 
 Place-opt optimization Phase 37 Iter  1         0.00        0.00      0.00         0        413.99   151079.70        1100              0.01       967
 Information: The net parasitics of block adaptive_pg_top are cleared. (TIM-123)
@@ -2893,7 +2893,7 @@ Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
 
 Information: Starting place_opt / final_opto / Optimization (1) (FLW-8000)
-Information: Time: 2026-06-28 19:56:34 / Session: 0.02 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:13 / Session: 0.01 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
 
 Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
 Information: The following app options are used in cellmap
@@ -2912,9 +2912,9 @@ Information: The following app options are used in cellmap
         cts.placement.cell_spacing_rule_style : maximum
 Total 0.0200 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x9948bb90): 361
+INFO: number of GridCells (0x95cabb90): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x9948bb90): 361
+INFO: number of GridCells (0x95cabb90): 361
 Total 0.0100 seconds to load 1100 cell instances into cellmap
 Moveable cells: 1100; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6273, cell height 0.6000, cell area 0.3764 for total 1100 placed and application fixed cells
@@ -2936,9 +2936,9 @@ Information: The following app options are used in cellmap
         cts.placement.cell_spacing_rule_style : maximum
 Total 0.0100 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x9948a0a8): 361
+INFO: number of GridCells (0x95caa0a8): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x9948a0a8): 361
+INFO: number of GridCells (0x95caa0a8): 361
 Total 0.0200 seconds to load 1100 cell instances into cellmap
 Moveable cells: 1100; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6273, cell height 0.6000, cell area 0.3764 for total 1100 placed and application fixed cells
@@ -3193,10 +3193,10 @@ Place-opt optimization Phase 51 Iter  1         0.00        0.00      0.00      
 Place-opt optimization Phase 52 Iter  1         0.00        0.00      0.00         0        413.99   145288.11        1100              0.02       967
 
 Information: Ending place_opt / final_opto / Optimization (1) (FLW-8001)
-Information: Time: 2026-06-28 19:56:43 / Session: 0.02 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:22 / Session: 0.02 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
 
 Information: Starting place_opt / final_opto / Legalization (1) (FLW-8000)
-Information: Time: 2026-06-28 19:56:43 / Session: 0.02 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:22 / Session: 0.02 hr / Command: 0.01 hr / Memory: 967 MB (FLW-8100)
 
 START_FUNC : legalize_placement_pre_run_core CPU :     63 s ( 0.02 hr) ELAPSE :     63 s ( 0.02 hr) MEM-PEAK :   967 Mb
 END_FUNC : legalize_placement_pre_run_core CPU :     63 s ( 0.02 hr) ELAPSE :     63 s ( 0.02 hr) MEM-PEAK :   967 Mb
@@ -3370,10 +3370,10 @@ Information: Update timing completed net estimation for all the timing graph net
 Information: Net estimation statistics: timing graph nets = 1229, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 1229, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
 
 Information: Ending place_opt / final_opto / Legalization (1) (FLW-8001)
-Information: Time: 2026-06-28 19:56:44 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:23 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
 
 Information: Starting place_opt / final_opto / Optimization (2) (FLW-8000)
-Information: Time: 2026-06-28 19:56:44 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:23 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
 INFO: Enabled CLO at stage after_LGL1.
 
 INFO: place.legalize.enable_advanced_legalizer not set - need to revert CLO
@@ -3395,11 +3395,11 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0100 seconds to build cellmap data
+Total 0.0200 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x9d9215a8): 361
+INFO: number of GridCells (0xa5d8d5a8): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x9d9215a8): 361
+INFO: number of GridCells (0xa5d8d5a8): 361
 Total 0.0200 seconds to load 1100 cell instances into cellmap
 Moveable cells: 1100; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6273, cell height 0.6000, cell area 0.3764 for total 1100 placed and application fixed cells
@@ -3462,10 +3462,10 @@ Place-opt optimization Phase 63 Iter  2         0.00        0.00      0.00      
 Place-opt optimization Phase 63 Iter  3         0.00        0.00      0.00         0        413.99   145288.11        1100              0.02       967
 
 Information: Ending place_opt / final_opto / Optimization (2) (FLW-8001)
-Information: Time: 2026-06-28 19:56:47 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:26 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
 
 Information: Starting place_opt / final_opto / Legalization (2) (FLW-8000)
-Information: Time: 2026-06-28 19:56:47 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:26 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
 
 START_FUNC : legalize_placement_pre_run_core CPU :     67 s ( 0.02 hr) ELAPSE :     67 s ( 0.02 hr) MEM-PEAK :   967 Mb
 END_FUNC : legalize_placement_pre_run_core CPU :     67 s ( 0.02 hr) ELAPSE :     67 s ( 0.02 hr) MEM-PEAK :   967 Mb
@@ -3506,7 +3506,7 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0200 seconds to build cellmap data
+Total 0.0300 seconds to build cellmap data
 Information: Creating classic rule checker.
 Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
 =====> Processed 77 ref cells (25 fillers) from library
@@ -3640,7 +3640,7 @@ Information: Update timing completed net estimation for all the timing graph net
 Information: Net estimation statistics: timing graph nets = 1229, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 1229, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
 
 Information: Ending place_opt / final_opto / Legalization (2) (FLW-8001)
-Information: Time: 2026-06-28 19:56:48 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:27 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
 
 Information: Initializing classic cellmap without advanced rules enabled and without PDC enabled
 Information: The following app options are used in cellmap
@@ -3659,9 +3659,9 @@ Information: The following app options are used in cellmap
         cts.placement.cell_spacing_rule_style : maximum
 Total 0.0100 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x9ec2c150): 361
+INFO: number of GridCells (0xabd0a150): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x9ec2c150): 361
+INFO: number of GridCells (0xabd0a150): 361
 Total 0.0200 seconds to load 1100 cell instances into cellmap
 Moveable cells: 1100; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6273, cell height 0.6000, cell area 0.3764 for total 1100 placed and application fixed cells
@@ -3670,7 +3670,7 @@ Place-opt optimization Phase 68 Iter  1         0.00        0.00      0.00      
 Place-opt optimization Phase 69 Iter  1         0.00        0.00      0.00         1        413.99   145288.11        1100              0.02       967
 
 Information: Ending place_opt / final_opto (FLW-8001)
-Information: Time: 2026-06-28 19:56:48 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:27 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
 Number of Site types in the design = 1
 Setting up Chip Core
 Chip Core shape: (0 0) (299700 300000)
@@ -3782,14 +3782,14 @@ Place-opt command complete                CPU:    69 s (  0.02 hr )  ELAPSE:    
 Place-opt command statistics  CPU=43 sec (0.01 hr) ELAPSED=43 sec (0.01 hr) MEM-PEAK=0.944 GB
 Information: Running auto PG connection. (NDM-099)
 Information: Ending 'place_opt' (FLW-8001)
-Information: Time: 2026-06-28 19:56:49 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:28 / Session: 0.02 hr / Command: 0.02 hr / Memory: 967 MB (FLW-8100)
 1
 report_timing  -max_paths 5          > $RPT_DIR/timing_place.rpt
 catch { report_power   -analysis_effort high > $RPT_DIR/power_place.rpt }
 1
 clock_opt
 Information: Starting 'clock_opt' (FLW-8000)
-Information: Time: 2026-06-28 19:56:49 / Session: 0.02 hr / Command: 0.00 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:28 / Session: 0.02 hr / Command: 0.00 hr / Memory: 967 MB (FLW-8100)
 INFO: clock_opt is running in balanced flow mode.
 INFO: Total Power Aware Optimization Enabled (Dynamic + Leakage)
 Number of Site types in the design = 1
@@ -3809,10 +3809,10 @@ TEST: runCore bldClkInit-init
 
 
 Information: Starting clock_opt / build_clock (FLW-8000)
-Information: Time: 2026-06-28 19:56:49 / Session: 0.02 hr / Command: 0.00 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:28 / Session: 0.02 hr / Command: 0.00 hr / Memory: 967 MB (FLW-8100)
 
 Information: Starting clock_opt / build_clock / Trial CTS (FLW-8000)
-Information: Time: 2026-06-28 19:56:49 / Session: 0.02 hr / Command: 0.00 hr / Memory: 967 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:28 / Session: 0.02 hr / Command: 0.00 hr / Memory: 967 MB (FLW-8100)
 Running clock synthesis step.
 Info: Enabling GR in trial CTO
 Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
@@ -4038,12 +4038,12 @@ Layer M1: cached 0 shapes out of 0 total shapes.
 Layer M2: cached 0 shapes out of 0 total shapes.
 Layer M3: cached 0 shapes out of 0 total shapes.
 Cached 0 vias out of 0 total vias.
-Total 0.0300 seconds to build cellmap data
+Total 0.0400 seconds to build cellmap data
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x96c9a480): 144
+INFO: number of GridCells (0x9ee94480): 144
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x96c9a480): 144
-Total 0.0200 seconds to load 1100 cell instances into cellmap
+INFO: number of GridCells (0x9ee94480): 144
+Total 0.0300 seconds to load 1100 cell instances into cellmap
 Moveable cells: 1100; Application fixed cells: 0; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6273, cell height 0.6000, cell area 0.3764 for total 1100 placed and application fixed cells
 Information: Legalizer's PDC rule check is enabled
@@ -4055,7 +4055,7 @@ Start Auto-Exception Derivations...
  No macro pin was found for clock balance point settings.
  No macro pin was found for disabling self arcs.
 Info: 82 sinks and boundary insts are collected
-Information: The run time for clock tree initialization is 0 hr : 0 min : 0.06 sec, cpu time is 0 hr : 0 min : 0.06 sec. (CTS-104)
+Information: The run time for clock tree initialization is 0 hr : 0 min : 0.07 sec, cpu time is 0 hr : 0 min : 0.07 sec. (CTS-104)
 Setting target skew for clock: clk (mode default corner default) as 0.750000
 Drc Mode Option: auto
 Corner Scaling is off, multiplier is 1.000000
@@ -4192,7 +4192,7 @@ Number of Drivers Sized: 0 [0.00%]
 Warning: Buffer-tree root clk skipped, because it has no valid location
  Added 0 Repeaters (B: 0 I: 0). Built 0 Repeater Levels for driver clk
  Phase delay: (max r/f: 0.018539/0.000591  min r/f: 0.018539/0.000591) : clk
-Information: The run time for gate-by-gate clock tree synthesis is 0 hr : 0 min : 1.64 sec, cpu time is 0 hr : 0 min : 1.64 sec. (CTS-104)
+Information: The run time for gate-by-gate clock tree synthesis is 0 hr : 0 min : 1.65 sec, cpu time is 0 hr : 0 min : 1.65 sec. (CTS-104)
 ************************************************************
 * CTS STEP: DRC Fixing Beyond Exceptions
 ************************************************************
@@ -4518,7 +4518,7 @@ parastics information loaded to the router.
 [End of Loading Timing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
 Information: The net parasitics of block adaptive_pg_top are cleared. (TIM-123)
 Total number of global routed clock nets: 3
-Information: The run time for clock net global routing is 0 hr : 0 min : 0.32 sec, cpu time is 0 hr : 0 min : 0.32 sec. (CTS-104)
+Information: The run time for clock net global routing is 0 hr : 0 min : 0.34 sec, cpu time is 0 hr : 0 min : 0.34 sec. (CTS-104)
 Information: The stitching and editing of coupling caps is turned OFF for design 'adaptive_pg_top_icc2.dlib:adaptive_pg_top.design'. (TIM-125)
 Information: Design adaptive_pg_top has 1231 nets, 3 global routed, 0 detail routed. (NEX-024)
 Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
@@ -4993,12 +4993,12 @@ Iteration 2 (effort: high)
 
 -------------------------------------------------
 
-Pre-Opt drc fixing cpu time 00:00:01.42u 00:00:00.02s 00:00:01.44e: 
+Pre-Opt drc fixing cpu time 00:00:01.45u 00:00:00.01s 00:00:01.46e: 
 Clock QoR After Pre-Opt Drc Fixing:
 Clock: clk, Mode: default, Root: clk
 Information: CTS QoR Post Initial DRC Fixing: GlobalSkew = 0.0215; ID = 0.0215; NetsWithDRC = 0; Worst Tran/Cap cost = 0.0000/0.0000; ClockBufCount = 0; ClockBufArea = 0.0000; ClockCellArea = 1.1988; ClockWireLen = 118.4500; Clock = clk; Mode = default; Corner = default; ClockRoot = clk. (CTS-037)
-The elapsed time for optimization of clock tree is 0 hr : 0 min : 1.44 sec, cpu time is 0 hr : 0 min : 1.44 sec.
-Information: The run time for Initial DRC fixing is 0 hr : 0 min : 1.44 sec, cpu time is 0 hr : 0 min : 1.44 sec. (CTS-104)
+The elapsed time for optimization of clock tree is 0 hr : 0 min : 1.47 sec, cpu time is 0 hr : 0 min : 1.47 sec.
+Information: The run time for Initial DRC fixing is 0 hr : 0 min : 1.47 sec, cpu time is 0 hr : 0 min : 1.47 sec. (CTS-104)
 [cto] Finished InitDrc.1: PASS
 
 ************************************************************
@@ -5053,7 +5053,7 @@ Information: global optimization has converged.
 
         # Total CPU time                  = 00h:00m:00s
         # Total elapsed time              = 00h:00m:00s
-        # Flow total speed up             =     1.0000
+        # Flow total speed up             =     0.9996
 
 -------------------------------------------------
 
@@ -5101,16 +5101,16 @@ Iteration 2 (effort: low)
 
         # Total CPU time                  = 00h:00m:00s
         # Total elapsed time              = 00h:00m:00s
-        # Flow total speed up             =     1.0000
+        # Flow total speed up             =     1.0001
         # Commit CPU time                 = 00h:00m:00s
         # Commit elapsed time             = 00h:00m:00s
-        # Commit speed up                 =     0.9980
+        # Commit speed up                 =     1.0000
         # Generator CPU time              = 00h:00m:00s
         # Generator elapsed time          = 00h:00m:00s
-        # Generator speed up              =     0.9926
+        # Generator speed up              =     1.0081
         # Sg CPU time                     = 00h:00m:00s
         # Sg elapsed time                 = 00h:00m:00s
-        # Sg speed up                     =     1.0000
+        # Sg speed up                     =     1.0001
         # The rest of flow speed up       =     1.0001
 
 -------------------------------------------------
@@ -5118,9 +5118,9 @@ Iteration 2 (effort: low)
 Clock QoR After Area Recovery and Subtree Balancing:
 Clock: clk, Mode: default, Root: clk
 Information: CTS QoR Post Area Recovery Resizing: GlobalSkew = 0.0214; ID = 0.0214; NetsWithDRC = 0; Worst Tran/Cap cost = 0.0000/0.0000; ClockBufCount = 0; ClockBufArea = 0.0000; ClockCellArea = 0.7104; ClockWireLen = 118.4500; Clock = clk; Mode = default; Corner = default; ClockRoot = clk. (CTS-037)
-Area recovery and subtree balancing cpu time 00:00:00.13u 00:00:00.00s 00:00:00.13e: 
-The elapsed time for optimization of clock tree is 0 hr : 0 min : 0.13 sec, cpu time is 0 hr : 0 min : 0.13 sec.
-Information: The run time for Area recovery is 0 hr : 0 min : 0.13 sec, cpu time is 0 hr : 0 min : 0.13 sec. (CTS-104)
+Area recovery and subtree balancing cpu time 00:00:00.14u 00:00:00.00s 00:00:00.14e: 
+The elapsed time for optimization of clock tree is 0 hr : 0 min : 0.14 sec, cpu time is 0 hr : 0 min : 0.14 sec.
+Information: The run time for Area recovery is 0 hr : 0 min : 0.14 sec, cpu time is 0 hr : 0 min : 0.14 sec. (CTS-104)
 [cto] Finished AR.1: PASS
 
 ************************************************************
@@ -5152,7 +5152,7 @@ Starting multithread based drc fixing Post opt drc fixing
 
         # Total CPU time                  = 00h:00m:00s
         # Total elapsed time              = 00h:00m:00s
-        # Flow total speed up             =     1.0009
+        # Flow total speed up             =     1.0018
 
 -------------------------------------------------
 
@@ -5595,7 +5595,7 @@ Drc Mode Option: auto
 CCD blasted path groups
 DBG: ccdInfra::initAppOptions
 DBG: ccdInfra::initCtsFixedBalancePins
-CCD initialization runtime: cpu 0.051390, elapsed 0.051386, speed up 1.000078.
+CCD initialization runtime: cpu 0.051064, elapsed 0.051059, speed up 1.000098.
 
 CCD-Info: App options set by user
    No CCD app option is set.
@@ -5645,13 +5645,13 @@ Enable clock slack update
 
   # Total CPU time                               00h:00m:00s
   # Total elapsed time                           00h:00m:00s
-  # Flow total speed up                          1.000088
+  # Flow total speed up                          1.000075
   # Init lazy tns CPU time                       00h:00m:00s
   # Init lazy tns elapsed time                   00h:00m:00s
-  # Init lazy tns speed up                       1.000077
+  # Init lazy tns speed up                       1.000089
   # Seed generation CPU time                     00h:00m:00s
   # Seed generation elapsed time                 00h:00m:00s
-  # Seed generation speed up                     0.997199
+  # Seed generation speed up                     0.997305
 
 -------------------------------------------------
 
@@ -5665,7 +5665,7 @@ CCD: After FMAX optimization:cto1_NONE_POWER3
     Scenario default  WNHS = 0.015354, TNHS = 0.000000, NHVP = 0
 ---------------------------------------------------------------------------------------------
 CCD-QoR: Timing: WNS = 2.479, TNS = 0.000, NVP = 0, UNWEIGHTED_TNS = 0.000, WNHS = 0.015, TNHS = 0.000, NHVP = 0, UNWEIGHTED_TNHS = 0.000, R2R(wns=2.478676, tns=0.000000, nvp=0)
- CCD flow runtime: cpu 0.595870, elapsed 0.595814, speed up 1.000094.
+ CCD flow runtime: cpu 0.599589, elapsed 0.599521, speed up 1.000113.
 CCD unblasted path groups
 Mark clock trees...
 Marking clock synthesized attributes
@@ -6296,7 +6296,7 @@ There are 0 buffers added and 0 inverters added by Clock Tree Optimization.
 * CTS STEP: Postlude
 ************************************************************
 Info: 82 sinks and boundary insts are set as application_fixed
-Information: The run time for postlude is 0 hr : 0 min : 0.07 sec, cpu time is 0 hr : 0 min : 0.07 sec. (CTS-104)
+Information: The run time for postlude is 0 hr : 0 min : 0.08 sec, cpu time is 0 hr : 0 min : 0.08 sec. (CTS-104)
 ************************************************************
 * CTS STEP: Summary report
 ************************************************************
@@ -6304,7 +6304,7 @@ There are 3 flat clock tree nets.
 There are 2 non-sink instances (total area 0.71) on clock trees including 0 instances dont_touch.
 Clock tree synthesize and optimization added 0 buffers and 0 inverters (total area 0.00).
  Compilation of clock trees finished successfully
- Run time for cts 00:00:06.30u 00:00:00.25s 00:00:06.55e: 
+ Run time for cts 00:00:06.36u 00:00:00.26s 00:00:06.62e: 
 
 Summary of messages during CTS:
 ===============================================================
@@ -6316,7 +6316,7 @@ No clock balance group was found, so skip the balance
 Info: clearing CTS-GR option
 Info: clearinf CTO-GR option
 Information: Ending clock_opt / build_clock / Trial CTS (FLW-8001)
-Information: Time: 2026-06-28 19:56:56 / Session: 0.02 hr / Command: 0.00 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:35 / Session: 0.02 hr / Command: 0.00 hr / Memory: 1515 MB (FLW-8100)
 
 Information: The stitching and editing of coupling caps is turned OFF for design 'adaptive_pg_top_icc2.dlib:adaptive_pg_top.design'. (TIM-125)
 Information: Design adaptive_pg_top has 1231 nets, 3 global routed, 0 detail routed. (NEX-024)
@@ -6427,9 +6427,9 @@ Information: The following app options are used in cellmap
         cts.placement.cell_spacing_rule_style : maximum
 Total 0.0100 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x97c01650): 361
+INFO: number of GridCells (0xc7f57650): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x97c01650): 361
+INFO: number of GridCells (0xc7f57650): 361
 Total 0.0200 seconds to load 1100 cell instances into cellmap
 Moveable cells: 1016; Application fixed cells: 84; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6274, cell height 0.6000, cell area 0.3764 for total 1100 placed and application fixed cells
@@ -6498,7 +6498,7 @@ Clock-opt optimization Phase 7 Iter 19          0.00        0.00      0.00      
 Clock-opt optimization Phase 8 Iter  1          0.00        0.00      0.00         0        414.07   145513.36        1100              0.02      1515
 
 Information: Starting clock_opt / build_clock / CTS (FLW-8000)
-Information: Time: 2026-06-28 19:57:07 / Session: 0.02 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:46 / Session: 0.02 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
 Clock-opt optimization Phase 9 Iter  1          0.00        0.00      0.00         0        414.07   145513.36        1100              0.02      1515
 Info: Enabling GR in final CTS
 Info: Enabling GR in final CTO
@@ -6722,9 +6722,9 @@ Layer M3: cached 0 shapes out of 57 total shapes.
 Cached 0 vias out of 117 total vias.
 Total 0.0300 seconds to build cellmap data
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0xa7a618c0): 144
+INFO: number of GridCells (0x9e9fd8c0): 144
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0xa7a618c0): 144
+INFO: number of GridCells (0x9e9fd8c0): 144
 Total 0.0300 seconds to load 1100 cell instances into cellmap
 Moveable cells: 1016; Application fixed cells: 84; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6274, cell height 0.6000, cell area 0.3764 for total 1100 placed and application fixed cells
@@ -7648,7 +7648,7 @@ Drc Mode Option: auto
 CCD blasted path groups
 DBG: ccdInfra::initAppOptions
 DBG: ccdInfra::initCtsFixedBalancePins
-CCD initialization runtime: cpu 0.051517, elapsed 0.051512, speed up 1.000097.
+CCD initialization runtime: cpu 0.051529, elapsed 0.051523, speed up 1.000116.
 
 CCD-Info: App options set by user
    No CCD app option is set.
@@ -7692,13 +7692,13 @@ Enable clock slack update
 
   # Total CPU time                               00h:00m:00s
   # Total elapsed time                           00h:00m:00s
-  # Flow total speed up                          0.999987
+  # Flow total speed up                          1.000077
   # Init lazy tns CPU time                       00h:00m:00s
   # Init lazy tns elapsed time                   00h:00m:00s
-  # Init lazy tns speed up                       0.999987
+  # Init lazy tns speed up                       1.000079
   # Seed generation CPU time                     00h:00m:00s
   # Seed generation elapsed time                 00h:00m:00s
-  # Seed generation speed up                     0.991870
+  # Seed generation speed up                     0.992424
 
 -------------------------------------------------
 
@@ -7712,7 +7712,7 @@ CCD: After FMAX optimization:budget_implementation_R2R_WNS3
     Scenario default  WNHS = 0.015354, TNHS = 0.000000, NHVP = 0
 ---------------------------------------------------------------------------------------------
 CCD-QoR: Timing: WNS = 2.479, TNS = 0.000, NVP = 0, UNWEIGHTED_TNS = 0.000, WNHS = 0.015, TNHS = 0.000, NHVP = 0, UNWEIGHTED_TNHS = 0.000, R2R(wns=2.478676, tns=0.000000, nvp=0)
- CCD flow runtime: cpu 0.342276, elapsed 0.342252, speed up 1.000070.
+ CCD flow runtime: cpu 0.341723, elapsed 0.341698, speed up 1.000073.
 CCD unblasted path groups
 Mark clock trees...
 Marking clock synthesized attributes
@@ -8330,7 +8330,7 @@ Updating congestion ...
 Skip track assign
 Skip detail route
 Updating the database ...
-Information: The run time for Multi-objective Clock Optimization is 0 hr : 0 min : 2.18 sec, cpu time is 0 hr : 0 min : 2.18 sec. (CTS-104)
+Information: The run time for Multi-objective Clock Optimization is 0 hr : 0 min : 2.17 sec, cpu time is 0 hr : 0 min : 2.17 sec. (CTS-104)
 ************************************************************
 * CTS STEP: Postlude
 ************************************************************
@@ -8369,7 +8369,7 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0200 seconds to build cellmap data
+Total 0.0100 seconds to build cellmap data
 Information: Creating classic rule checker.
 Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
 =====> Processed 78 ref cells (25 fillers) from library
@@ -8493,7 +8493,7 @@ Cell: u_alu/HFSINV_3152_8 (SAEDLVT14_AOINV_IW_1)
  Successfully legalize placement.
 Info: 82 sinks and boundary insts are collected
 Info: 82 sinks and boundary insts are unset from application_fixed
-Information: The run time for postlude is 0 hr : 0 min : 0.15 sec, cpu time is 0 hr : 0 min : 0.15 sec. (CTS-104)
+Information: The run time for postlude is 0 hr : 0 min : 0.14 sec, cpu time is 0 hr : 0 min : 0.14 sec. (CTS-104)
 ************************************************************
 * CTS STEP: Summary report
 ************************************************************
@@ -8501,7 +8501,7 @@ There are 3 flat clock tree nets.
 There are 2 non-sink instances (total area 0.71) on clock trees including 0 instances dont_touch.
 Clock tree synthesize and optimization added 0 buffers and 0 inverters (total area 0.00).
  Compilation of clock trees finished successfully
- Run time for cts 00:00:02.74u 00:00:00.13s 00:00:02.87e: 
+ Run time for cts 00:00:02.76u 00:00:00.11s 00:00:02.87e: 
 
 Summary of messages during CTS:
 ===============================================================
@@ -8542,9 +8542,9 @@ Information: The following app options are used in cellmap
         cts.placement.cell_spacing_rule_style : maximum
 Total 0.0100 seconds to build cellmap data
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x9ae36240): 144
+INFO: number of GridCells (0xa75880c0): 144
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x9ae36240): 144
+INFO: number of GridCells (0xa75880c0): 144
 Total 0.0200 seconds to load 1100 cell instances into cellmap
 Moveable cells: 1098; Application fixed cells: 2; Macro cells: 0; User fixed cells: 0
 Average cell width 0.6274, cell height 0.6000, cell area 0.3764 for total 1100 placed and application fixed cells
@@ -8564,7 +8564,7 @@ Information: Net estimation statistics: timing graph nets = 1229, routed nets = 
       0:01:30     0.000     0.000   414.074     0.000     0.007         4       145         0     0.000      1515 
 
 Information: Ending clock_opt / build_clock / CTS (FLW-8001)
-Information: Time: 2026-06-28 19:57:10 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:49 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
 Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
 
 Clock-opt optimization Phase 10 Iter  1         0.00        0.00      0.00         0        414.07   145513.36        1100              0.03      1515
@@ -8635,19 +8635,19 @@ Clock-opt final QoR Summary         WNS        TNS   R2RTNS    NSV      WHV     
 Clock-opt final QoR Summary      0.0000     0.0000   0.0000      0   0.0000     0.0000      0        0        1 145513.359       414.07       1100
 
 Clock-opt command complete                CPU:    91 s (  0.03 hr )  ELAPSE:    91 s (  0.03 hr )  MEM-PEAK:  1515 MB
-Clock-opt command statistics  CPU=14 sec (0.00 hr) ELAPSED=15 sec (0.00 hr) MEM-PEAK=1.479 GB
+Clock-opt command statistics  CPU=15 sec (0.00 hr) ELAPSED=15 sec (0.00 hr) MEM-PEAK=1.479 GB
 
 Information: Ending clock_opt / build_clock (FLW-8001)
-Information: Time: 2026-06-28 19:57:11 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:50 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
 TEST: runCore bldClkEnd-end
 INFO: run stage route_clock (init -> end)
 TEST: runCore rteClkInit-init
 
 Information: Starting clock_opt / route_clock (FLW-8000)
-Information: Time: 2026-06-28 19:57:11 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:50 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
 
 Information: Starting clock_opt / route_clock / Clock Routing (FLW-8000)
-Information: Time: 2026-06-28 19:57:11 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:50 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
 Clock-opt optimization Phase 2 Iter  1          0.00        0.00      0.00         0        414.07   145513.36        1100              0.03      1515
 Running clock routing step.
 set_app_options -as_user_default -list {route.global.global_route_topology_style 1}
@@ -9213,7 +9213,7 @@ Initial. Via VIA9RDL count = 0
 Initial. completed.
 
 Start GR phase 1
-Sun Jun 28 19:57:11 2026
+Sun Jun 28 20:12:50 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -9763,16 +9763,16 @@ set_app_options -as_user_default -list {route.global.global_route_topology_style
 Warning: Ignoring -as_user_default option since application option <route.global.global_route_topology_style> is global scoped. (NDMUI-1004)
 route.global.global_route_topology_style 0
 Information: Ending clock_opt / route_clock / Clock Routing (FLW-8001)
-Information: Time: 2026-06-28 19:57:15 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:55 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
 
 Information: Ending clock_opt / route_clock (FLW-8001)
-Information: Time: 2026-06-28 19:57:15 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:55 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
 TEST: runCore rteClkEnd-end
 INFO: run stage final_opto (init -> end)
 TEST: runCore finalOptoInit-init
 
 Information: Starting clock_opt / final_opto (FLW-8000)
-Information: Time: 2026-06-28 19:57:15 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:12:55 / Session: 0.03 hr / Command: 0.01 hr / Memory: 1515 MB (FLW-8100)
 
 Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
 Information: The stitching and editing of coupling caps is turned OFF for design 'adaptive_pg_top_icc2.dlib:adaptive_pg_top.design'. (TIM-125)
@@ -9793,7 +9793,7 @@ Info: update em.
 Clock-opt timing update complete          CPU:    96 s (  0.03 hr )  ELAPSE:    96 s (  0.03 hr )  MEM-PEAK:  1515 MB
 INFO: Propagating Switching Activities
 Information: Activity for scenario default was cached, no propagation required. (POW-005)
-INFO: Switching Activity propagation took     0.00001 sec
+INFO: Switching Activity propagation took     0.00002 sec
 INFO: Propagating Switching Activity for all power flows 
 
 Clock-opt initial QoR
@@ -9872,11 +9872,11 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0100 seconds to build cellmap data
+Total 0.0200 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x8dc00d20): 361
+INFO: number of GridCells (0x9c9e4d20): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x8dc00d20): 361
+INFO: number of GridCells (0x9c9e4d20): 361
 Total 0.0200 seconds to load 1100 cell instances into cellmap
 Moveable cells: 1098; Application fixed cells: 2; Macro cells: 0; User fixed cells: 0
 0 out of 1226 data nets is detail routed, 3 out of 3 clock nets are detail routed and total 1229 nets have been analyzed
@@ -10009,7 +10009,7 @@ Clock-opt optimization Phase 11 Iter  3         0.00        0.00      0.00      
 Warning: Design includes unreasonable large hold violation(s). (OPT-209)
 Clock-opt optimization Phase 11 Iter  4         0.00        0.00      0.00         0        409.46   138053.64        1119              0.03      1515
 INFO: updating slack distrubution time borrowing
-updateTimeBorrowsAndSi elapsed: 10.847000
+updateTimeBorrowsAndSi elapsed: 11.222000
 
 Clock-opt optimization Phase 12 Iter  1         0.00        0.00      0.00         0        409.46   138053.64        1119              0.03      1515
 Running post-clock timing-driven placement.
@@ -10031,9 +10031,9 @@ Information: The following app options are used in cellmap
         cts.placement.cell_spacing_rule_style : maximum
 Total 0.0100 seconds to build cellmap data
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x8e5c6ba0): 144
+INFO: number of GridCells (0x97a40960): 144
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x8e5c6ba0): 144
+INFO: number of GridCells (0x97a40960): 144
 Total 0.0200 seconds to load 1119 cell instances into cellmap
 Moveable cells: 1117; Application fixed cells: 2; Macro cells: 0; User fixed cells: 0
 0 out of 1254 data nets is detail routed, 3 out of 3 clock nets are detail routed and total 1257 nets have been analyzed
@@ -10625,7 +10625,7 @@ Initial. Via VIA9RDL count = 0
 Initial. completed.
 
 Start GR phase 1
-Sun Jun 28 19:57:39 2026
+Sun Jun 28 20:13:18 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -10677,8 +10677,8 @@ phase1. Via VIA78SQ_C count = 2
 phase1. Via VIA89_C count = 2
 phase1. Via VIA9RDL count = 0
 phase1. completed.
-[End of Whole Chip Routing] Elapsed real time: 0:00:00 
-[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:00 total=0:00:00
+[End of Whole Chip Routing] Elapsed real time: 0:00:01 
+[End of Whole Chip Routing] Elapsed cpu  time: sys=0:00:00 usr=0:00:01 total=0:00:01
 [End of Whole Chip Routing] Stage (MB): Used  106  Alloctr  106  Proc    0 
 [End of Whole Chip Routing] Total (MB): Used  148  Alloctr  149  Proc 12638 
 
@@ -10836,11 +10836,11 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0100 seconds to build cellmap data
+Total 0.0200 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x8de2d068): 361
+INFO: number of GridCells (0x97fe3068): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x8de2d068): 361
+INFO: number of GridCells (0x97fe3068): 361
 Total 0.0200 seconds to load 1119 cell instances into cellmap, 1035 cells are off site row
 Moveable cells: 1117; Application fixed cells: 2; Macro cells: 0; User fixed cells: 0
 0 out of 1254 data nets is detail routed, 3 out of 3 clock nets are detail routed and total 1257 nets have been analyzed
@@ -10872,11 +10872,11 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0200 seconds to build cellmap data
+Total 0.0100 seconds to build cellmap data
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x9aa4a0c0): 144
+INFO: number of GridCells (0x991ea120): 144
 INFO: creating 12(r) x 12(c) GridCells YDim 3 XDim 3
-INFO: number of GridCells (0x9aa4a0c0): 144
+INFO: number of GridCells (0x991ea120): 144
 Total 0.0200 seconds to load 1119 cell instances into cellmap, 1033 cells are off site row
 Moveable cells: 1117; Application fixed cells: 2; Macro cells: 0; User fixed cells: 0
 0 out of 1254 data nets is detail routed, 3 out of 3 clock nets are detail routed and total 1257 nets have been analyzed
@@ -10917,7 +10917,7 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0100 seconds to build cellmap data
+Total 0.0200 seconds to build cellmap data
 Information: Creating classic rule checker.
 Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
 =====> Processed 82 ref cells (25 fillers) from library
@@ -11092,9 +11092,9 @@ Information: The following app options are used in cellmap
         cts.placement.cell_spacing_rule_style : maximum
 Total 0.0100 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x956d0e70): 361
+INFO: number of GridCells (0x96c3ce70): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0x956d0e70): 361
+INFO: number of GridCells (0x96c3ce70): 361
 Total 0.0200 seconds to load 1119 cell instances into cellmap
 Moveable cells: 1117; Application fixed cells: 2; Macro cells: 0; User fixed cells: 0
 0 out of 1254 data nets is detail routed, 3 out of 3 clock nets are detail routed and total 1257 nets have been analyzed
@@ -11126,7 +11126,7 @@ Information: Timer-derived activity data is cached on scenario default (POW-052)
 Information: Running switching activity propagation in scalar mode!
 
  **** Information : No. of simulation cycles = 6 ****
-INFO: Switching Activity propagation took     0.00004 sec
+INFO: Switching Activity propagation took     0.00003 sec
 INFO: Propagating Switching Activity for all power flows 
 Information: The netlist change observers are disabled for incremental extraction. (TIM-126)
 INFO: place.legalize.enable_advanced_legalizer not set - need to revert CLO
@@ -11733,7 +11733,7 @@ Initial. Via VIA9RDL count = 0
 Initial. completed.
 
 Start GR phase 1
-Sun Jun 28 19:57:44 2026
+Sun Jun 28 20:13:23 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -11785,7 +11785,7 @@ phase1. Via VIA9RDL count = 0
 phase1. completed.
 
 Start GR phase 2
-Sun Jun 28 19:57:44 2026
+Sun Jun 28 20:13:24 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -11915,7 +11915,7 @@ Scene  PG      WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrn
 Clock-opt route-global QoR Summary      WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV  MaxCapV    Leakage         Area    InstCnt
 Clock-opt route-global QoR Summary   0.0000     0.0000   0.0000      0   0.0000     0.0000      0        0        2 138071.266       409.46       1119
 
-Clock-opt Global-routing complete         CPU:   125 s (  0.03 hr )  ELAPSE:   125 s (  0.03 hr )  MEM-PEAK:  1515 MB
+Clock-opt Global-routing complete         CPU:   126 s (  0.03 hr )  ELAPSE:   126 s (  0.03 hr )  MEM-PEAK:  1515 MB
 
 Cell Min-Routing-Layer = M1
 Cell Max-Routing-Layer = MRDL
@@ -12801,7 +12801,7 @@ Information: Legalizer's PDC rule check is NOT enabled
 Information: Legalizer's advanced rule check is NOT enabled
 DBG: ccdInfra::initAppOptions
 DBG: ccdInfra::initCtsFixedBalancePins
-CCD initialization runtime: cpu 0.019830, elapsed 0.019827, speed up 1.000151.
+CCD initialization runtime: cpu 0.021000, elapsed 0.020998, speed up 1.000095.
 
 CCD-Info: App options set by user
    ccd.hold_control_effort = medium
@@ -12870,7 +12870,7 @@ Information: There is no DRC violation or all DRC violations are not fixable.
 
         # Total CPU time                  = 00h:00m:00s
         # Total elapsed time              = 00h:00m:00s
-        # Flow total speed up             =     1.0011
+        # Flow total speed up             =     1.0000
 
 -------------------------------------------------
 
@@ -12909,7 +12909,7 @@ Information: There is no DRC violation or all DRC violations are not fixable.
 
         # Total CPU time                  = 00h:00m:00s
         # Total elapsed time              = 00h:00m:00s
-        # Flow total speed up             =     1.0000
+        # Flow total speed up             =     1.0025
 
 -------------------------------------------------
 
@@ -12936,7 +12936,7 @@ Route Cleanup and Reuse: 0 shapes being reused for 0 clock nets
 INFO: optApi switch to OPTO purpose
 enhanced site row merge :  1
 Number of Site types in the design = 1
- CCD flow runtime: cpu 0.381093, elapsed 0.381065, speed up 1.000073.
+ CCD flow runtime: cpu 0.394945, elapsed 0.394865, speed up 1.000203.
 Mark clock trees...
 Marking clock synthesized attributes
 
@@ -13026,7 +13026,7 @@ Warning: Design includes unreasonable large hold violation(s). (OPT-209)
 Clock-opt optimization Phase 25 Iter  2         0.00        0.00      0.00         0        409.55   138101.02        1119              0.04      1515
 Warning: Design includes unreasonable large hold violation(s). (OPT-209)
 INFO: updating slack distrubution time borrowing
-updateTimeBorrowsAndSi elapsed: 10.880000
+updateTimeBorrowsAndSi elapsed: 11.068000
 
 Clock-opt optimization Phase 26 Iter  1         0.00        0.00      0.00         0        409.55   138101.02        1119              0.04      1515
 Information: The value of option cts.compile.enable_cell_relocation has been overridden to "leaf_only" to support latency-driven placement. (CTS-973)
@@ -13420,7 +13420,7 @@ Information: Legalizer's PDC rule check is NOT enabled
 Information: Legalizer's advanced rule check is NOT enabled
 DBG: ccdInfra::initAppOptions
 DBG: ccdInfra::initCtsFixedBalancePins
-CCD initialization runtime: cpu 0.019935, elapsed 0.019933, speed up 1.000100.
+CCD initialization runtime: cpu 0.019993, elapsed 0.019990, speed up 1.000150.
 
 CCD-Info: App options set by user
    ccd.hold_control_effort = medium
@@ -13478,7 +13478,7 @@ CCD-QoR: Timing: WNS = 1.379, TNS = 0.000, NVP = 0, UNWEIGHTED_TNS = 0.000, WNHS
 
         # Total CPU time                  = 00h:00m:00s
         # Total elapsed time              = 00h:00m:00s
-        # Flow total speed up             =     1.0001
+        # Flow total speed up             =     1.0002
 
 -------------------------------------------------
 
@@ -13505,7 +13505,7 @@ Route Cleanup and Reuse: 0 shapes being reused for 0 clock nets
 INFO: optApi switch to OPTO purpose
 enhanced site row merge :  1
 Number of Site types in the design = 1
- CCD flow runtime: cpu 0.548268, elapsed 0.548225, speed up 1.000078.
+ CCD flow runtime: cpu 0.559369, elapsed 0.559304, speed up 1.000116.
 Mark clock trees...
 Marking clock synthesized attributes
 
@@ -13577,10 +13577,10 @@ Warning: Design includes unreasonable large hold violation(s). (OPT-209)
 Clock-opt optimization Phase 32 Iter  2         0.00        0.00      0.00         0        410.48   138583.67        1118              0.04      1515
 Warning: Design includes unreasonable large hold violation(s). (OPT-209)
 INFO: updating slack distrubution time borrowing
-updateTimeBorrowsAndSi elapsed: 10.889000
+updateTimeBorrowsAndSi elapsed: 11.319000
 
 
-Clock-opt route preserve complete         CPU:   137 s (  0.04 hr )  ELAPSE:   137 s (  0.04 hr )  MEM-PEAK:  1515 MB
+Clock-opt route preserve complete         CPU:   138 s (  0.04 hr )  ELAPSE:   138 s (  0.04 hr )  MEM-PEAK:  1515 MB
 
 INFO: Sending timing info to router
 Information: The netlist change observers are enabled for incremental extraction. (TIM-127)
@@ -13741,11 +13741,11 @@ Cell: u_alu/HFSINV_2870_6 (SAEDLVT14_AOINV_IW_0P5)
   Displacement:   0.000 um ( 0.00 row height)
 
 Legalization succeeded.
-Total Legalizer CPU: 0.153
-Total Legalizer Wall Time: 0.153
+Total Legalizer CPU: 0.155
+Total Legalizer Wall Time: 0.155
 ----------------------------------------------------------------
 
-Clock-opt legalization complete           CPU:   137 s (  0.04 hr )  ELAPSE:   137 s (  0.04 hr )  MEM-PEAK:  1515 MB
+Clock-opt legalization complete           CPU:   138 s (  0.04 hr )  ELAPSE:   138 s (  0.04 hr )  MEM-PEAK:  1515 MB
 rtapi Thread-server 0: shutdown 
 Mgr Thread-server 0: Dtor 
 
@@ -14356,7 +14356,7 @@ Initial. Via VIA9RDL count = 0
 Initial. completed.
 
 Start GR phase 1
-Sun Jun 28 19:57:58 2026
+Sun Jun 28 20:13:38 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -14410,7 +14410,7 @@ phase1. Via VIA9RDL count = 0
 phase1. completed.
 
 Start GR phase 2
-Sun Jun 28 19:57:58 2026
+Sun Jun 28 20:13:38 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -14464,7 +14464,7 @@ phase2. Via VIA9RDL count = 0
 phase2. completed.
 
 Start GR phase 3
-Sun Jun 28 19:57:59 2026
+Sun Jun 28 20:13:39 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -14575,10 +14575,10 @@ Information: The following app options are used in cellmap
         cts.placement.cell_spacing_rule_style : maximum
 Total 0.0100 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0xa798a930): 361
+INFO: number of GridCells (0xa6a96930): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0xa798a930): 361
-Total 0.0100 seconds to load 1118 cell instances into cellmap
+INFO: number of GridCells (0xa6a96930): 361
+Total 0.0200 seconds to load 1118 cell instances into cellmap
 Moveable cells: 1116; Application fixed cells: 2; Macro cells: 0; User fixed cells: 0
 0 out of 1232 data nets is detail routed, 3 out of 3 clock nets are detail routed and total 1235 nets have been analyzed
 Only clock route nets/shapes. Estimated current stage is after clock detail route stage
@@ -15097,13 +15097,13 @@ Warning: Design includes unreasonable large hold violation(s). (OPT-209)
 Clock-opt optimization Phase 39 Iter  2         0.00        0.00      0.00         0        410.48   138583.67        1118              0.04      1515
 Warning: Design includes unreasonable large hold violation(s). (OPT-209)
 INFO: updating slack distrubution time borrowing
-updateTimeBorrowsAndSi elapsed: 11.186000
+updateTimeBorrowsAndSi elapsed: 10.879000
 
 
 Clock-opt route preserve complete         CPU:   143 s (  0.04 hr )  ELAPSE:   143 s (  0.04 hr )  MEM-PEAK:  1515 MB
 
 Information: Ending clock_opt / final_opto (FLW-8001)
-Information: Time: 2026-06-28 19:58:02 / Session: 0.04 hr / Command: 0.02 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:13:42 / Session: 0.04 hr / Command: 0.02 hr / Memory: 1515 MB (FLW-8100)
 
 
 Clock-opt optimization complete                 0.00        0.00      0.00         0        410.48   138583.67        1118              0.04      1515
@@ -15266,11 +15266,11 @@ Cell: u_alu/ctmTdsLR_3_980 (SAEDLVT14_NR2_ISO_1)
   Displacement:   0.000 um ( 0.00 row height)
 
 Legalization succeeded.
-Total Legalizer CPU: 0.147
-Total Legalizer Wall Time: 0.147
+Total Legalizer CPU: 0.150
+Total Legalizer Wall Time: 0.150
 ----------------------------------------------------------------
 
-Clock-opt legalization complete           CPU:   143 s (  0.04 hr )  ELAPSE:   143 s (  0.04 hr )  MEM-PEAK:  1515 MB
+Clock-opt legalization complete           CPU:   143 s (  0.04 hr )  ELAPSE:   144 s (  0.04 hr )  MEM-PEAK:  1515 MB
 rtapi Thread-server 0: shutdown 
 Mgr Thread-server 0: Dtor 
 
@@ -15879,7 +15879,7 @@ Initial. Via VIA9RDL count = 0
 Initial. completed.
 
 Start GR phase 1
-Sun Jun 28 19:58:03 2026
+Sun Jun 28 20:13:43 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -15933,7 +15933,7 @@ phase1. Via VIA9RDL count = 0
 phase1. completed.
 
 Start GR phase 2
-Sun Jun 28 19:58:04 2026
+Sun Jun 28 20:13:44 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -15987,7 +15987,7 @@ phase2. Via VIA9RDL count = 0
 phase2. completed.
 
 Start GR phase 3
-Sun Jun 28 19:58:04 2026
+Sun Jun 28 20:13:44 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -16062,7 +16062,7 @@ Information: Extraction observers are detached as design net change threshold is
 [End of dbOut] Stage (MB): Used  -34  Alloctr  -34  Proc    0 
 [End of dbOut] Total (MB): Used   36  Alloctr   37  Proc 12638 
 
-Clock-opt Incremental Global-routing complete  CPU:   145 s (  0.04 hr )  ELAPSE:   145 s (  0.04 hr )  MEM-PEAK:  1515 MB
+Clock-opt Incremental Global-routing complete  CPU:   146 s (  0.04 hr )  ELAPSE:   146 s (  0.04 hr )  MEM-PEAK:  1515 MB
 INFO: place.legalize.enable_advanced_legalizer not set - need to revert CLO
 INFO: First Clock-opt did not mark run with CLO enabled/disabled property
 Co-efficient Ratio Summary:
@@ -16164,31 +16164,31 @@ Scene  PG      WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrn
 Clock-opt final QoR Summary         WNS        TNS   R2RTNS    NSV      WHV        THV    NHV  MaxTrnV  MaxCapV    Leakage         Area    InstCnt
 Clock-opt final QoR Summary      0.0000     0.0000   0.0000      0   0.0000     0.0000      0        0        2 138583.672       410.48       1118
 
-Clock-opt command complete                CPU:   145 s (  0.04 hr )  ELAPSE:   145 s (  0.04 hr )  MEM-PEAK:  1515 MB
+Clock-opt command complete                CPU:   146 s (  0.04 hr )  ELAPSE:   146 s (  0.04 hr )  MEM-PEAK:  1515 MB
 Clock-opt command statistics  CPU=50 sec (0.01 hr) ELAPSED=50 sec (0.01 hr) MEM-PEAK=1.479 GB
 1
 TEST: runCore final-init
 TEST: runCore final-end
 Information: Running auto PG connection. (NDM-099)
 Information: Ending 'clock_opt' (FLW-8001)
-Information: Time: 2026-06-28 19:58:05 / Session: 0.04 hr / Command: 0.02 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:13:45 / Session: 0.04 hr / Command: 0.02 hr / Memory: 1515 MB (FLW-8100)
 1
 report_clock_qor                     > $RPT_DIR/clock_qor.rpt
 report_timing  -max_paths 5          > $RPT_DIR/timing_cts.rpt
 route_opt
 Information: Starting 'route_opt' (FLW-8000)
-Information: Time: 2026-06-28 19:58:05 / Session: 0.04 hr / Command: 0.00 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:13:45 / Session: 0.04 hr / Command: 0.00 hr / Memory: 1515 MB (FLW-8100)
 INFO: route_opt is running in balanced flow mode
 Warning: SI analysis is not enabled for post-route optimization. (ROPT-002)
 INFO: Total Power Aware Optimization Enabled (Dynamic + Leakage)
-Route-opt command begin                   CPU:   146 s (  0.04 hr )  ELAPSE:   146 s (  0.04 hr )  MEM-PEAK:  1515 MB
+Route-opt command begin                   CPU:   146 s (  0.04 hr )  ELAPSE:   147 s (  0.04 hr )  MEM-PEAK:  1515 MB
 Warning: SI analysis is not enabled for post-route optimization. (ROPT-002)
 INFO: place.legalize.enable_advanced_legalizer not set - need to revert CLO
 INFO: Concurrent Legalization and Optimization (CLO) Reverted
 INFO: place.legalize.enable_advanced_legalizer not set - need to revert CLO
 Info: update em.
 
-Route-opt timing update complete          CPU:   146 s (  0.04 hr )  ELAPSE:   146 s (  0.04 hr )  MEM-PEAK:  1515 MB
+Route-opt timing update complete          CPU:   146 s (  0.04 hr )  ELAPSE:   147 s (  0.04 hr )  MEM-PEAK:  1515 MB
 INFO: Propagating Switching Activities
 Information: Activity propagation will be performed for scenario default.
 Information: Doing activity propagation for mode 'default' and corner 'default' with effort level 'medium'. (POW-024)
@@ -16275,12 +16275,12 @@ Layer M1: cached 0 shapes out of 1826 total shapes.
 Layer M2: cached 0 shapes out of 2228 total shapes.
 Layer M3: cached 0 shapes out of 755 total shapes.
 Cached 0 vias out of 10710 total vias.
-Total 0.0400 seconds to build cellmap data
+Total 0.0300 seconds to build cellmap data
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0xa2a88a80): 361
+INFO: number of GridCells (0x9f49aa80): 361
 INFO: creating 19(r) x 19(c) GridCells YDim 1.8 XDim 1.8
-INFO: number of GridCells (0xa2a88a80): 361
-Total 0.0200 seconds to load 1118 cell instances into cellmap
+INFO: number of GridCells (0x9f49aa80): 361
+Total 0.0300 seconds to load 1118 cell instances into cellmap
 Moveable cells: 1116; Application fixed cells: 2; Macro cells: 0; User fixed cells: 0
 0 out of 1232 data nets is detail routed, 3 out of 3 clock nets are detail routed and total 1235 nets have been analyzed
 Only clock route nets/shapes. Estimated current stage is after clock detail route stage
@@ -16374,11 +16374,11 @@ Route-opt optimization Phase 13 Iter  2         0.00        0.00      0.00      
 Warning: Design includes unreasonable large hold violation(s). (OPT-209)
 
 
-Route-opt route preserve complete         CPU:   151 s (  0.04 hr )  ELAPSE:   151 s (  0.04 hr )  MEM-PEAK:  1515 MB
+Route-opt route preserve complete         CPU:   152 s (  0.04 hr )  ELAPSE:   152 s (  0.04 hr )  MEM-PEAK:  1515 MB
 
 INFO: Sending timing info to router
 Information: Serialized np data
-INFO: timer data saved to /tmp/adaptive_pg_top_48897_587200384.timdat
+INFO: timer data saved to /tmp/adaptive_pg_top_55688_583311232.timdat
 Information: The netlist change observers are enabled for incremental extraction. (TIM-127)
 nplDplc2Placer::setParam(effort,1)
 nplDplc2Placer::setParam(debug,0)
@@ -16415,7 +16415,7 @@ Information: The following app options are used in cellmap
         place.common.use_placement_model : false
         place.common.enable_advanced_placement_model : true
         cts.placement.cell_spacing_rule_style : maximum
-Total 0.0100 seconds to build cellmap data
+Total 0.0200 seconds to build cellmap data
 Information: Creating classic rule checker.
 Warning: Routing direction of metal layer PO is neither "horizontal" nor "vertical".  PDC checks will not be performed on this layer. (PDC-003)
 =====> Processed 82 ref cells (25 fillers) from library
@@ -16537,11 +16537,11 @@ Cell: u_alu/ctmTdsLR_3_980 (SAEDLVT14_NR2_ISO_1)
   Displacement:   0.000 um ( 0.00 row height)
 
 Legalization succeeded.
-Total Legalizer CPU: 0.149
-Total Legalizer Wall Time: 0.149
+Total Legalizer CPU: 0.150
+Total Legalizer Wall Time: 0.150
 ----------------------------------------------------------------
 
-Route-opt legalization complete           CPU:   151 s (  0.04 hr )  ELAPSE:   151 s (  0.04 hr )  MEM-PEAK:  1515 MB
+Route-opt legalization complete           CPU:   152 s (  0.04 hr )  ELAPSE:   152 s (  0.04 hr )  MEM-PEAK:  1515 MB
 INFO: Router Max Iterations set to : 5 
 Cell Min-Routing-Layer = M1
 Cell Max-Routing-Layer = MRDL
@@ -17136,7 +17136,7 @@ Initial. Via VIA9RDL count = 0
 Initial. completed.
 
 Start GR phase 1
-Sun Jun 28 19:58:12 2026
+Sun Jun 28 20:13:52 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -17188,7 +17188,7 @@ phase1. Via VIA9RDL count = 0
 phase1. completed.
 
 Start GR phase 2
-Sun Jun 28 19:58:12 2026
+Sun Jun 28 20:13:52 2026
 Number of partitions: 1 (1 x 1)
 Size of partitions: 38 gCells x 38 gCells
 [rtAllParts] Elapsed real time: 0:00:00 
@@ -17468,7 +17468,7 @@ DRC-SUMMARY:
         Same net via-cut spacing : 71
         Short : 553
 
-[Iter 0] Elapsed real time: 0:02:12 
+[Iter 0] Elapsed real time: 0:02:11 
 [Iter 0] Elapsed cpu  time: sys=0:00:02 usr=0:02:12 total=0:02:15
 [Iter 0] Stage (MB): Used   73  Alloctr   73  Proc    0 
 [Iter 0] Total (MB): Used  108  Alloctr  109  Proc 12638 
@@ -17654,7 +17654,7 @@ DRC-SUMMARY:
         Short : 194
 
 [Iter 3] Elapsed real time: 0:04:59 
-[Iter 3] Elapsed cpu  time: sys=0:00:05 usr=0:05:00 total=0:05:06
+[Iter 3] Elapsed cpu  time: sys=0:00:06 usr=0:05:00 total=0:05:06
 [Iter 3] Stage (MB): Used   73  Alloctr   73  Proc    0 
 [Iter 3] Total (MB): Used  108  Alloctr  109  Proc 12638 
 
@@ -17710,7 +17710,7 @@ DRC-SUMMARY:
         Short : 152
 
 [Iter 4] Elapsed real time: 0:06:00 
-[Iter 4] Elapsed cpu  time: sys=0:00:07 usr=0:06:01 total=0:06:08
+[Iter 4] Elapsed cpu  time: sys=0:00:07 usr=0:06:01 total=0:06:09
 [Iter 4] Stage (MB): Used   73  Alloctr   73  Proc    0 
 [Iter 4] Total (MB): Used  108  Alloctr  109  Proc 12638 
 
@@ -17885,7 +17885,7 @@ Net 100 = alu_result_raw[14]
 Total number of changed nets = 1193 (out of 1237)
 
 [DR: Done] Elapsed real time: 0:06:03 
-[DR: Done] Elapsed cpu  time: sys=0:00:07 usr=0:06:04 total=0:06:12
+[DR: Done] Elapsed cpu  time: sys=0:00:07 usr=0:06:05 total=0:06:12
 [DR: Done] Stage (MB): Used    0  Alloctr    0  Proc    0 
 [DR: Done] Total (MB): Used   35  Alloctr   36  Proc 12638 
 [ECO: DR] Elapsed real time: 0:06:06 
@@ -18134,12 +18134,12 @@ Topology ECO not run, no qualifying violations or in frozen nets.
 Updating the database ...
 Information: Extraction observers are detached as design net change threshold is reached.
 ...updated 1193 nets with eco mode
-[ECO: End] Elapsed real time: 0:06:06 
+[ECO: End] Elapsed real time: 0:06:07 
 [ECO: End] Elapsed cpu  time: sys=0:00:07 usr=0:06:08 total=0:06:15
 [ECO: End] Stage (MB): Used   -2  Alloctr   -2  Proc    0 
 [ECO: End] Total (MB): Used    0  Alloctr    1  Proc 12638 
 
-Route-opt ECO routing complete            CPU:   520 s (  0.14 hr )  ELAPSE:   518 s (  0.14 hr )  MEM-PEAK:  1515 MB
+Route-opt ECO routing complete            CPU:   520 s (  0.14 hr )  ELAPSE:   519 s (  0.14 hr )  MEM-PEAK:  1515 MB
 Co-efficient Ratio Summary:
 4.193421605155  6.578038173730  2.479639287277  7.744187540401  0.485050000353  3.179565833784  5.567214754587  2.894454387461  6.565921217863  9.017937705874  3.117428167010  9.863470546651  6.078234764085  2.744208441123  8.318121804907
 9.699225026083  2.464623950064  1.382370221226  9.387184029619  3.142429406669  0.968752789964  6.613180723294  4.146578793224  7.876358918112  2.191135303696  0.976582408171  2.700189480681  3.840561864440  3.750206153169  7.663464042299
@@ -18227,21 +18227,27 @@ Route-opt final QoR Summary      0.0000     0.0000   0.0000      0   0.0000     
 
 Route-opt optimization complete                 0.00        0.00      0.00         0        410.61   138427.83        1118              0.14      1515
 
-Route-opt command complete                CPU:   520 s (  0.14 hr )  ELAPSE:   519 s (  0.14 hr )  MEM-PEAK:  1515 MB
+Route-opt command complete                CPU:   521 s (  0.14 hr )  ELAPSE:   520 s (  0.14 hr )  MEM-PEAK:  1515 MB
 Route-opt command statistics  CPU=375 sec (0.10 hr) ELAPSED=373 sec (0.10 hr) MEM-PEAK=1.479 GB
 Information: Ending 'route_opt' (FLW-8001)
-Information: Time: 2026-06-28 20:04:19 / Session: 0.14 hr / Command: 0.10 hr / Memory: 1515 MB (FLW-8100)
+Information: Time: 2026-06-28 20:19:59 / Session: 0.14 hr / Command: 0.10 hr / Memory: 1515 MB (FLW-8100)
 1
 report_timing  -max_paths 10         > $RPT_DIR/timing_postroute.rpt
-report_area                          > $RPT_DIR/area_postroute.rpt
-Error: Command 'report_area' is disabled. (CMD-080)
+report_utilization                   > $RPT_DIR/area_postroute.rpt
+catch { report_power   -analysis_effort high > $RPT_DIR/power_postroute.rpt }
+1
+write_verilog  $OUT_DIR/${DESIGN}_postroute.v
+1
+write_sdc      $OUT_DIR/${DESIGN}_postroute.sdc
+Error: extra positional option './outputs/adaptive_pg_top_postroute.sdc' (CMD-012)
+Error: Required argument '-output' was not found (CMD-007)
 Information: script '/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl'
-                stopped at line 63 due to error. (CMD-081)
+                stopped at line 67 due to error. (CMD-081)
 Extended error info:
 
     while executing
-"report_area                          > $RPT_DIR/area_postroute.rpt"
-    (file "/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl" line 63)
+"write_sdc      $OUT_DIR/${DESIGN}_postroute.sdc"
+    (file "/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl" line 67)
  -- End Extended Error Info
 Information: 51 out of 56 LGL-050 messages were not printed due to limit 5  (MSG-3913)
 Information: 172 out of 182 POW-080 messages were not printed due to limit 10  (MSG-3913)

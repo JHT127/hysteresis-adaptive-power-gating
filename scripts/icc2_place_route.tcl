@@ -64,7 +64,7 @@ report_utilization                   > $RPT_DIR/area_postroute.rpt
 catch { report_power   -analysis_effort high > $RPT_DIR/power_postroute.rpt }
 
 write_verilog  $OUT_DIR/${DESIGN}_postroute.v
-write_sdc      $OUT_DIR/${DESIGN}_postroute.sdc
+write_sdc      -output $OUT_DIR/${DESIGN}_postroute.sdc
 save_lib
 
 puts "\n=== ICC2 COMPLETE ==="
