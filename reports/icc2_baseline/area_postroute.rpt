@@ -1,0 +1,26 @@
+****************************************
+Report : report_utilization
+Design : static_pg_top
+Version: U-2022.12-SP5
+Date   : Sun Jun 28 20:55:45 2026
+****************************************
+Utilization Ratio:			0.4015
+Utilization options:
+ - Area calculation based on:		site_row of block static_pg_top
+ - Categories of objects excluded:	hard_macros macro_keepouts soft_macros io_cells hard_blockages 
+Total Area:				899.1000
+Total Capacity Area:			899.1000
+Total Area of cells:			361.0164
+Area of excluded objects:
+ - hard_macros         :		0.0000
+ - macro_keepouts      :		0.0000
+ - soft_macros         :		0.0000
+ - io_cells            :		0.0000
+ - hard_blockages      :		0.0000
+Total Area of excluded objects:		0.0000
+Ratio of excluded objects:		0.0000
+
+Utilization of site-rows with:
+ - Site 'unit':				0.4015
+
+0.4015
