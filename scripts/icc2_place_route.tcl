@@ -22,6 +22,16 @@ read_verilog -design $DESIGN $NETLIST
 link_design  $DESIGN
 read_sdc     $SDC_FILE
 
+# FIX (parasitics): the SAED14LVT package DOES include TLUplus data — it
+# was just never attached. Found at /usr/synopsys/saed/tech/star_rc/,
+# confirmed world-readable. This is what was actually causing
+# "Scenario Manager creation failed" (OPT-041) in every prior place_opt/
+# clock_opt attempt — not a true absence of parasitic data.
+set_tlu_plus_files \
+    -max_tluplus /usr/synopsys/saed/tech/star_rc/max/saed14nm_1p9m_Cmax.tluplus \
+    -min_tluplus /usr/synopsys/saed/tech/star_rc/min/saed14nm_1p9m_Cmin.tluplus \
+    -tech2itf_map /usr/synopsys/saed/tech/star_rc/saed14nm_tf_itf_tluplus.map
+
 initialize_floorplan \
     -boundary {{0 0} {30 30}} \
     -core_offset 2
@@ -30,7 +40,7 @@ create_net -power  VDD
 create_net -ground VSS
 connect_pg_net -automatic
 
-create_placement
+place_opt
 report_timing  -max_paths 5          > $RPT_DIR/timing_place.rpt
 catch { report_power   -analysis_effort high > $RPT_DIR/power_place.rpt }
 
