@@ -22,15 +22,25 @@ read_verilog -design $DESIGN $NETLIST
 link_design  $DESIGN
 read_sdc     $SDC_FILE
 
-# FIX (parasitics): the SAED14LVT package DOES include TLUplus data — it
-# was just never attached. Found at /usr/synopsys/saed/tech/star_rc/,
-# confirmed world-readable. This is what was actually causing
-# "Scenario Manager creation failed" (OPT-041) in every prior place_opt/
-# clock_opt attempt — not a true absence of parasitic data.
-set_tlu_plus_files \
-    -max_tluplus /usr/synopsys/saed/tech/star_rc/max/saed14nm_1p9m_Cmax.tluplus \
-    -min_tluplus /usr/synopsys/saed/tech/star_rc/min/saed14nm_1p9m_Cmin.tluplus \
-    -tech2itf_map /usr/synopsys/saed/tech/star_rc/saed14nm_tf_itf_tluplus.map
+# FIX (parasitics, corrected): set_tlu_plus_files is an ICC1/DC command and
+# doesn't exist in ICC2 (confirmed via `man`). ICC2's real two-step sequence:
+# (1) read_parasitic_tech loads the TLUplus data into the library under a
+#     named model; (2) set_parasitic_parameters attaches that named model to
+#     the active constraint corner for RC extraction. Both confirmed via
+#     `man read_parasitic_tech` / `man set_parasitic_parameters`.
+read_parasitic_tech \
+    -tlup /usr/synopsys/saed/tech/star_rc/max/saed14nm_1p9m_Cmax.tluplus \
+    -layermap /usr/synopsys/saed/tech/star_rc/saed14nm_tf_itf_tluplus.map \
+    -name saed14lvt_max
+
+read_parasitic_tech \
+    -tlup /usr/synopsys/saed/tech/star_rc/min/saed14nm_1p9m_Cmin.tluplus \
+    -layermap /usr/synopsys/saed/tech/star_rc/saed14nm_tf_itf_tluplus.map \
+    -name saed14lvt_min
+
+set_parasitic_parameters \
+    -early_spec saed14lvt_min \
+    -late_spec  saed14lvt_max
 
 initialize_floorplan \
     -boundary {{0 0} {30 30}} \
