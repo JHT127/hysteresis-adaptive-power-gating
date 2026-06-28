@@ -166,3 +166,9 @@ wvZoomIn -win $_nWave2
 verdiCaptureWindow -win $_nWave2
 wvCapture -win $_nWave2 -file \
           "/home/st160/VLSI-Project/vlsi-project/paper/waveform_2.png"
+verdiCloseDialog -win $_nWave2 -widget capturePreview
+wvZoomIn -win $_nWave2
+wvZoomOut -win $_nWave2
+verdiCaptureWindow -win $_nWave2
+wvCapture -win $_nWave2 -file \
+          "/home/st160/VLSI-Project/vlsi-project/paper/waveform_3.png"
