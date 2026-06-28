@@ -1,0 +1,55 @@
+ 
+                              IC Compiler II (TM)
+
+             Version U-2022.12-SP5 for linux64 - Jul 19, 2023 -SLE
+
+                    Copyright (c) 1988 - 2023 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+set DESIGN   "adaptive_pg_top"
+adaptive_pg_top
+set NETLIST  "./netlists/proposed/adaptive_pg_top_lp.v"
+./netlists/proposed/adaptive_pg_top_lp.v
+set SDC_FILE "./netlists/proposed/adaptive_pg_top_lp.sdc"
+./netlists/proposed/adaptive_pg_top_lp.sdc
+set RPT_DIR  "./reports/icc2"
+./reports/icc2
+set OUT_DIR  "./outputs"
+./outputs
+set TECH_NDM "/usr/synopsys/saed/stdcell_lvt/ndm/tech_ndm/1p9m_tech.ndm"
+/usr/synopsys/saed/stdcell_lvt/ndm/tech_ndm/1p9m_tech.ndm
+set REF_NDM  "/usr/synopsys/saed/stdcell_lvt/ndm/saed14lvt_frame_timing_ccs.ndm"
+/usr/synopsys/saed/stdcell_lvt/ndm/saed14lvt_frame_timing_ccs.ndm
+file mkdir $RPT_DIR
+file mkdir $OUT_DIR
+file delete -force ${DESIGN}_icc2.dlib
+create_lib ${DESIGN}_icc2.dlib \
+    -ref_libs [list $TECH_NDM $REF_NDM]
+{adaptive_pg_top_icc2.dlib}
+# FIX (Phase 2): read_verilog has no -library option in ICC2 — the design
+# library context is already established by create_lib above. The original
+# "-library WORK" argument caused CMD-081 / SEL-005 and aborted the script
+# before anything else ran.
+read_verilog -design $DESIGN $NETLIST
+Error: File './netlists/proposed/adaptive_pg_top_lp.v' cannot be found using search_path of: '.'. (FILE-002)
+Information: script '/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl'
+                stopped at line 21 due to error. (CMD-081)
+Extended error info:
+
+    while executing
+"read_verilog -design $DESIGN $NETLIST"
+    (file "/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl" line 21)
+ -- End Extended Error Info
