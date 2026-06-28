@@ -1,8 +1,0 @@
-/home/st25/vlsi_codes/rtl/activity_monitor.v
-/home/st25/vlsi_codes/rtl/adaptive_pg_top.v
-/home/st25/vlsi_codes/rtl/alu_32bit.v
-/home/st25/vlsi_codes/rtl/hysteresis_predictor.v
-/home/st25/vlsi_codes/rtl/isolation_ctrl.v
-/home/st25/vlsi_codes/rtl/power_state_fsm.v
-/home/st25/vlsi_codes/rtl/sleep_controller.v
-/home/st25/vlsi_codes/tb/tb_adaptive_pg_top.v
