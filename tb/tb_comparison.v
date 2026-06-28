@@ -170,10 +170,10 @@ module tb_comparison;
 
         // WL1: BURST
         $display("\n===========================================================");
-        $display("  WORKLOAD 1: BURST (10-op bursts, 1-cycle idle)");
+        $display("  WORKLOAD 1: BURST (8-op bursts, 5-cycle idle)");
         $display("===========================================================");
         reset_counters;
-        repeat(8) begin repeat(10) alu_op(4'b0000,$urandom,$urandom); idle_cycles(1); end
+        repeat(10) begin repeat(8) alu_op(4'b0000,$urandom,$urandom); idle_cycles(5); end
         idle_cycles(5);
         print_table("BURST");
         $display("  [EXPECTED] Baseline thrashes (fixed 3-cycle threshold has no");
