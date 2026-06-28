@@ -1,0 +1,56 @@
+Information: Propagating switching activity (high effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort high
+Design : static_pg_top
+Version: R-2020.09-SP5-5
+Date   : Sun Jun 28 18:10:30 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed14lvt_tt0p8v25c (File: /usr/synopsys/saed/stdcell_lvt/db_nldm/saed14lvt_tt0p8v25c.db)
+
+
+Operating Conditions: tt0p8v25c   Library: saed14lvt_tt0p8v25c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+static_pg_top          8000              saed14lvt_tt0p8v25c
+
+
+Global Operating Voltage = 0.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  28.7961 uW   (69%)
+  Net Switching Power  =  12.9098 uW   (31%)
+                         ---------
+Total Dynamic Power    =  41.7059 uW  (100%)
+
+Cell Leakage Power     = 831.2471 nW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register          23.8150            0.4667        1.5455e+05           24.4362  (  57.45%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      4.9812           12.4431        6.7526e+05           18.0995  (  42.55%)
+--------------------------------------------------------------------------------------------------
+Total             28.7961 uW        12.9098 uW     8.2981e+05 pW        42.5358 uW
+1

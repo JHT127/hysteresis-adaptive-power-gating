@@ -1,0 +1,58 @@
+Information: Propagating switching activity (high effort zero delay simulation). (PWR-6)
+Warning: Design has unannotated primary inputs. (PWR-414)
+Warning: Design has unannotated sequential cell outputs. (PWR-415)
+ 
+****************************************
+Report : power
+        -analysis_effort high
+Design : adaptive_pg_top
+Version: R-2020.09-SP5-5
+Date   : Sun Jun 28 18:12:20 2026
+****************************************
+
+
+Library(s) Used:
+
+    saed14lvt_tt0p8v25c (File: /usr/synopsys/saed/stdcell_lvt/db_nldm/saed14lvt_tt0p8v25c.db)
+
+Information: The library cell 'SAEDLVT14_LSRDPQ_1' in the library 'saed14lvt_tt0p8v25c' is not characterized for internal power. (PWR-227)
+Information: The design contains cells, other than constants and black boxes, that are not characterized for internal power. (PWR-228)
+
+Operating Conditions: tt0p8v25c   Library: saed14lvt_tt0p8v25c
+Wire Load Model Mode: top
+
+Design        Wire Load Model            Library
+------------------------------------------------
+adaptive_pg_top        8000              saed14lvt_tt0p8v25c
+
+
+Global Operating Voltage = 0.8  
+Power-specific unit information :
+    Voltage Units = 1V
+    Capacitance Units = 1.000000ff
+    Time Units = 1ns
+    Dynamic Power Units = 1uW    (derived from V,C,T units)
+    Leakage Power Units = 1pW
+
+
+  Cell Internal Power  =  15.2122 uW   (72%)
+  Net Switching Power  =   5.9079 uW   (28%)
+                         ---------
+Total Dynamic Power    =  21.1201 uW  (100%)
+
+Cell Leakage Power     =   1.0437 uW
+
+
+                 Internal         Switching           Leakage            Total
+Power Group      Power            Power               Power              Power   (   %    )  Attrs
+--------------------------------------------------------------------------------------------------
+io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
+black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
+clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
+register          12.3245            0.2758        2.0501e+05           12.8054  (  57.78%)
+sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
+combinational      2.8876            5.6321        8.3725e+05            9.3570  (  42.22%)
+--------------------------------------------------------------------------------------------------
+Total             15.2122 uW         5.9079 uW     1.0423e+06 pW        22.1624 uW
+1

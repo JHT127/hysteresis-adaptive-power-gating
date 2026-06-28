@@ -44,12 +44,60 @@ create_lib ${DESIGN}_icc2.dlib \
 # "-library WORK" argument caused CMD-081 / SEL-005 and aborted the script
 # before anything else ran.
 read_verilog -design $DESIGN $NETLIST
-Error: File './netlists/proposed/adaptive_pg_top_lp.v' cannot be found using search_path of: '.'. (FILE-002)
+Information: Reading Verilog into new design 'adaptive_pg_top' in library 'adaptive_pg_top_icc2.dlib'. (VR-012)
+Loading verilog file '/home/st160/VLSI-Project/vlsi-project/netlists/proposed/adaptive_pg_top_lp.v'
+Number of modules read: 7
+Top level ports: 118
+Total ports in all modules: 358
+Total nets in all modules: 1570
+Total instances in all modules: 1187
+Elapsed = 00:00:00.02, CPU = 00:00:00.02
+1
+link_design  $DESIGN
+Using libraries: adaptive_pg_top_icc2.dlib 1p9m_tech saed14lvt_frame_timing_ccs
+Linking block adaptive_pg_top_icc2.dlib:adaptive_pg_top.design
+Information: User units loaded from library 'saed14lvt_frame_timing_ccs' (LNK-040)
+Design 'adaptive_pg_top' was successfully linked.
+1
+read_sdc     $SDC_FILE
+Information: Loading SDC version 2.1 file '/home/st160/VLSI-Project/vlsi-project/netlists/proposed/adaptive_pg_top_lp.sdc' (FILE-007)
+Warning: The 'set_max_fanout' command is not supported in this program.  The command will be ignored. (CSTR-011)
+Information: Timer using 1 threads
+1
+initialize_floorplan \
+    -boundary {{0 0} {30 30}} \
+    -core_offset 2
+Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'M2'. (DPUI-924)
+Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'vertical' routing direction for layer 'M3'. (DPUI-924)
+Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'M4'. (DPUI-924)
+Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'vertical' routing direction for layer 'M5'. (DPUI-924)
+Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'M6'. (DPUI-924)
+Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'vertical' routing direction for layer 'M7'. (DPUI-924)
+Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'M8'. (DPUI-924)
+Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'vertical' routing direction for layer 'M9'. (DPUI-924)
+Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'MRDL'. (DPUI-924)
+Removing existing floorplan objects
+Creating core...
+Core utilization ratio = 47.95%
+Unplacing all cells...
+Creating site array...
+Creating routing tracks...
+Initializing floorplan completed.
+create_net -power  VDD
+{VDD}
+create_net -ground VSS
+{VSS}
+create_pg_ring_pattern ring_pat \
+    [list [list -net VDD -layer M8 -width 0.8] \
+          [list -net VSS -layer M8 -width 0.8]]
+Error: extra positional option '{-net VDD -layer M8 -width 0.8} {-net VSS -layer M8 -width 0.8}' (CMD-012)
 Information: script '/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl'
-                stopped at line 21 due to error. (CMD-081)
+                stopped at line 31 due to error. (CMD-081)
 Extended error info:
 
     while executing
-"read_verilog -design $DESIGN $NETLIST"
-    (file "/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl" line 21)
+"create_pg_ring_pattern ring_pat \
+    [list [list -net VDD -layer M8 -width 0.8] \
+          [list -net VSS -layer M8 -width 0.8]]"
+    (file "/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl" line 31)
  -- End Extended Error Info

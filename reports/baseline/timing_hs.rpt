@@ -1,0 +1,516 @@
+Information: Updating design information... (UID-85)
+ 
+****************************************
+Report : timing
+        -path full
+        -delay max
+        -max_paths 5
+Design : static_pg_top
+Version: R-2020.09-SP5-5
+Date   : Sun Jun 28 18:10:30 2026
+****************************************
+
+Operating Conditions: tt0p8v25c   Library: saed14lvt_tt0p8v25c
+Wire Load Model Mode: top
+
+  Startpoint: op[1] (input port clocked by clk)
+  Endpoint: u_alu/result_reg[31]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  static_pg_top      8000                  saed14lvt_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.40       0.40 f
+  op[1] (in)                                              0.00       0.40 f
+  u_alu/op[1] (alu_32bit)                                 0.00       0.40 f
+  u_alu/U224/X (SAEDLVT14_INV_4)                          0.05       0.45 r
+  u_alu/U709/X (SAEDLVT14_ND2_CDC_0P5)                    0.02       0.47 f
+  u_alu/U221/X (SAEDLVT14_NR2_MM_1)                       0.02       0.48 r
+  u_alu/U748/X (SAEDLVT14_ND2_CDC_0P5)                    0.04       0.52 f
+  u_alu/U499/X (SAEDLVT14_INV_1)                          0.08       0.61 r
+  u_alu/DP_OP_23J1_122_7706/U33/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.09       0.70 r
+  u_alu/DP_OP_23J1_122_7706/U32/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       0.74 r
+  u_alu/DP_OP_23J1_122_7706/U31/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.79 r
+  u_alu/DP_OP_23J1_122_7706/U30/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.83 r
+  u_alu/DP_OP_23J1_122_7706/U29/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       0.87 r
+  u_alu/DP_OP_23J1_122_7706/U28/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       0.91 r
+  u_alu/DP_OP_23J1_122_7706/U27/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.96 r
+  u_alu/DP_OP_23J1_122_7706/U26/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.00 r
+  u_alu/DP_OP_23J1_122_7706/U25/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       1.04 r
+  u_alu/DP_OP_23J1_122_7706/U24/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.09 r
+  u_alu/DP_OP_23J1_122_7706/U23/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.13 r
+  u_alu/DP_OP_23J1_122_7706/U22/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.17 r
+  u_alu/DP_OP_23J1_122_7706/U21/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.22 r
+  u_alu/DP_OP_23J1_122_7706/U20/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.26 r
+  u_alu/DP_OP_23J1_122_7706/U19/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.30 r
+  u_alu/DP_OP_23J1_122_7706/U18/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.34 r
+  u_alu/DP_OP_23J1_122_7706/U17/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.38 r
+  u_alu/DP_OP_23J1_122_7706/U16/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       1.43 r
+  u_alu/DP_OP_23J1_122_7706/U15/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.47 r
+  u_alu/DP_OP_23J1_122_7706/U14/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.52 r
+  u_alu/DP_OP_23J1_122_7706/U13/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.56 r
+  u_alu/DP_OP_23J1_122_7706/U12/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.61 r
+  u_alu/DP_OP_23J1_122_7706/U11/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.65 r
+  u_alu/DP_OP_23J1_122_7706/U10/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.70 r
+  u_alu/DP_OP_23J1_122_7706/U9/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.74 r
+  u_alu/DP_OP_23J1_122_7706/U8/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.76 r
+  u_alu/DP_OP_23J1_122_7706/U7/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.79 r
+  u_alu/DP_OP_23J1_122_7706/U6/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.03       1.83 r
+  u_alu/DP_OP_23J1_122_7706/U5/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.86 r
+  u_alu/DP_OP_23J1_122_7706/U4/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.88 r
+  u_alu/DP_OP_23J1_122_7706/U3/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.91 r
+  u_alu/U269/X (SAEDLVT14_MUXI2_U_0P5)                    0.02       1.93 r
+  u_alu/U267/X (SAEDLVT14_EO2_0P5)                        0.02       1.95 r
+  u_alu/U266/X (SAEDLVT14_OAI22_1)                        0.02       1.97 f
+  u_alu/U790/X (SAEDLVT14_OR4_1)                          0.02       1.99 f
+  u_alu/result_reg[31]/D (SAEDLVT14_FDP_V2LP_0P5)         0.01       1.99 f
+  data arrival time                                                  1.99
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  u_alu/result_reg[31]/CK (SAEDLVT14_FDP_V2LP_0P5)        0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.99
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.00
+
+
+  Startpoint: op[1] (input port clocked by clk)
+  Endpoint: u_alu/result_reg[30]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  static_pg_top      8000                  saed14lvt_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.40       0.40 f
+  op[1] (in)                                              0.00       0.40 f
+  u_alu/op[1] (alu_32bit)                                 0.00       0.40 f
+  u_alu/U224/X (SAEDLVT14_INV_4)                          0.05       0.45 r
+  u_alu/U709/X (SAEDLVT14_ND2_CDC_0P5)                    0.02       0.47 f
+  u_alu/U221/X (SAEDLVT14_NR2_MM_1)                       0.02       0.48 r
+  u_alu/U748/X (SAEDLVT14_ND2_CDC_0P5)                    0.04       0.52 f
+  u_alu/U499/X (SAEDLVT14_INV_1)                          0.08       0.61 r
+  u_alu/DP_OP_23J1_122_7706/U33/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.09       0.70 r
+  u_alu/DP_OP_23J1_122_7706/U32/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       0.74 r
+  u_alu/DP_OP_23J1_122_7706/U31/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.79 r
+  u_alu/DP_OP_23J1_122_7706/U30/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.83 r
+  u_alu/DP_OP_23J1_122_7706/U29/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       0.87 r
+  u_alu/DP_OP_23J1_122_7706/U28/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       0.91 r
+  u_alu/DP_OP_23J1_122_7706/U27/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.96 r
+  u_alu/DP_OP_23J1_122_7706/U26/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.00 r
+  u_alu/DP_OP_23J1_122_7706/U25/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       1.04 r
+  u_alu/DP_OP_23J1_122_7706/U24/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.09 r
+  u_alu/DP_OP_23J1_122_7706/U23/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.13 r
+  u_alu/DP_OP_23J1_122_7706/U22/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.17 r
+  u_alu/DP_OP_23J1_122_7706/U21/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.22 r
+  u_alu/DP_OP_23J1_122_7706/U20/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.26 r
+  u_alu/DP_OP_23J1_122_7706/U19/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.30 r
+  u_alu/DP_OP_23J1_122_7706/U18/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.34 r
+  u_alu/DP_OP_23J1_122_7706/U17/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.38 r
+  u_alu/DP_OP_23J1_122_7706/U16/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       1.43 r
+  u_alu/DP_OP_23J1_122_7706/U15/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.47 r
+  u_alu/DP_OP_23J1_122_7706/U14/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.52 r
+  u_alu/DP_OP_23J1_122_7706/U13/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.56 r
+  u_alu/DP_OP_23J1_122_7706/U12/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.61 r
+  u_alu/DP_OP_23J1_122_7706/U11/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.65 r
+  u_alu/DP_OP_23J1_122_7706/U10/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.70 r
+  u_alu/DP_OP_23J1_122_7706/U9/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.74 r
+  u_alu/DP_OP_23J1_122_7706/U8/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.76 r
+  u_alu/DP_OP_23J1_122_7706/U7/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.79 r
+  u_alu/DP_OP_23J1_122_7706/U6/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.03       1.83 r
+  u_alu/DP_OP_23J1_122_7706/U5/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.86 r
+  u_alu/DP_OP_23J1_122_7706/U4/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.88 r
+  u_alu/DP_OP_23J1_122_7706/U3/S (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.92 f
+  u_alu/U78/X (SAEDLVT14_OA2BB2_V1_1)                     0.02       1.93 r
+  u_alu/U268/X (SAEDLVT14_ND2_CDC_0P5)                    0.01       1.94 f
+  u_alu/U265/X (SAEDLVT14_NR2_1)                          0.01       1.96 r
+  u_alu/U788/X (SAEDLVT14_ND2_CDC_0P5)                    0.01       1.97 f
+  u_alu/result_reg[30]/D (SAEDLVT14_FDP_V2LP_0P5)         0.01       1.98 f
+  data arrival time                                                  1.98
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  u_alu/result_reg[30]/CK (SAEDLVT14_FDP_V2LP_0P5)        0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.98
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.02
+
+
+  Startpoint: op[1] (input port clocked by clk)
+  Endpoint: u_alu/result_reg[29]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  static_pg_top      8000                  saed14lvt_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.40       0.40 f
+  op[1] (in)                                              0.00       0.40 f
+  u_alu/op[1] (alu_32bit)                                 0.00       0.40 f
+  u_alu/U224/X (SAEDLVT14_INV_4)                          0.05       0.45 r
+  u_alu/U709/X (SAEDLVT14_ND2_CDC_0P5)                    0.02       0.47 f
+  u_alu/U221/X (SAEDLVT14_NR2_MM_1)                       0.02       0.48 r
+  u_alu/U748/X (SAEDLVT14_ND2_CDC_0P5)                    0.04       0.52 f
+  u_alu/U499/X (SAEDLVT14_INV_1)                          0.08       0.61 r
+  u_alu/DP_OP_23J1_122_7706/U33/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.09       0.70 r
+  u_alu/DP_OP_23J1_122_7706/U32/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       0.74 r
+  u_alu/DP_OP_23J1_122_7706/U31/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.79 r
+  u_alu/DP_OP_23J1_122_7706/U30/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.83 r
+  u_alu/DP_OP_23J1_122_7706/U29/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       0.87 r
+  u_alu/DP_OP_23J1_122_7706/U28/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       0.91 r
+  u_alu/DP_OP_23J1_122_7706/U27/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.96 r
+  u_alu/DP_OP_23J1_122_7706/U26/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.00 r
+  u_alu/DP_OP_23J1_122_7706/U25/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       1.04 r
+  u_alu/DP_OP_23J1_122_7706/U24/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.09 r
+  u_alu/DP_OP_23J1_122_7706/U23/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.13 r
+  u_alu/DP_OP_23J1_122_7706/U22/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.17 r
+  u_alu/DP_OP_23J1_122_7706/U21/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.22 r
+  u_alu/DP_OP_23J1_122_7706/U20/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.26 r
+  u_alu/DP_OP_23J1_122_7706/U19/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.30 r
+  u_alu/DP_OP_23J1_122_7706/U18/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.34 r
+  u_alu/DP_OP_23J1_122_7706/U17/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.38 r
+  u_alu/DP_OP_23J1_122_7706/U16/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       1.43 r
+  u_alu/DP_OP_23J1_122_7706/U15/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.47 r
+  u_alu/DP_OP_23J1_122_7706/U14/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.52 r
+  u_alu/DP_OP_23J1_122_7706/U13/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.56 r
+  u_alu/DP_OP_23J1_122_7706/U12/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.61 r
+  u_alu/DP_OP_23J1_122_7706/U11/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.65 r
+  u_alu/DP_OP_23J1_122_7706/U10/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.70 r
+  u_alu/DP_OP_23J1_122_7706/U9/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.74 r
+  u_alu/DP_OP_23J1_122_7706/U8/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.76 r
+  u_alu/DP_OP_23J1_122_7706/U7/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.79 r
+  u_alu/DP_OP_23J1_122_7706/U6/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.03       1.83 r
+  u_alu/DP_OP_23J1_122_7706/U5/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.86 r
+  u_alu/DP_OP_23J1_122_7706/U4/S (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.89 f
+  u_alu/U6/X (SAEDLVT14_AO21_U_0P5)                       0.02       1.90 f
+  u_alu/U786/X (SAEDLVT14_OR4_1)                          0.02       1.92 f
+  u_alu/result_reg[29]/D (SAEDLVT14_FDP_V2LP_0P5)         0.01       1.93 f
+  data arrival time                                                  1.93
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  u_alu/result_reg[29]/CK (SAEDLVT14_FDP_V2LP_0P5)        0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.93
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: op[1] (input port clocked by clk)
+  Endpoint: u_alu/result_reg[28]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  static_pg_top      8000                  saed14lvt_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.40       0.40 f
+  op[1] (in)                                              0.00       0.40 f
+  u_alu/op[1] (alu_32bit)                                 0.00       0.40 f
+  u_alu/U224/X (SAEDLVT14_INV_4)                          0.05       0.45 r
+  u_alu/U709/X (SAEDLVT14_ND2_CDC_0P5)                    0.02       0.47 f
+  u_alu/U221/X (SAEDLVT14_NR2_MM_1)                       0.02       0.48 r
+  u_alu/U748/X (SAEDLVT14_ND2_CDC_0P5)                    0.04       0.52 f
+  u_alu/U499/X (SAEDLVT14_INV_1)                          0.08       0.61 r
+  u_alu/DP_OP_23J1_122_7706/U33/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.09       0.70 r
+  u_alu/DP_OP_23J1_122_7706/U32/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       0.74 r
+  u_alu/DP_OP_23J1_122_7706/U31/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.79 r
+  u_alu/DP_OP_23J1_122_7706/U30/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.83 r
+  u_alu/DP_OP_23J1_122_7706/U29/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       0.87 r
+  u_alu/DP_OP_23J1_122_7706/U28/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       0.91 r
+  u_alu/DP_OP_23J1_122_7706/U27/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.96 r
+  u_alu/DP_OP_23J1_122_7706/U26/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.00 r
+  u_alu/DP_OP_23J1_122_7706/U25/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       1.04 r
+  u_alu/DP_OP_23J1_122_7706/U24/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.09 r
+  u_alu/DP_OP_23J1_122_7706/U23/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.13 r
+  u_alu/DP_OP_23J1_122_7706/U22/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.17 r
+  u_alu/DP_OP_23J1_122_7706/U21/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.22 r
+  u_alu/DP_OP_23J1_122_7706/U20/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.26 r
+  u_alu/DP_OP_23J1_122_7706/U19/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.30 r
+  u_alu/DP_OP_23J1_122_7706/U18/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.34 r
+  u_alu/DP_OP_23J1_122_7706/U17/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.38 r
+  u_alu/DP_OP_23J1_122_7706/U16/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       1.43 r
+  u_alu/DP_OP_23J1_122_7706/U15/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.47 r
+  u_alu/DP_OP_23J1_122_7706/U14/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.52 r
+  u_alu/DP_OP_23J1_122_7706/U13/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.56 r
+  u_alu/DP_OP_23J1_122_7706/U12/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.61 r
+  u_alu/DP_OP_23J1_122_7706/U11/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.65 r
+  u_alu/DP_OP_23J1_122_7706/U10/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.70 r
+  u_alu/DP_OP_23J1_122_7706/U9/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.74 r
+  u_alu/DP_OP_23J1_122_7706/U8/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.76 r
+  u_alu/DP_OP_23J1_122_7706/U7/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.79 r
+  u_alu/DP_OP_23J1_122_7706/U6/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.03       1.83 r
+  u_alu/DP_OP_23J1_122_7706/U5/S (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.86 f
+  u_alu/U270/X (SAEDLVT14_AO21_U_0P5)                     0.01       1.87 f
+  u_alu/U46/X (SAEDLVT14_AO221_0P5)                       0.02       1.89 f
+  u_alu/U785/X (SAEDLVT14_AOI21_0P75)                     0.01       1.90 r
+  u_alu/U264/X (SAEDLVT14_ND2_CDC_0P5)                    0.01       1.92 f
+  u_alu/result_reg[28]/D (SAEDLVT14_FDP_V2LP_0P5)         0.01       1.92 f
+  data arrival time                                                  1.92
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  u_alu/result_reg[28]/CK (SAEDLVT14_FDP_V2LP_0P5)        0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.92
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.07
+
+
+  Startpoint: op[1] (input port clocked by clk)
+  Endpoint: u_alu/result_reg[27]
+            (rising edge-triggered flip-flop clocked by clk)
+  Path Group: clk
+  Path Type: max
+
+  Des/Clust/Port     Wire Load Model       Library
+  ------------------------------------------------
+  static_pg_top      8000                  saed14lvt_tt0p8v25c
+
+  Point                                                   Incr       Path
+  --------------------------------------------------------------------------
+  clock clk (rise edge)                                   0.00       0.00
+  clock network delay (ideal)                             0.00       0.00
+  input external delay                                    0.40       0.40 f
+  op[1] (in)                                              0.00       0.40 f
+  u_alu/op[1] (alu_32bit)                                 0.00       0.40 f
+  u_alu/U224/X (SAEDLVT14_INV_4)                          0.05       0.45 r
+  u_alu/U709/X (SAEDLVT14_ND2_CDC_0P5)                    0.02       0.47 f
+  u_alu/U221/X (SAEDLVT14_NR2_MM_1)                       0.02       0.48 r
+  u_alu/U748/X (SAEDLVT14_ND2_CDC_0P5)                    0.04       0.52 f
+  u_alu/U499/X (SAEDLVT14_INV_1)                          0.08       0.61 r
+  u_alu/DP_OP_23J1_122_7706/U33/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.09       0.70 r
+  u_alu/DP_OP_23J1_122_7706/U32/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       0.74 r
+  u_alu/DP_OP_23J1_122_7706/U31/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.79 r
+  u_alu/DP_OP_23J1_122_7706/U30/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.83 r
+  u_alu/DP_OP_23J1_122_7706/U29/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       0.87 r
+  u_alu/DP_OP_23J1_122_7706/U28/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       0.91 r
+  u_alu/DP_OP_23J1_122_7706/U27/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       0.96 r
+  u_alu/DP_OP_23J1_122_7706/U26/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.00 r
+  u_alu/DP_OP_23J1_122_7706/U25/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       1.04 r
+  u_alu/DP_OP_23J1_122_7706/U24/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.09 r
+  u_alu/DP_OP_23J1_122_7706/U23/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.13 r
+  u_alu/DP_OP_23J1_122_7706/U22/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.17 r
+  u_alu/DP_OP_23J1_122_7706/U21/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.22 r
+  u_alu/DP_OP_23J1_122_7706/U20/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.26 r
+  u_alu/DP_OP_23J1_122_7706/U19/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.30 r
+  u_alu/DP_OP_23J1_122_7706/U18/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.34 r
+  u_alu/DP_OP_23J1_122_7706/U17/CO (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.38 r
+  u_alu/DP_OP_23J1_122_7706/U16/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.05       1.43 r
+  u_alu/DP_OP_23J1_122_7706/U15/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.47 r
+  u_alu/DP_OP_23J1_122_7706/U14/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.52 r
+  u_alu/DP_OP_23J1_122_7706/U13/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.56 r
+  u_alu/DP_OP_23J1_122_7706/U12/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.61 r
+  u_alu/DP_OP_23J1_122_7706/U11/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.65 r
+  u_alu/DP_OP_23J1_122_7706/U10/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.70 r
+  u_alu/DP_OP_23J1_122_7706/U9/CO (SAEDLVT14_ADDF_V1_1)
+                                                          0.04       1.74 r
+  u_alu/DP_OP_23J1_122_7706/U8/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.76 r
+  u_alu/DP_OP_23J1_122_7706/U7/CO (SAEDLVT14_ADDF_V2_0P5)
+                                                          0.03       1.79 r
+  u_alu/DP_OP_23J1_122_7706/U6/S (SAEDLVT14_ADDF_V1_0P5)
+                                                          0.04       1.84 f
+  u_alu/U41/X (SAEDLVT14_ND2_CDC_0P5)                     0.01       1.85 r
+  u_alu/U7/X (SAEDLVT14_ND2_CDC_0P5)                      0.01       1.86 f
+  u_alu/U784/X (SAEDLVT14_OR4_1)                          0.02       1.88 f
+  u_alu/result_reg[27]/D (SAEDLVT14_FDP_V2LP_0P5)         0.01       1.89 f
+  data arrival time                                                  1.89
+
+  clock clk (rise edge)                                   2.00       2.00
+  clock network delay (ideal)                             0.00       2.00
+  u_alu/result_reg[27]/CK (SAEDLVT14_FDP_V2LP_0P5)        0.00       2.00 r
+  library setup time                                     -0.01       1.99
+  data required time                                                 1.99
+  --------------------------------------------------------------------------
+  data required time                                                 1.99
+  data arrival time                                                 -1.89
+  --------------------------------------------------------------------------
+  slack (MET)                                                        0.11
+
+
+1

@@ -26,7 +26,7 @@ set_output_delay 1.0 -clock clk [all_outputs]
 set_max_fanout    8 [current_design]
 set_max_transition 0.4 [current_design]
 set_clock_gating_style -sequential_cell latch -minimum_bitwidth 3
-insert_clock_gates [current_design]
+insert_clock_gating [current_design]
 set_leakage_optimization true
 compile_ultra -no_autoungroup
 report_timing -path full -delay max -max_paths 5 > $RPT_DIR/timing_lp.rpt
@@ -53,7 +53,7 @@ set_output_delay 0.4 -clock clk [all_outputs]
 set_max_fanout    6 [current_design]
 set_max_transition 0.3 [current_design]
 set_clock_gating_style -sequential_cell latch -minimum_bitwidth 3
-insert_clock_gates [current_design]
+insert_clock_gating [current_design]
 compile_ultra -no_autoungroup -timing_high_effort_script
 report_timing -path full -delay max -max_paths 5 > $RPT_DIR/timing_hs.rpt
 report_area                                       > $RPT_DIR/area_hs.rpt

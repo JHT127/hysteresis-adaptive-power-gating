@@ -1,0 +1,30 @@
+ 
+****************************************
+Report : area
+Design : static_pg_top
+Version: R-2020.09-SP5-5
+Date   : Sun Jun 28 18:10:30 2026
+****************************************
+
+Library(s) Used:
+
+    saed14lvt_tt0p8v25c (File: /usr/synopsys/saed/stdcell_lvt/db_nldm/saed14lvt_tt0p8v25c.db)
+
+Number of ports:                          350
+Number of nets:                          1379
+Number of cells:                         1039
+Number of combinational cells:            974
+Number of sequential cells:                59
+Number of macros/black boxes:               0
+Number of buf/inv:                        140
+Number of references:                       7
+
+Combinational area:                296.147996
+Buf/Inv area:                       25.530000
+Noncombinational area:              55.100399
+Macro/Black Box area:                0.000000
+Net Interconnect area:             814.548164
+
+Total cell area:                   351.248395
+Total area:                       1165.796559
+1
