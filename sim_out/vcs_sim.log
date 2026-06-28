@@ -1,42 +1,93 @@
-Command: /home/st25/vlsi_codes/./simv -l sim_out/vcs_sim.log
+Command: /home/st160/VLSI-Project/vlsi-project/./simv -l sim_out/vcs_sim.log
 Chronologic VCS simulator copyright 1991-2022
 Contains Synopsys proprietary information.
-Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Jun  1 00:48 2026
+Compiler version T-2022.06-SP2_Full64; Runtime version T-2022.06-SP2_Full64;  Jun 28 15:01 2026
 
 =======================================================
                                                                                                                                                       WORKLOAD 1: BURST (dense computation, 5-cycle gaps)
 =======================================================
-[T=105000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=10)
-[T=155000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
-[BURST] Power mode after burst = 2 (expected 0=ON)
-[WARN] Unexpected sleep during burst workload!
+[BURST] Power mode after burst = 0 (expected 0=ON)
 
 =======================================================
                                                                                                                                                            WORKLOAD 2: SPARSE (long idle gaps, 20 cycles)
 =======================================================
+[T=1885000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=10)
+[T=1925000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
+[T=2075000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+[T=2085000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=11)
+[T=2095000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
+[T=2285000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+[T=2295000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=11)
+[T=2305000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
+[T=2495000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+[T=2505000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=11)
+[T=2515000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
+[T=2705000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+[T=2715000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=11)
+[T=2725000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
+[T=2915000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+[T=2925000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=11)
+[T=2935000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
 [SPARSE] Power mode near end = 2 (expected 2=DS)
 
 =======================================================
                                                                                                                                                               WORKLOAD 3: EXTERNAL WAKEUP from Deep Sleep
 =======================================================
 [WAKEUP] Before wakeup_req: mode=2 (expect DS=2)
-[T=2535000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+[T=3255000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
 [WAKEUP] After wakeup_done: mode=0 (expect ON=0)
-[T=2545000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=11)
-[T=2555000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
+[T=3265000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=11)
+[T=3275000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
 
 =======================================================
                                                                                                                                                              WORKLOAD 4: MIXED (alternating dense/sparse)
 =======================================================
+[T=3385000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+[T=4715000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=10)
+[T=4765000] Mode transition: 1 -> 0  (iso=0 sleep_n=1 footer=10)
+[T=4785000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=10)
+[T=4815000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
+[T=4945000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+[T=4955000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=11)
+[T=4965000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
 
 =======================================================
                                                                                                                                                                    WORKLOAD 5: SUSTAINED IDLE (35 cycles)
 =======================================================
+[T=5075000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+[T=5085000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=11)
+[T=5095000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
 [IDLE] Power mode after 35 idle = 2 (expect DS=2)
-[ERROR] Simulation TIMEOUT
-$finish called from file "tb/tb_adaptive_pg_top.v", line 284.
-$finish at simulation time           1000000000
+[T=5555000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+[T=5565000] Mode transition: 0 -> 1  (iso=1 sleep_n=0 footer=11)
+[T=5575000] Mode transition: 1 -> 2  (iso=1 sleep_n=0 footer=01)
+[IDLE->ON] result=0x00000000 (expect 0x00010000)
+[T=5675000] Mode transition: 2 -> 0  (iso=0 sleep_n=1 footer=01)
+
+=======================================================
+                                                                                                                                                                               SIMULATION RESULTS SUMMARY
+=======================================================
+
+  Total cycles simulated  : 562
+  Cycles in ON            : 327
+  Cycles in LIGHT SLEEP   : 21
+  Cycles in DEEP  SLEEP   : 214
+  Valid results issued    : 141
+  Wake-up events          : 11
+  Mode transitions        : 34
+
+  --- Leakage Analysis (normalized to all-ON baseline) ---
+  Leakage integral (weighted): 480.97
+  Baseline (all ON)           : 562.00
+  Leakage saving              : 14.4%
+
+  [NOTE] Light Sleep = 19% leakage reduction (state retentive)
+  [NOTE] Deep  Sleep = 36% leakage reduction (Agarwal p4 model)
+
+SIMULATION COMPLETE.
+$finish called from file "tb/tb_adaptive_pg_top.v", line 275.
+$finish at simulation time              5675000
            V C S   S i m u l a t i o n   R e p o r t 
-Time: 1000000000 ps
-CPU Time:      0.550 seconds;       Data structure size:   0.0Mb
-Mon Jun  1 00:48:20 2026
+Time: 5675000 ps
+CPU Time:      0.300 seconds;       Data structure size:   0.0Mb
+Sun Jun 28 15:01:13 2026

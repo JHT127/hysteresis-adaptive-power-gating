@@ -1,0 +1,10 @@
+simv
+simv.daidir/
+csrc/
+ucli.key
+*.vcd
+*.vpd
+*.key
+DVEfiles/
+sim_out/*.log
+*.daidir/
