@@ -1,0 +1,27 @@
+Command: vcs -sverilog -full64 -debug_access+all -timescale=1ns/1ps -l sim_out/vcs_compile.log \
+rtl/alu_32bit.v rtl/activity_monitor.v rtl/hysteresis_predictor.v rtl/power_state_fsm.v \
+rtl/sleep_controller.v rtl/isolation_ctrl.v rtl/adaptive_pg_top.v tb/tb_adaptive_pg_top.v \
+
+                         Chronologic VCS (TM)
+       Version T-2022.06-SP2_Full64 -- Mon Jun  1 00:48:20 2026
+
+                    Copyright (c) 1991 - 2022 Synopsys, Inc.
+   This software and the associated documentation are proprietary to Synopsys,
+ Inc. This software may only be used in accordance with the terms and conditions
+ of a written license agreement with Synopsys, Inc. All other use, reproduction,
+   or distribution of this software is strictly prohibited.  Licensed Products
+     communicate with Synopsys servers for the purpose of providing software
+    updates, detecting software piracy and verifying that customers are using
+    Licensed Products in conformity with the applicable License Key for such
+  Licensed Products. Synopsys will use information gathered in connection with
+    this process to deliver software updates and pursue software pirates and
+                                   infringers.
+
+ Inclusivity & Diversity - Visit SolvNetPlus to read the "Synopsys Statement on
+            Inclusivity and Diversity" (Refer to article 000036315 at
+                        https://solvnetplus.synopsys.com)
+
+The design hasn't changed and need not be recompiled. 
+If you really want to, delete file simv.daidir/.vcs.timestamp and
+run VCS again.
+
