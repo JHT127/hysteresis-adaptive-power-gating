@@ -7,7 +7,7 @@ Report : power
         -analysis_effort high
 Design : adaptive_pg_top
 Version: R-2020.09-SP5-5
-Date   : Sun Jun 28 18:17:29 2026
+Date   : Sun Jun 28 18:22:21 2026
 ****************************************
 
 
@@ -15,6 +15,8 @@ Library(s) Used:
 
     saed14lvt_tt0p8v25c (File: /usr/synopsys/saed/stdcell_lvt/db_nldm/saed14lvt_tt0p8v25c.db)
 
+Information: The library cell 'SAEDLVT14_LSRDPQ_1' in the library 'saed14lvt_tt0p8v25c' is not characterized for internal power. (PWR-227)
+Information: The design contains cells, other than constants and black boxes, that are not characterized for internal power. (PWR-228)
 
 Operating Conditions: tt0p8v25c   Library: saed14lvt_tt0p8v25c
 Wire Load Model Mode: top
@@ -33,12 +35,12 @@ Power-specific unit information :
     Leakage Power Units = 1pW
 
 
-  Cell Internal Power  =  40.3099 uW   (72%)
-  Net Switching Power  =  15.3900 uW   (28%)
+  Cell Internal Power  =  22.5140 uW   (65%)
+  Net Switching Power  =  12.0408 uW   (35%)
                          ---------
-Total Dynamic Power    =  55.6999 uW  (100%)
+Total Dynamic Power    =  34.5547 uW  (100%)
 
-Cell Leakage Power     =   1.2333 uW
+Cell Leakage Power     =   1.0833 uW
 
 
                  Internal         Switching           Leakage            Total
@@ -47,10 +49,10 @@ Power Group      Power            Power               Power              Power  
 io_pad             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 memory             0.0000            0.0000            0.0000            0.0000  (   0.00%)
 black_box          0.0000            0.0000            0.0000            0.0000  (   0.00%)
-clock_network      0.0000            0.0000            0.0000            0.0000  (   0.00%)
-register          31.9163            0.6860        2.0984e+05           32.8121  (  57.64%)
+clock_network  4.2101e-02            0.2224        4.3571e+03            0.2689  (   0.75%)
+register          15.5839            0.2028        1.9405e+05           15.9807  (  44.85%)
 sequential         0.0000            0.0000            0.0000            0.0000  (   0.00%)
-combinational      8.3936           14.7040        1.0206e+06           24.1182  (  42.36%)
+combinational      6.8880           11.6156        8.8215e+05           19.3857  (  54.40%)
 --------------------------------------------------------------------------------------------------
-Total             40.3099 uW        15.3900 uW     1.2305e+06 pW        56.9303 uW
+Total             22.5140 uW        12.0408 uW     1.0806e+06 pW        35.6353 uW
 1

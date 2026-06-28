@@ -46,12 +46,12 @@ create_lib ${DESIGN}_icc2.dlib \
 read_verilog -design $DESIGN $NETLIST
 Information: Reading Verilog into new design 'adaptive_pg_top' in library 'adaptive_pg_top_icc2.dlib'. (VR-012)
 Loading verilog file '/home/st160/VLSI-Project/vlsi-project/netlists/proposed/adaptive_pg_top_lp.v'
-Number of modules read: 7
+Number of modules read: 9
 Top level ports: 118
-Total ports in all modules: 358
-Total nets in all modules: 1570
-Total instances in all modules: 1187
-Elapsed = 00:00:00.02, CPU = 00:00:00.02
+Total ports in all modules: 364
+Total nets in all modules: 1544
+Total instances in all modules: 1164
+Elapsed = 00:00:00.02, CPU = 00:00:00.01
 1
 link_design  $DESIGN
 Using libraries: adaptive_pg_top_icc2.dlib 1p9m_tech saed14lvt_frame_timing_ccs
@@ -78,7 +78,7 @@ Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 've
 Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'MRDL'. (DPUI-924)
 Removing existing floorplan objects
 Creating core...
-Core utilization ratio = 47.95%
+Core utilization ratio = 46.95%
 Unplacing all cells...
 Creating site array...
 Creating routing tracks...
@@ -87,17 +87,92 @@ create_net -power  VDD
 {VDD}
 create_net -ground VSS
 {VSS}
-create_pg_ring_pattern ring_pat \
-    [list [list -net VDD -layer M8 -width 0.8] \
-          [list -net VSS -layer M8 -width 0.8]]
-Error: extra positional option '{-net VDD -layer M8 -width 0.8} {-net VSS -layer M8 -width 0.8}' (CMD-012)
-Information: script '/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl'
-                stopped at line 31 due to error. (CMD-081)
-Extended error info:
+connect_pg_net -automatic
+****************************************
+Report : Power/Ground Connection Summary
+Design : adaptive_pg_top
+Version: U-2022.12-SP5
+Date   : Sun Jun 28 18:39:06 2026
+****************************************
+P/G net name                  P/G pin count(previous/current)
+--------------------------------------------------------------------------------
+Power net VDD                 0/1156
+Ground net VSS                0/1156
+--------------------------------------------------------------------------------
+Information: connections of 2312 power/ground pin(s) are created or changed.
+1
+place_opt
+Information: Starting 'place_opt' (FLW-8000)
+Information: Time: 2026-06-28 18:39:06 / Session: 0.00 hr / Command: 0.00 hr / Memory: 402 MB (FLW-8100)
+Information: The command 'place_opt' cleared the undo history. (UNDO-016)
+INFO: place_opt is running in balanced flow mode
+INFO: Total Power Aware Optimization Enabled (Dynamic + Leakage)
+Warning: Corner default:  0 process number, 1 process label, 0 voltage, and 0 temperature mismatches. (PVT-030)
+Warning: 1156 cells affected for early, 1156 for late. (PVT-031)
+Warning: 0 port driving_cells affected for early, 0 for late. (PVT-034)
+INFO: disable CRPR-based timing. 
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: no valid parasitic for default corner(EARLY) (NEX-018)
+Warning: no valid parasitic for (all corners) corner((both specs)) (NEX-018)
+Error: Scenario Manager creation failed. Optimization aborted. (OPT-041)
+INFO: Running power improvement flow (1)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: Cannot determine layer RC values for buffer characterization in corner default. (OPT-922)
+Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
+Warning: Skipping clock gate latency estimation because design setup is incomplete/invalid. (OPT-921)
 
+Information: Starting place_opt / initial_place (FLW-8000)
+Information: Time: 2026-06-28 18:39:07 / Session: 0.00 hr / Command: 0.00 hr / Memory: 541 MB (FLW-8100)
+
+
+Information: Starting place_opt / initial_place / Initial Placement (FLW-8000)
+Information: Time: 2026-06-28 18:39:07 / Session: 0.00 hr / Command: 0.00 hr / Memory: 541 MB (FLW-8100)
+Warning: no valid parasitic for default corner(LATE) (NEX-018)
+Warning: no valid parasitic for default corner(EARLY) (NEX-018)
+Warning: no valid parasitic for (all corners) corner((both specs)) (NEX-018)
+Information: The stitching and editing of coupling caps is turned OFF for design 'adaptive_pg_top_icc2.dlib:adaptive_pg_top.design'. (TIM-125)
+Warning: The extractor can not be initialized for block 'adaptive_pg_top'. (TIM-103)
+Warning: The extractor can not be initialized for design 'adaptive_pg_top'. Zero interconnect delay is used in timing analysis. (TIM-102)
+Warning: Batch extraction is skipped for block "adaptive_pg_top"
+Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
+Information: Net estimation statistics: timing graph nets = 1285, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
+************************************************************
+Timer Settings:
+Delay Calculation Style:                   auto
+Signal Integrity Analysis:                 disabled
+Timing Window Analysis:                    disabled
+Advanced Waveform Propagation:             disabled
+Variation Type:                            fixed_derate
+Clock Reconvergence Pessimism Removal:     disabled
+Advanced Receiver Model:                   disabled
+ML Acceleration:                           off
+************************************************************
+Information: Ending place_opt / initial_place / Initial Placement (FLW-8001)
+Information: Time: 2026-06-28 18:39:07 / Session: 0.00 hr / Command: 0.00 hr / Memory: 541 MB (FLW-8100)
+Information: Running auto PG connection. (NDM-099)
+Warning: Incomplete place_opt / initial_place (FLW-8004)
+Information: Ending 'place_opt' (FLW-8001)
+Information: Time: 2026-06-28 18:39:07 / Session: 0.00 hr / Command: 0.00 hr / Memory: 541 MB (FLW-8100)
+Error: 0
+        Use error_info for more info. (CMD-013)
+Information: script '/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl'
+                stopped at line 33 due to error. (CMD-081)
+Extended error info:
+0
     while executing
-"create_pg_ring_pattern ring_pat \
-    [list [list -net VDD -layer M8 -width 0.8] \
-          [list -net VSS -layer M8 -width 0.8]]"
-    (file "/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl" line 31)
+"place_opt"
+    (file "/home/st160/VLSI-Project/vlsi-project/scripts/icc2_place_route.tcl" line 33)
  -- End Extended Error Info
