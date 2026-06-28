@@ -30,7 +30,7 @@ create_net -power  VDD
 create_net -ground VSS
 connect_pg_net -automatic
 
-place_opt
+create_placement
 report_timing  -max_paths 5          > $RPT_DIR/timing_place.rpt
 catch { report_power   -analysis_effort high > $RPT_DIR/power_place.rpt }
 
