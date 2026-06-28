@@ -34,7 +34,7 @@ connect_pg_net -automatic
 # non-timing-driven mode and succeeds without it.
 create_placement
 report_timing  -max_paths 5          > $RPT_DIR/timing_place.rpt
-report_area                          > $RPT_DIR/area_place.rpt
+report_utilization                   > $RPT_DIR/area_place.rpt
 catch { report_power   -analysis_effort high > $RPT_DIR/power_place.rpt }
 
 save_lib
