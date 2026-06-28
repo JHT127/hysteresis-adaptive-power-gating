@@ -1,0 +1,975 @@
+GNU gdb (GDB) Red Hat Enterprise Linux 7.6.1-120.el7
+Copyright (C) 2013 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-redhat-linux-gnu".
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Attaching to process 37312
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/dgcom_exec...(no debugging symbols found)...done.
+Reading symbols from /lib64/libblkid.so.1...Reading symbols from /lib64/libblkid.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libblkid.so.1
+Reading symbols from /lib64/libpthread.so.0...(no debugging symbols found)...done.
+[New LWP 37358]
+[New LWP 37357]
+[New LWP 37356]
+[New LWP 37346]
+[New LWP 37313]
+[Thread debugging using libthread_db enabled]
+Using host libthread_db library "/lib64/libthread_db.so.1".
+Loaded symbols for /lib64/libpthread.so.0
+Reading symbols from /lib64/librt.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/librt.so.1
+Reading symbols from /lib64/libdl.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdl.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libNPI.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libNPI.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libnpiL1.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libnpiL1.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libnffr.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libnffr.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libnsys.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libnsys.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libz.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libz.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_regex-mt.so.1.77.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_regex-mt.so.1.77.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_system-mt.so.1.77.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_system-mt.so.1.77.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_filesystem-mt.so.1.77.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_filesystem-mt.so.1.77.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_serialization-mt.so.1.77.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_serialization-mt.so.1.77.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_thread-mt.so.1.77.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_thread-mt.so.1.77.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_iostreams-mt.so.1.77.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_iostreams-mt.so.1.77.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_timer-mt.so.1.77.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_timer-mt.so.1.77.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_chrono-mt.so.1.77.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_chrono-mt.so.1.77.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libFWMerge.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libFWMerge.so
+Reading symbols from /lib64/libcrypt.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libcrypt.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libnffw.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libnffw.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtbb.so.12...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtbb.so.12
+Reading symbols from /lib64/libuuid.so.1...Reading symbols from /lib64/libuuid.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libuuid.so.1
+Reading symbols from /lib64/libutil.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libutil.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtbbmalloc.so.2...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtbbmalloc.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/liblzma.so.5...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/liblzma.so.5...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/liblzma.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libpython3.6m.so.1.0...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libpython3.6m.so.1.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libhdf5.so.103...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libhdf5.so.103
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libhdf5_hl.so.100...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libhdf5_hl.so.100
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtensorflow_cc.so.2...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtensorflow_cc.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtensorflow_framework.so.2...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtensorflow_framework.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libprotobuf.so.19...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libprotobuf.so.19
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libpng16.so.16...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libpng16.so.16
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libgfortran.so.5...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libgfortran.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libquadmath.so.0...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libquadmath.so.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmpi.so.12...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmpi.so.12
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libAlembic.so.1.8...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libAlembic.so.1.8
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libDF-ISE.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libDF-ISE.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libfloops_KMCInclude.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libfloops_KMCInclude.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libfloops.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libfloops.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libHalf-2_5.so.25...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libHalf-2_5.so.25
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libibl.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libibl.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libIex-2_5.so.25...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libIex-2_5.so.25
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libIexMath-2_5.so.25...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libIexMath-2_5.so.25
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libIlmThread-2_5.so.25...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libIlmThread-2_5.so.25
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libImath-2_5.so.25...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libImath-2_5.so.25
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgBaseMpi.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgBaseMpi.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgBase.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgBase.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgBrep.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgBrep.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgContainers.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgContainers.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgContouring.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgContouring.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgDualContourVolume.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgDualContourVolume.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgGCPLUS.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgGCPLUS.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgGC.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgGC.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgGeom.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgGeom.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgIO.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgIO.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgMesher.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgMesher.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgMesh.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgMesh.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgpBase.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgpBase.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgpGCPLUS.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgpGCPLUS.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgpGC.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgpGC.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgpLevelset.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgpLevelset.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgpMask.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgpMask.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgSimpleMesh.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmgSimpleMesh.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsinterconnect_sidevice.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsinterconnect_sidevice.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsinterconnect_simechanics.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsinterconnect_simechanics.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsinterconnect_siUtil.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsinterconnect_siUtil.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsinterconnect_solve.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsinterconnect_solve.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtcad_fw_comm.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtcad_fw_comm.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libTcadGeom.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libTcadGeom.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libTcadMath.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libTcadMath.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtdi.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtdi.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtdr.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtdr.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libthi.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libthi.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtsi.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtsi.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libzstd.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libzstd.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/liblog4cxx.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/liblog4cxx.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtbb.so.2...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtbb.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libcholmod.so.3...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libcholmod.so.3
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsuitesparseconfig.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsuitesparseconfig.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libcolamd.so.2...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libcolamd.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libccolamd.so.2...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libccolamd.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libamd.so.2...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libamd.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libcamd.so.2...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libcamd.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmetis.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmetis.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/mesa/libGL.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/mesa/libGL.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libxcb-glx.so.0...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libxcb-glx.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libxcb-glx.so.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkChartsCore-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkChartsCore-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonColor-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonColor-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonComputationalGeometry-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonComputationalGeometry-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonCore-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonCore-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonDataModel-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonDataModel-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonExecutionModel-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonExecutionModel-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonMath-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonMath-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonMisc-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonMisc-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonSystem-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonSystem-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonTransforms-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkCommonTransforms-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkDICOMParser-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkDICOMParser-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkDomainsChemistry-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkDomainsChemistry-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkdoubleconversion-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkdoubleconversion-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkexodusII-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkexodusII-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkexpat-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkexpat-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersAMR-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersAMR-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersCore-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersCore-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersExtraction-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersExtraction-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersFlowPaths-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersFlowPaths-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersGeneral-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersGeneral-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersGeneric-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersGeneric-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersGeometry-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersGeometry-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersHybrid-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersHybrid-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersHyperTree-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersHyperTree-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersImaging-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersImaging-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersModeling-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersModeling-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersParallel-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersParallel-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersParallelImaging-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersParallelImaging-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersPoints-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersPoints-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersProgrammable-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersProgrammable-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersSelection-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersSelection-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersSMP-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersSMP-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersSources-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersSources-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersStatistics-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersStatistics-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersTexture-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersTexture-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersTopology-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersTopology-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersVerdict-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkFiltersVerdict-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkfreetype-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkfreetype-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkGeovisCore-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkGeovisCore-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkgl2ps-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkgl2ps-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkglew-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkglew-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkGUISupportQt-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkGUISupportQt-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkGUISupportQtSQL-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkGUISupportQtSQL-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkhdf5-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkhdf5-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkhdf5_hl-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkhdf5_hl-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingColor-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingColor-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingCore-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingCore-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingFourier-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingFourier-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingGeneral-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingGeneral-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingHybrid-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingHybrid-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingMath-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingMath-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingMorphological-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingMorphological-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingSources-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingSources-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingStatistics-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingStatistics-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingStencil-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkImagingStencil-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkInfovisCore-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkInfovisCore-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkInfovisLayout-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkInfovisLayout-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkInteractionImage-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkInteractionImage-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkInteractionStyle-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkInteractionStyle-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkInteractionWidgets-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkInteractionWidgets-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOAMR-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOAMR-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOAsynchronous-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOAsynchronous-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOCityGML-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOCityGML-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOCore-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOCore-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOEnSight-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOEnSight-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOExodus-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOExodus-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOExport-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOExport-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOExportGL2PS-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOExportGL2PS-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOExportPDF-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOExportPDF-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOGeometry-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOGeometry-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOImage-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOImage-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOImport-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOImport-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOInfovis-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOInfovis-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOLegacy-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOLegacy-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOLSDyna-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOLSDyna-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOMINC-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOMINC-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOMotionFX-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOMotionFX-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOMovie-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOMovie-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIONetCDF-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIONetCDF-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOOggTheora-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOOggTheora-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOParallel-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOParallel-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOParallelXML-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOParallelXML-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOPLY-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOPLY-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOSegY-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOSegY-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOSQL-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOSQL-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOTecplotTable-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOTecplotTable-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOVeraOut-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOVeraOut-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOVideo-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOVideo-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOXML-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOXML-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOXMLParser-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkIOXMLParser-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkjpeg-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkjpeg-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkjsoncpp-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkjsoncpp-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtklibharu-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtklibharu-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtklibproj-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtklibproj-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtklibxml2-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtklibxml2-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkloguru-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkloguru-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtklz4-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtklz4-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtklzma-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtklzma-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkmetaio-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkmetaio-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtknetcdf-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtknetcdf-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkogg-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkogg-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkParallelCore-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkParallelCore-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkParallelDIY-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkParallelDIY-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkpng-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkpng-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkpugixml-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkpugixml-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingAnnotation-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingAnnotation-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingContext2D-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingContext2D-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingCore-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingCore-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingFreeType-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingFreeType-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingGL2PSOpenGL2-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingGL2PSOpenGL2-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingImage-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingImage-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingLabel-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingLabel-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingLOD-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingLOD-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingOpenGL2-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingOpenGL2-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingQt-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingQt-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingSceneGraph-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingSceneGraph-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingUI-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingUI-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingVolume-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingVolume-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingVolumeOpenGL2-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingVolumeOpenGL2-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingVtkJS-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkRenderingVtkJS-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtksqlite-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtksqlite-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtksys-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtksys-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkTestingRendering-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkTestingRendering-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtktheora-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtktheora-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtktiff-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtktiff-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkverdict-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkverdict-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkViewsContext2D-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkViewsContext2D-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkViewsCore-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkViewsCore-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkViewsInfovis-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkViewsInfovis-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkViewsQt-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkViewsQt-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkWrappingTools-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkWrappingTools-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkzlib-9.0.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/libvtkzlib-9.0.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libarrow.so.16...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libarrow.so.16
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libparquet.so.16...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libparquet.so.16
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libpugixml.so.1...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libpugixml.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libpugixml.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/librdkafka++.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/librdkafka++.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/librdkafka.so.1...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/librdkafka.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsamcpp.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsamcpp.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Widgets.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Widgets.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Svg.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Svg.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Gui.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Gui.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5X11Extras.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5X11Extras.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5PrintSupport.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5PrintSupport.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Network.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Network.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Xml.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Xml.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Core.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Core.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Sql.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Sql.so.5
+Reading symbols from /lib64/libX11.so.6...Reading symbols from /lib64/libX11.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libX11.so.6
+Reading symbols from /lib64/libxcb.so.1...Reading symbols from /lib64/libxcb.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libxcb.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libfontconfig.so.1...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libfontconfig.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libfontconfig.so.1
+Reading symbols from /lib64/libXft.so.2...Reading symbols from /lib64/libXft.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXft.so.2
+Reading symbols from /lib64/libXss.so.1...Reading symbols from /lib64/libXss.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXss.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5WebChannel.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5WebChannel.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5WebSockets.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5WebSockets.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5WebKitWidgets.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5WebKitWidgets.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5WebKit.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5WebKit.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Test.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/libQt5Test.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libstdc++.so.6...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libstdc++.so.6
+Reading symbols from /lib64/libm.so.6...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libm.so.6
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libgomp.so.1...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libgomp.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libgcc_s.so.1...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libgcc_s.so.1
+Reading symbols from /lib64/libc.so.6...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libc.so.6
+Reading symbols from /lib64/ld-linux-x86-64.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/ld-linux-x86-64.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libvfs.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libvfs.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_atomic-mt.so.1.77.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_77_0_atomic-mt.so.1.77.0
+Reading symbols from /lib64/libbz2.so.1...Reading symbols from /lib64/libbz2.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libbz2.so.1
+Reading symbols from /lib64/libfreebl3.so...Reading symbols from /lib64/libfreebl3.so...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libfreebl3.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/../lib/libssl.so.1.0.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/../lib/libssl.so.1.0.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/../lib/libcrypto.so.1.0.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/../lib/libcrypto.so.1.0.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libTcadBase.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libTcadBase.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmongoclient.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmongoclient.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_thread-mt.so.1.73.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_thread-mt.so.1.73.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_chrono-mt.so.1.73.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_chrono-mt.so.1.73.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_system-mt.so.1.73.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_system-mt.so.1.73.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_regex-mt.so.1.73.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_regex-mt.so.1.73.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libLibScanFEcmdSTopo.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libLibScanFEcmdSTopo.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libStlUtilities.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libStlUtilities.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/liblpsolve55.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/liblpsolve55.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libScanFECommonSTopo.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libScanFECommonSTopo.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_numpy36.so.1.73.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_numpy36.so.1.73.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_python36.so.1.73.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_python36.so.1.73.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libssl.so.47...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libssl.so.47
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libcrypto.so.45...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libcrypto.so.45
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmpicxx.so.12...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libmpicxx.so.12
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtbcload-O.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtbcload-O.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtcl-mt-O.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libtcl-mt-O.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_filesystem-mt.so.1.73.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_filesystem-mt.so.1.73.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_serialization-mt.so.1.73.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/libsnps_boost_1_73_0_serialization-mt.so.1.73.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/mesa/libglapi.so.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/mesa/libglapi.so.0
+Reading symbols from /lib64/libXext.so.6...Reading symbols from /lib64/libXext.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXext.so.6
+Reading symbols from /lib64/libtinfo.so.5...Reading symbols from /lib64/libtinfo.so.5...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libtinfo.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/mesa/libsensors.so.4...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/mesa/libsensors.so.4...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/mesa/libsensors.so.4
+Reading symbols from /lib64/libXau.so.6...Reading symbols from /lib64/libXau.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXau.so.6
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/../export/libGLX.so.0...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/../export/libGLX.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/../export/libGLX.so.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/../export/libOpenGL.so.0...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/../export/libOpenGL.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/../export/libOpenGL.so.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libcrypto.so.10...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libcrypto.so.10...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libcrypto.so.10
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libssl.so.10...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libssl.so.10...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libssl.so.10
+Reading symbols from /lib64/libsasl2.so.3...Reading symbols from /lib64/libsasl2.so.3...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libsasl2.so.3
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libpng15.so.15...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libpng15.so.15...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libpng15.so.15
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libharfbuzz.so.0...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libharfbuzz.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libharfbuzz.so.0
+Reading symbols from /lib64/libgssapi_krb5.so.2...Reading symbols from /lib64/libgssapi_krb5.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgssapi_krb5.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libicui18n.so.50...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libicui18n.so.50...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libicui18n.so.50
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libicuuc.so.50...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libicuuc.so.50...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libicuuc.so.50
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libicudata.so.50...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libicudata.so.50...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libicudata.so.50
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libfreetype.so.6...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libfreetype.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/export/libfreetype.so.6
+Reading symbols from /lib64/libexpat.so.1...Reading symbols from /lib64/libexpat.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libexpat.so.1
+Reading symbols from /lib64/libXrender.so.1...Reading symbols from /lib64/libXrender.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXrender.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5Qml.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5Qml.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libxslt.so.1...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libxslt.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libxslt.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libxml2.so.2...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libxml2.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libxml2.so.2
+Reading symbols from /lib64/libsqlite3.so.0...Reading symbols from /lib64/libsqlite3.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libsqlite3.so.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5Sensors.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5Sensors.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5Positioning.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5Positioning.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5MultimediaWidgets.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5MultimediaWidgets.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5Multimedia.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5Multimedia.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5OpenGL.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5OpenGL.so.5
+Reading symbols from /lib64/libXcomposite.so.1...Reading symbols from /lib64/libXcomposite.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXcomposite.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libjpeg.so.62...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libjpeg.so.62...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libjpeg.so.62
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libwebp.so.4...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libwebp.so.4...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../export/libwebp.so.4
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5Quick.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5Quick.so.5
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5QmlModels.so.5...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/qt/../qt/libQt5QmlModels.so.5
+Reading symbols from /lib64/libresolv.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libresolv.so.2
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/../export/libGLdispatch.so.0...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/../export/libGLdispatch.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib/vtk/../export/libGLdispatch.so.0
+Reading symbols from /lib64/libkrb5.so.3...Reading symbols from /lib64/libkrb5.so.3...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libkrb5.so.3
+Reading symbols from /lib64/libcom_err.so.2...Reading symbols from /lib64/libcom_err.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libcom_err.so.2
+Reading symbols from /lib64/libk5crypto.so.3...Reading symbols from /lib64/libk5crypto.so.3...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libk5crypto.so.3
+Reading symbols from /lib64/libkrb5support.so.0...Reading symbols from /lib64/libkrb5support.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libkrb5support.so.0
+Reading symbols from /lib64/libglib-2.0.so.0...Reading symbols from /lib64/libglib-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libglib-2.0.so.0
+Reading symbols from /lib64/libgraphite2.so.3...Reading symbols from /lib64/libgraphite2.so.3...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgraphite2.so.3
+Reading symbols from /lib64/libkeyutils.so.1...Reading symbols from /lib64/libkeyutils.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libkeyutils.so.1
+Reading symbols from /lib64/libpulse-mainloop-glib.so.0...Reading symbols from /lib64/libpulse-mainloop-glib.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libpulse-mainloop-glib.so.0
+Reading symbols from /lib64/libpulse.so.0...Reading symbols from /lib64/libpulse.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libpulse.so.0
+Reading symbols from /lib64/libselinux.so.1...Reading symbols from /lib64/libselinux.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libselinux.so.1
+Reading symbols from /lib64/libpcre.so.1...Reading symbols from /lib64/libpcre.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libpcre.so.1
+Reading symbols from /usr/lib64/pulseaudio/libpulsecommon-10.0.so...Reading symbols from /usr/lib64/pulseaudio/libpulsecommon-10.0.so...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/lib64/pulseaudio/libpulsecommon-10.0.so
+Reading symbols from /lib64/libcap.so.2...Reading symbols from /lib64/libcap.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libcap.so.2
+Reading symbols from /lib64/libdbus-1.so.3...Reading symbols from /lib64/libdbus-1.so.3...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdbus-1.so.3
+Reading symbols from /lib64/libX11-xcb.so.1...Reading symbols from /lib64/libX11-xcb.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libX11-xcb.so.1
+Reading symbols from /lib64/libICE.so.6...Reading symbols from /lib64/libICE.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libICE.so.6
+Reading symbols from /lib64/libSM.so.6...Reading symbols from /lib64/libSM.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libSM.so.6
+Reading symbols from /lib64/libXtst.so.6...Reading symbols from /lib64/libXtst.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXtst.so.6
+Reading symbols from /lib64/libsystemd.so.0...Reading symbols from /lib64/libsystemd.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libsystemd.so.0
+Reading symbols from /lib64/libwrap.so.0...Reading symbols from /lib64/libwrap.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libwrap.so.0
+Reading symbols from /lib64/libsndfile.so.1...Reading symbols from /lib64/libsndfile.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libsndfile.so.1
+Reading symbols from /lib64/libasyncns.so.0...Reading symbols from /lib64/libasyncns.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libasyncns.so.0
+Reading symbols from /lib64/libattr.so.1...Reading symbols from /lib64/libattr.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libattr.so.1
+Reading symbols from /lib64/libXi.so.6...Reading symbols from /lib64/libXi.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libXi.so.6
+Reading symbols from /lib64/liblz4.so.1...Reading symbols from /lib64/liblz4.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/liblz4.so.1
+Reading symbols from /lib64/libgcrypt.so.11...Reading symbols from /lib64/libgcrypt.so.11...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgcrypt.so.11
+Reading symbols from /lib64/libgpg-error.so.0...Reading symbols from /lib64/libgpg-error.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgpg-error.so.0
+Reading symbols from /lib64/libdw.so.1...Reading symbols from /lib64/libdw.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdw.so.1
+Reading symbols from /lib64/libnsl.so.1...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnsl.so.1
+Reading symbols from /lib64/libgsm.so.1...Reading symbols from /lib64/libgsm.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgsm.so.1
+Reading symbols from /lib64/libFLAC.so.8...Reading symbols from /lib64/libFLAC.so.8...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libFLAC.so.8
+Reading symbols from /lib64/libvorbisenc.so.2...Reading symbols from /lib64/libvorbisenc.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libvorbisenc.so.2
+Reading symbols from /lib64/libvorbis.so.0...Reading symbols from /lib64/libvorbis.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libvorbis.so.0
+Reading symbols from /lib64/libogg.so.0...Reading symbols from /lib64/libogg.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libogg.so.0
+Reading symbols from /lib64/libelf.so.1...Reading symbols from /lib64/libelf.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libelf.so.1
+Reading symbols from /usr/lib64/gconv/UTF-16.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/lib64/gconv/UTF-16.so
+Reading symbols from /lib64/libnss_files.so.2...(no debugging symbols found)...done.
+Loaded symbols for /lib64/libnss_files.so.2
+Reading symbols from /lib64/libudev.so.1...Reading symbols from /lib64/libudev.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libudev.so.1
+Reading symbols from /lib64/libdbus-glib-1.so.2...Reading symbols from /lib64/libdbus-glib-1.so.2...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libdbus-glib-1.so.2
+Reading symbols from /lib64/libgio-2.0.so.0...Reading symbols from /lib64/libgio-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgio-2.0.so.0
+Reading symbols from /lib64/libgobject-2.0.so.0...Reading symbols from /lib64/libgobject-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgobject-2.0.so.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libffi.so.6...Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libffi.so.6...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/../shlib_python/libffi.so.6
+Reading symbols from /lib64/libgmodule-2.0.so.0...Reading symbols from /lib64/libgmodule-2.0.so.0...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libgmodule-2.0.so.0
+Reading symbols from /lib64/libmount.so.1...Reading symbols from /lib64/libmount.so.1...(no debugging symbols found)...done.
+(no debugging symbols found)...done.
+Loaded symbols for /lib64/libmount.so.1
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_heapq.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_heapq.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/_multiarray_umath.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/../../numpy.libs/libopenblasp-r0-09e95953.3.13.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/../../numpy.libs/libopenblasp-r0-09e95953.3.13.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/../../numpy.libs/libgfortran-2e0d59d6.so.5.0.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/../../numpy.libs/libgfortran-2e0d59d6.so.5.0.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/../../numpy.libs/libquadmath-2d0c479f.so.0.0.0...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/../../numpy.libs/libquadmath-2d0c479f.so.0.0.0
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/../../numpy.libs/libz-eb09ad1d.so.1.2.3...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/../../numpy.libs/libz-eb09ad1d.so.1.2.3
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/math.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/math.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_datetime.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_datetime.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_struct.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_struct.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_pickle.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_pickle.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/core/_multiarray_tests.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_posixsubprocess.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/select.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/select.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_ctypes.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/linalg/lapack_lite.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/linalg/_umath_linalg.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/zlib.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_bz2.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_lzma.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/grp.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/grp.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_decimal.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/fft/_pocketfft_internal.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/fft/_pocketfft_internal.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/mtrand.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/bit_generator.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/bit_generator.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_common.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_common.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/binascii.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/binascii.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_md5.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_md5.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_sha1.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_sha1.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_sha256.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_sha256.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_sha512.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_sha512.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_blake2.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_blake2.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_sha3.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_sha3.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_bisect.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_bisect.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_random.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_random.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_bounded_integers.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_bounded_integers.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_mt19937.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_mt19937.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_philox.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_philox.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_pcg64.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_pcg64.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_sfc64.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_sfc64.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_generator.cpython-36m-x86_64-linux-gnu.so...(no debugging symbols found)...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/numpy/random/_generator.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_opcode.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_socket.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_socket.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/array.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/array.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_json.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_multiprocessing.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/_multiprocessing.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/mmap.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/lib-dynload/mmap.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/psutil/_psutil_linux.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/psutil/_psutil_linux.cpython-36m-x86_64-linux-gnu.so
+Reading symbols from /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/psutil/_psutil_posix.cpython-36m-x86_64-linux-gnu.so...done.
+Loaded symbols for /usr/synopsys/icc2/U-2022.12-SP5/etc/Python/lib/python3.6/site-packages/psutil/_psutil_posix.cpython-36m-x86_64-linux-gnu.so
+0x00007f0bf2a7e659 in waitpid () from /lib64/libc.so.6
+Missing separate debuginfos, use: debuginfo-install bzip2-libs-1.0.6-13.el7.x86_64 cyrus-sasl-lib-2.1.26-24.el7_9.x86_64 dbus-glib-0.100-7.el7.x86_64 dbus-libs-1.10.24-15.el7.x86_64 elfutils-libelf-0.176-5.el7.x86_64 elfutils-libs-0.176-5.el7.x86_64 expat-2.1.0-15.el7_9.x86_64 flac-libs-1.3.0-5.el7_1.x86_64 glib2-2.56.1-9.el7_9.x86_64 glibc-2.17-326.el7_9.x86_64 graphite2-1.3.10-1.el7_3.x86_64 gsm-1.0.13-11.el7.x86_64 keyutils-libs-1.5.8-3.el7.x86_64 krb5-libs-1.15.1-55.el7_9.x86_64 libICE-1.0.9-9.el7.x86_64 libSM-1.2.2-2.el7.x86_64 libX11-1.6.7-4.el7_9.x86_64 libXScrnSaver-1.2.2-6.1.el7.x86_64 libXau-1.0.8-2.1.el7.x86_64 libXcomposite-0.4.4-4.1.el7.x86_64 libXext-1.3.3-3.el7.x86_64 libXft-2.3.2-2.el7.x86_64 libXi-1.7.9-1.el7.x86_64 libXrender-0.9.10-1.el7.x86_64 libXtst-1.2.3-1.el7.x86_64 libasyncns-0.8-7.el7.x86_64 libattr-2.4.46-13.el7.x86_64 libblkid-2.23.2-65.el7_9.1.x86_64 libcap-2.22-11.el7.x86_64 libcom_err-1.42.9-19.el7.x86_64 libgcrypt-1.5.3-14.el7.x86_64 libgpg-error-1.12-3.el7.x86_64 libmount-2.23.2-65.el7_9.1.x86_64 libogg-1.3.0-7.el7.x86_64 libselinux-2.5-15.el7.x86_64 libsndfile-1.0.25-12.el7_9.1.x86_64 libuuid-2.23.2-65.el7_9.1.x86_64 libvorbis-1.3.3-8.el7.1.x86_64 libxcb-1.13-1.el7.x86_64 lz4-1.8.3-1.el7.x86_64 ncurses-libs-5.9-14.20130511.el7_4.x86_64 nss-softokn-freebl-3.79.0-4.el7_9.x86_64 pcre-8.32-17.el7.x86_64 pulseaudio-libs-10.0-6.el7_9.x86_64 pulseaudio-libs-glib2-10.0-6.el7_9.x86_64 sqlite-3.7.17-8.el7_7.1.x86_64 systemd-libs-219-78.el7_9.7.x86_64 tcp_wrappers-libs-7.6-77.el7.x86_64
+(gdb) (gdb) 
+Thread 6 (Thread 0x7f0be57ff700 (LWP 37313)):
+#0  0x00007f0c5f6dca35 in pthread_cond_wait@@GLIBC_2.3.2 () from /lib64/libpthread.so.0
+#1  0x00007f0bf968dea5 in background_thread_sleep (tsdn=<optimized out>, interval=<optimized out>, info=<optimized out>) at src/background_thread.c:232
+#2  background_work_sleep_once (ind=0, info=<optimized out>, tsdn=<optimized out>) at src/background_thread.c:307
+#3  background_thread0_work (tsd=<optimized out>) at src/background_thread.c:452
+#4  background_work (ind=<optimized out>, tsd=<optimized out>) at src/background_thread.c:490
+#5  background_thread_entry () at src/background_thread.c:522
+#6  0x000000003c9d6755 in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f0c5f6d8ea5 in start_thread () from /lib64/libpthread.so.0
+#8  0x00007f0bf2ab7b0d in clone () from /lib64/libc.so.6
+
+Thread 5 (Thread 0x7f0bde0a0700 (LWP 37346)):
+#0  0x00007f0bf2aaeb43 in select () from /lib64/libc.so.6
+#1  0x000000003c11c666 in SNPSee_554ec7c90557bab679d871cd58526530 ()
+#2  0x000000003c9d6755 in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#3  0x00007f0c5f6d8ea5 in start_thread () from /lib64/libpthread.so.0
+#4  0x00007f0bf2ab7b0d in clone () from /lib64/libc.so.6
+
+Thread 4 (Thread 0x7f0bdc020700 (LWP 37356)):
+#0  0x00007f0bf2ab1e29 in syscall () from /lib64/libc.so.6
+#1  0x00007f0c5fc0dddc in futex_wait (comparand=2, futex=0x7f0be4b1252c) at /remote/dept5188e/pfurnanz/p4/dgcom_s_dev/third_party_sw/tbb/oneTBB-2021.5.0/src/tbb/semaphore.h:290
+#2  tbb::detail::r1::binary_semaphore::P (this=0x7f0be4b1252c) at /remote/dept5188e/pfurnanz/p4/dgcom_s_dev/third_party_sw/tbb/oneTBB-2021.5.0/src/tbb/semaphore.h:290
+#3  0x00007f0c5fc07a18 in commit_wait (c=..., this=0x7f0be4b12520) at /remote/dept5188e/pfurnanz/p4/dgcom_s_dev/third_party_sw/tbb/oneTBB-2021.5.0/src/tbb/rml_thread_monitor.h:243
+#4  run (this=0x7f0be4b12500) at /remote/dept5188e/pfurnanz/p4/dgcom_s_dev/third_party_sw/tbb/oneTBB-2021.5.0/src/tbb/private_server.cpp:274
+#5  tbb::detail::r1::rml::private_worker::thread_routine (arg=0x7f0be4b12500) at /remote/dept5188e/pfurnanz/p4/dgcom_s_dev/third_party_sw/tbb/oneTBB-2021.5.0/src/tbb/private_server.cpp:221
+#6  0x000000003c9d6755 in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f0c5f6d8ea5 in start_thread () from /lib64/libpthread.so.0
+#8  0x00007f0bf2ab7b0d in clone () from /lib64/libc.so.6
+
+Thread 3 (Thread 0x7f0bdc821700 (LWP 37357)):
+#0  0x00007f0bf2ab1e29 in syscall () from /lib64/libc.so.6
+#1  0x00007f0c5fc0dddc in futex_wait (comparand=2, futex=0x7f0be4b125ac) at /remote/dept5188e/pfurnanz/p4/dgcom_s_dev/third_party_sw/tbb/oneTBB-2021.5.0/src/tbb/semaphore.h:290
+#2  tbb::detail::r1::binary_semaphore::P (this=0x7f0be4b125ac) at /remote/dept5188e/pfurnanz/p4/dgcom_s_dev/third_party_sw/tbb/oneTBB-2021.5.0/src/tbb/semaphore.h:290
+#3  0x00007f0c5fc07a18 in commit_wait (c=..., this=0x7f0be4b125a0) at /remote/dept5188e/pfurnanz/p4/dgcom_s_dev/third_party_sw/tbb/oneTBB-2021.5.0/src/tbb/rml_thread_monitor.h:243
+#4  run (this=0x7f0be4b12580) at /remote/dept5188e/pfurnanz/p4/dgcom_s_dev/third_party_sw/tbb/oneTBB-2021.5.0/src/tbb/private_server.cpp:274
+#5  tbb::detail::r1::rml::private_worker::thread_routine (arg=0x7f0be4b12580) at /remote/dept5188e/pfurnanz/p4/dgcom_s_dev/third_party_sw/tbb/oneTBB-2021.5.0/src/tbb/private_server.cpp:221
+#6  0x000000003c9d6755 in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#7  0x00007f0c5f6d8ea5 in start_thread () from /lib64/libpthread.so.0
+#8  0x00007f0bf2ab7b0d in clone () from /lib64/libc.so.6
+
+Thread 2 (Thread 0x7f0bdb01e700 (LWP 37358)):
+#0  0x00007f0bf2a7e9fd in nanosleep () from /lib64/libc.so.6
+#1  0x00007f0bf2a7e894 in sleep () from /lib64/libc.so.6
+#2  0x000000003c8feb6d in SNPSee_736c226cc0f9d19c9f03a5b629cc1ac67c55aabab371cb493cbe3cfa24e022212a2bcadfa6af024e0b25b9779f0423a5d122967b11fd1c59 ()
+#3  0x00007f0c5918abb0 in execute_native_thread_routine () at ../../../../../src/gcc-9.2.0/libstdc++-v3/src/c++11/thread.cc:80
+#4  0x000000003c9d6755 in SNPSee_d9c72da67e7a1f57e9891545cd875e2719332304182309de ()
+#5  0x00007f0c5f6d8ea5 in start_thread () from /lib64/libpthread.so.0
+#6  0x00007f0bf2ab7b0d in clone () from /lib64/libc.so.6
+
+Thread 1 (Thread 0x7f0be60f37c0 (LWP 37312)):
+#0  0x00007f0bf2a7e659 in waitpid () from /lib64/libc.so.6
+#1  0x00007f0bf29fbf62 in do_system () from /lib64/libc.so.6
+#2  0x00007f0bf29fc311 in system () from /lib64/libc.so.6
+#3  0x000000003c9ddd80 in SNPSee_216f3c2f4c55dbceb170dcb7639b9c2cdd496024a8e266b98132685c735317487fd2aa296d8a7317 ()
+#4  0x000000003c9df780 in SNPSee_216f3c2f4c55dbceb170dcb7639b9c2cdd496024a8e266b98132685c735317484a021951c8b3b34314fe2ade355c4696 ()
+#5  0x000000003c6b6735 in SNPSee_9ea8dbbd5e74784445edf9ed12a0bc4777b489dcaefdb88f6c0991497dfc16a1f1ee4f39216b1e41 ()
+#6  0x000000003c6b9b65 in SNPSee_9ea8dbbd5e74784484d3cce2fced02c05a3783bc3b9f8fad49ba3bacacc1ac73ecf347a38534d06f ()
+#7  0x000000003a1e406e in SNPSee_3da1e8e388eef22c4cad96049bb507e323902e731626b6f85a1de23e01dcfb84 ()
+#8  <signal handler called>
+#9  0x0000000040d79c17 in SNPSee_6e69fbe5cd64cca1c6703629b1e895f8 ()
+#10 0x0000000040d753d2 in SNPSee_d37906b5b637f25b ()
+#11 0x000000003a1dc506 in SNPSee_5d373cd896410e630e5be4cb01b4f045 ()
+#12 0x00000000409a210d in SNPSee_84819e9227b2e0aa9cae34dc8be3b8a5cd8f264d30f37d0c6a8e358e8cb885004984e24a8c4868b7af29ce1919d3f9852683413c29440db5024a1d284b194ff1 ()
+#13 0x000000001d314daa in SNPSee_3ed686e8d4a659b5b71ddd12e447f33917cbb8a33ac076760fc4c1bbbacc2de678ec65c28e5937c601c2ef47280b3679 ()
+#14 0x000000001d3107ed in SNPSee_e52978fb95288b35702010462a2fb7521b19e6c7de02e749f68bb351c5fdf77d77dcb6d7ca3d86dfab86a645dee82a58b2bd32436fe9252678dfa79a3e0c83bf ()
+#15 0x000000001cff0976 in SNPSee_b81f4656f0d7d3ca1b0bca755b60caea2cb50375ef5e9df280c2a7ba1e2ca19f7750e3d580600edd04a01dc4363d697fcd6b18c4d0ab558c ()
+#16 0x000000003c28dabd in SNPSee_b3a63ca9beb66366a2beecdfa325f5f850e37c16b964335ba934f8a7afefeaf1 ()
+#17 0x000000000ec3cad9 in SNPSee_6188b3f9a7e769c7eb2dc22ab181ff5c0260e7bf3c6e6c5b6dd310362dd3e58b19a33122e2a80c1014bca5a076370ba0686492d474ef148ca36ababef5945158a888f7e536545dec88d039942c447aad829ec3c9a13ccf1352c7f068f1dc0d713b949058f841385ce96831542394be36f2ec7e463409336ff9646fa385cc5a553529ff78d8277054cb68eca1e74b2650bc52a0a187546145fe12efa21abc06a8 ()
+#18 0x000000000ec3e8cb in SNPSee_5a24f30b88271223 ()
+#19 0x00007f0bf29db555 in __libc_start_main () from /lib64/libc.so.6
+#20 0x000000000ec2a029 in SNPSee_d06eed713327be76 ()
+(gdb) Detaching from program: /usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/dgcom_exec, process 37312
+[Inferior 1 (process 37312) detached]
+(gdb) 

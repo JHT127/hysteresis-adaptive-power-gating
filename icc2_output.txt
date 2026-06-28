@@ -21,128 +21,140 @@
 
 set DESIGN   "static_pg_top"
 static_pg_top
-set NETLIST  "./netlists/baseline/static_pg_top_lp.v"
-./netlists/baseline/static_pg_top_lp.v
-set SDC_FILE "./netlists/baseline/static_pg_top_lp.sdc"
-./netlists/baseline/static_pg_top_lp.sdc
-set RPT_DIR  "./reports/icc2_baseline"
-./reports/icc2_baseline
-set OUT_DIR  "./outputs"
-./outputs
-set TECH_NDM "/usr/synopsys/saed/stdcell_lvt/ndm/tech_ndm/1p9m_tech.ndm"
-/usr/synopsys/saed/stdcell_lvt/ndm/tech_ndm/1p9m_tech.ndm
-set REF_NDM  "/usr/synopsys/saed/stdcell_lvt/ndm/saed14lvt_frame_timing_ccs.ndm"
-/usr/synopsys/saed/stdcell_lvt/ndm/saed14lvt_frame_timing_ccs.ndm
-file mkdir $RPT_DIR
-file mkdir $OUT_DIR
-file delete -force ${DESIGN}_icc2.dlib
-create_lib ${DESIGN}_icc2.dlib \
-    -ref_libs [list $TECH_NDM $REF_NDM]
-{static_pg_top_icc2.dlib}
-# FIX (Phase 2): read_verilog has no -library option in ICC2 — the design
-# library context is already established by create_lib above. The original
-# "-library WORK" argument caused CMD-081 / SEL-005 and aborted the script
-# before anything else ran.
-read_verilog -design $DESIGN $NETLIST
-Information: Reading Verilog into new design 'static_pg_top' in library 'static_pg_top_icc2.dlib'. (VR-012)
-Loading verilog file '/home/st160/VLSI-Project/vlsi-project/netlists/baseline/static_pg_top_lp.v'
-Number of modules read: 7
-Top level ports: 118
-Total ports in all modules: 350
-Total nets in all modules: 1354
-Total instances in all modules: 1007
-Elapsed = 00:00:00.02, CPU = 00:00:00.01
-1
-link_design  $DESIGN
-Using libraries: static_pg_top_icc2.dlib 1p9m_tech saed14lvt_frame_timing_ccs
-Linking block static_pg_top_icc2.dlib:static_pg_top.design
-Information: User units loaded from library 'saed14lvt_frame_timing_ccs' (LNK-040)
-Design 'static_pg_top' was successfully linked.
-1
-read_sdc     $SDC_FILE
-Information: Loading SDC version 2.1 file '/home/st160/VLSI-Project/vlsi-project/netlists/baseline/static_pg_top_lp.sdc' (FILE-007)
-Information: Timer using 1 threads
-1
-# FIX (parasitics, corrected): set_tlu_plus_files is an ICC1/DC command and
-# doesn't exist in ICC2 (confirmed via `man`). ICC2's real two-step sequence:
-# (1) read_parasitic_tech loads the TLUplus data into the library under a
-#     named model; (2) set_parasitic_parameters attaches that named model to
-#     the active constraint corner for RC extraction. Both confirmed via
-#     `man read_parasitic_tech` / `man set_parasitic_parameters`.
-read_parasitic_tech \
-    -tlup /usr/synopsys/saed/tech/star_rc/max/saed14nm_1p9m_Cmax.tluplus \
-    -layermap /usr/synopsys/saed/tech/star_rc/saed14nm_tf_itf_tluplus.map \
-    -name saed14lvt_max
-WARNING: Layer mapping file warning. Tech layer 'M1_3' mapped in layer mapping file cannot be found in technology section.
-WARNING: Layer mapping file warning. Tech layer 'M2_3' mapped in layer mapping file cannot be found in technology section.
-WARNING: Layer mapping file warning. Tech layer 'M3_3' mapped in layer mapping file cannot be found in technology section.
-1
-read_parasitic_tech \
-    -tlup /usr/synopsys/saed/tech/star_rc/min/saed14nm_1p9m_Cmin.tluplus \
-    -layermap /usr/synopsys/saed/tech/star_rc/saed14nm_tf_itf_tluplus.map \
-    -name saed14lvt_min
-WARNING: Layer mapping file warning. Tech layer 'M1_3' mapped in layer mapping file cannot be found in technology section.
-WARNING: Layer mapping file warning. Tech layer 'M2_3' mapped in layer mapping file cannot be found in technology section.
-WARNING: Layer mapping file warning. Tech layer 'M3_3' mapped in layer mapping file cannot be found in technology section.
-1
-set_parasitic_parameters \
-    -early_spec saed14lvt_min \
-    -late_spec  saed14lvt_max
-1
-initialize_floorplan \
-    -boundary {{0 0} {30 30}} \
-    -core_offset 2
-Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'M2'. (DPUI-924)
-Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'vertical' routing direction for layer 'M3'. (DPUI-924)
-Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'M4'. (DPUI-924)
-Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'vertical' routing direction for layer 'M5'. (DPUI-924)
-Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'M6'. (DPUI-924)
-Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'vertical' routing direction for layer 'M7'. (DPUI-924)
-Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'M8'. (DPUI-924)
-Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'vertical' routing direction for layer 'M9'. (DPUI-924)
-Warning: The routing directions for layer 'MRDL ' are missing. Auto deriving 'horizontal' routing direction for layer 'MRDL'. (DPUI-924)
-Removing existing floorplan objects
-Creating core...
-Core utilization ratio = 39.00%
-Unplacing all cells...
-Creating site array...
-Creating routing tracks...
-Initializing floorplan completed.
-create_net -power  VDD
-{VDD}
-create_net -ground VSS
-{VSS}
-connect_pg_net -automatic
-****************************************
-Report : Power/Ground Connection Summary
-Design : static_pg_top
-Version: U-2022.12-SP5
-Date   : Sun Jun 28 20:48:19 2026
-****************************************
-P/G net name                  P/G pin count(previous/current)
---------------------------------------------------------------------------------
-Power net VDD                 0/1001
-Ground net VSS                0/1001
---------------------------------------------------------------------------------
-Information: connections of 2002 power/ground pin(s) are created or changed.
-1
-place_opt
-Information: Starting 'place_opt' (FLW-8000)
-Information: Time: 2026-06-28 20:48:19 / Session: 0.00 hr / Command: 0.00 hr / Memory: 406 MB (FLW-8100)
-Information: The command 'place_opt' cleared the undo history. (UNDO-016)
-INFO: place_opt is running in balanced flow mode
-Warning: Cannot find any max transition constraint on the design. (OPT-070)
-INFO: Total Power Aware Optimization Enabled (Dynamic + Leakage)
-Warning: Corner default:  0 process number, 1 process label, 0 voltage, and 0 temperature mismatches. (PVT-030)
-Warning: 1001 cells affected for early, 1001 for late. (PVT-031)
-Warning: 0 port driving_cells affected for early, 0 for late. (PVT-034)
-INFO: disable CRPR-based timing. 
-Information: The stitching and editing of coupling caps is turned OFF for design 'static_pg_top_icc2.dlib:static_pg_top.design'. (TIM-125)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Information: Design Average RC for design static_pg_top  (NEX-011)
-Information: r = 2.018739 ohm/um, via_r = 0.939299 ohm/cut, c = 0.095196 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
+set NETLIST  "./ne
+Segmentation fault encountered.Maximum memory usage for this session: 316.94 MB
+Maximum memory usage for this session iSNPSee_72fe6ee5e6adf88ac107a01d196ffb8ed40842348ffb0f8b+36
+SNPSee_9ea8dbbd5e74784445edf9ed12a0bc4777b489dcaefdb88f6aa47f4097fccf5e+156
+SNPSee_9ea8dbbd5e74784484d3cce2fced02c05a3783bc3b9f8fad49ba3bacacc1ac73ecf347a38534d06f+2085
+SNPSee_3da1e8e388eef22c4cad96049bb507e323902e731626b6f85a1de23e01dcfb84+775
+_L_unlock_13+52
+SNPSee_6e69fbe5cd64cca1c6703629b1e895f8+7
+SNPSee_d37906b5b637f25b+18
+SNPSee_5d373cd896410e630e5be4cb01b4f045+1318
+SNPSee_84819e9227b2e0aa9cae34dc8be3b8a5cd8f264d30f37d0c6a8e358e8cb885004984e24a8c4868b7af29ce1919d3f9852683413c29440db5024a1d284b194ff1+141
+SNPSee_3ed686e8d4a659b5b71ddd12e447f33917cbb8a33ac076760fc4c1bbbacc2de678ec65c28e5937c601c2ef47280b3679+122
+SNPSee_e52978fb95288b35702010462a2fb7521b19e6c7de02e749f68bb351c5fdf77d77dcb6d7ca3d86dfab86a645dee82a58b2bd32436fe9252678dfa79a3e0c83bf+189
+SNPSee_b81f4656f0d7d3ca1b0bca755b60caea2cb50375ef5e9df280c2a7ba1e2ca19f7750e3d580600edd04a01dc4363d697fcd6b18c4d0ab558c+710
+SNPSee_b3a63ca9beb66366a2beecdfa325f5f850e37c16b964335ba934f8a7afefeaf1+989
+SNPSee_6188b3f9a7e769c7eb2dc22ab181ff5c0260e7bf3c6e6c5b6dd310362dd3e58b19a33122e2a80c1014bca5a076370ba0686492d474ef148ca36ababef5945158a888f7e536545dec88d039942c447aad829ec3c9a13ccf1352c7f068f1dc0d713b949058f841385ce96831542394be36f2ec7e463409336ff9646fa385cc5a553529ff78d8277054cb68eca1e74b2650bc52a0a187546145fe12efa21abc06a8+19225
+SNPSee_5a24f30b88271223+2027
+__libc_start_main+245
+SNPSee_d06eed713327be76+41
+
+A detailed stack trace has been caSNPSee_72fe6ee5e6adf88ac107a01d196ffb8ed40842348ffb0f8b+36
+SNPSee_9ea8dbbd5e7478
+The tool has just encountered a fatal error:
+
+If you encountered this fatal error when using the most recent
+Synopsys release, submit the above stack trace and a test case that
+reproduces the problem to the Synopsys Support Center by using
+Enter A Call at http://solvnet.synopsys.com/EnterACall.
+
+* For information about the latest software releases, go to the Synopsys
+  SolvNet Release Library at http://solvnet.synopsys.com/ReleaseLibrary.
+
+* For information about required Operating System patches, go to
+  http://www.synopsys.com/support
+
+
+Fatal: Internal system error, cannot recover.
+Error code=11
+CPU time=33
+
+Release = 'U-2022.12-SP5'  Architecture = 'linux64'  Program = 'IC Compiler II'
+Exec = '/usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/dgcom_exec'
+
+'1013683749 975061102 139982177748528 1087872023 1087853522 975029510 1083842829 489770410 489752557 486476150 1009310397 247712473 247720139 139980352157013 247636009'
+89
+SNPSee_6188b3f9a7e769c7eb2dc22ab181ff5c0260e7bf3c6e6c5b6dd310362dd3e58b19a33122e2a80c1014bca5a076370ba0686492d474ef148ca36ababef5945158a888f7e536545dec88d039942c447aad829ec3c9a13ccf1352c7f068f1dc0d713b949058f841385ce96831542394be36f2ec7e463409336ff9646fa385cc5a553529ff78d8277054cb68eca1e74b2650bc52a0a187546145fe12efa21abc06a8+19225
+SNPSee_5a24f30b88271223+2027
+__libc_start_main+245
+SNPSee_d06eed713327be76+41
+
+A detailed stack trace has been captured in /home/st160/VLSI-Project/vlsi-project/Synopsys_stack_trace_49690.txt.
+
+The tool has just encountered a fatal error:
+
+If you encountered this fatal error when using the most recent
+Synopsys release, submit the above stack trace and a test case that
+reproduces the problem to the Synopsys Support Center by using
+Enter A Call at http://solvnet.synopsys.com/EnterACall.
+
+* For information about the latest software releases, go to the Synopsys
+  SolvNet Release Library at http://solvnet.synopsys.com/ReleaseLibrary.
+
+* For information about required Operating System patches, go to
+  http://www.synopsys.com/support
+
+
+Fatal: Internal system error, cannot recover.
+Error code=11
+CPU time=36
+
+Release = 'U-2022.12-SP5'  Architecture = 'linux64'  Program = 'IC Compiler II'
+Exec = '/usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/dgcom_exec'
+
+'1013683749 975061102 140383386539568 1087872023 1087853522 975029510 1083842829 489770410 489752557 486476150 1009310397 247712473 247720139 140381560948053 247636009'
+83bf+189
+SNPSee_b81f4656f0d7d3ca1b0bca755b60caea2cb50375ef5e9df280c2a7ba1e2ca19f7750e3d580600edd04a01dc4363d697fcd6b18c4d0ab558c+710
+SNPSee_b3a63ca9beb66366a2beecdfa325f5f850e37c16b964335ba934f8a7afefeaf1+989
+SNPSee_6188b3f9a7e769c7eb2dc22ab181ff5c0260e7bf3c6e6c5b6dd310362dd3e58b19a33122e2a80c1014bca5a076370ba0686492d474ef148ca36ababef5945158a888f7e536545dec88d039942c447aad829ec3c9a13ccf1352c7f068f1dc0d713b949058f841385ce96831542394be36f2ec7e463409336ff9646fa385cc5a553529ff78d8277054cb68eca1e74b2650bc52a0a187546145fe12efa21abc06a8+19225
+SNPSee_5a24f30b88271223+2027
+__libc_start_main+245
+SNPSee_d06eed713327be76+41
+
+A detailed stack trace has been captured in /home/st160/VLSI-Project/vlsi-project/Synopsys_stack_trace_44616.txt.
+
+The tool has just encountered a fatal error:
+
+If you encountered this fatal error when using the most recent
+Synopsys release, submit the above stack trace and a test case that
+reproduces the problem to the Synopsys Support Center by using
+Enter A Call at http://solvnet.synopsys.com/EnterACall.
+
+* For information about the latest software releases, go to the Synopsys
+  SolvNet Release Library at http://solvnet.synopsys.com/ReleaseLibrary.
+
+* For information about required Operating System patches, go to
+  http://www.synopsys.com/support
+
+
+Fatal: Internal system error, cannot recover.
+Error code=11
+CPU time=35
+
+Release = 'U-2022.12-SP5'  Architecture = 'linux64'  Program = 'IC Compiler II'
+Exec = '/usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/dgcom_exec'
+
+'1013683749 975061102 140367010588208 1087872023 1087853522 975029510 1083842829 489770410 489752557 486476150 1009310397 247712473 247720139 140365184996693 247636009'
+ain+245
+SNPSee_d06eed713327be76+41
+
+A detailed stack trace has been captured in /home/st160/VLSI-Project/vlsi-project/Synopsys_stack_trace_5789.txt.
+
+The tool has just encountered a fatal error:
+
+If you encountered this fatal error when using the most recent
+Synopsys release, submit the above stack trace and a test case that
+reproduces the problem to the Synopsys Support Center by using
+Enter A Call at http://solvnet.synopsys.com/EnterACall.
+
+* For information about the latest software releases, go to the Synopsys
+  SolvNet Release Library at http://solvnet.synopsys.com/ReleaseLibrary.
+
+* For information about required Operating System patches, go to
+  http://www.synopsys.com/support
+
+
+Fatal: Internal system error, cannot recover.
+Error code=11
+CPU time=35
+
+Release = 'U-2022.12-SP5'  Architecture = 'linux64'  Program = 'IC Compiler II'
+Exec = '/usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/dgcom_exec'
+
+'1013683749 975061102 139801068930608 1087872023 1087853522 975029510 1083842829 489770410 489752557 486476150 1009310397 247712473 247720139 139799243339093 247636009'
+tion: r = 2.018739 ohm/um, via_r = 0.939299 ohm/cut, c = 0.095196 ff/um, cc = 0.000000 ff/um (X dir) (NEX-017)
 Information: r = 2.517176 ohm/um, via_r = 0.492748 ohm/cut, c = 0.087652 ff/um, cc = 0.000000 ff/um (Y dir) (NEX-017)
 Number of Site types in the design = 1
 Setting up Chip Core
@@ -182,41 +194,50 @@ Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
-Warning: No clock routing rules were specified. Use set_clock_routing_rules to specify routing rules for accurate clock latency estimation. (OPT-902)
-Information: Estimating clock gate latencies for scenario 'default'. (OPT-909)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Warning: Technology layer 'M1' setting 'pitch' is not valid (NEXMaximum memory usage for this session: 540.79 MB
+Maximum memory usage for this session including child processes: 540.79SNPSee_72fe6ee5e6adf88ac107a01d196ffb8ed40842348ffb0f8b+36
+SNPSee_9ea8dbbd5e74784445edf9ed12a0bc4777b489dcaefdb88f6aa47f4097fccf5e+156
+SNPSee_9ea8dbbd5e74784484d3cce2fced02c05a3783bc3b9f8fad49ba3bacacc1ac73ecf347a38534d06f+2085
+SNPSee_3da1e8e388eef22c4cad96049bb507e323902e731626b6f85a1de23e01dcfb84+775
+_L_unlock_13+52
+SNPSee_6e69fbe5cd64cca1c6703629b1e895f8+7
+SNPSee_d37906b5b637f25b+18
+SNPSee_5d373cd896410e630e5be4cb01b4f045+1318
+SNPSee_84819e9227b2e0aa9cae34dc8be3b8a5cd8f264d30f37d0c6a8e358e8cb885004984e24a8c4868b7af29ce1919d3f9852683413c29440db5024a1d284b194ff1+141
+SNPSee_3ed686e8d4a659b5b71ddd12e447f33917cbb8a33ac076760fc4c1bbbacc2de678ec65c28e5937c601c2ef47280b3679+122
+SNPSee_e52978fb95288b35702010462a2fb7521b19e6c7de02e749f68bb351c5fdf77d77dcb6d7ca3d86dfab86a645dee82a58b2bd32436fe9252678dfa79a3e0c83bf+189
+SNPSee_b81f4656f0d7d3ca1b0bca755b60caea2cb50375ef5e9df280c2a7ba1e2ca19f7750e3d580600edd04a01dc4363d697fcd6b18c4d0ab558c+710
+SNPSee_b3a63ca9beb66366a2beecdfa325f5f850e37c16b964335ba934f8a7afefeaf1+989
+SNPSee_6188b3f9a7e769c7eb2dc22ab181ff5c0260e7bf3c6e6c5b6dd310362dd3e58b19a33122e2a80c1014bca5a076370ba0686492d474ef148ca36ababef5945158a888f7e536545dec88d039942c447aad829ec3c9a13ccf1352c7f068f1dc0d713b949058f841385ce96831542394be36f2ec7e463409336ff9646fa385cc5a553529ff78d8277054cb68eca1e74b2650bc52a0a187546145fe12efa21abc06a8+19225
+SNPSee_5a24f30b88271223+2027
+__libc_start_main+245
+SNPSee_d06eed713327be76+41
 
-Information: Starting place_opt / initial_place (FLW-8000)
-Information: Time: 2026-06-28 20:48:20 / Session: 0.00 hr / Command: 0.00 hr / Memory: 615 MB (FLW-8100)
+A detailed stack trace has been captured in /home/st160/VLSI-Project/vlsi-project/Synopsys_stack_trace_32589.txt.
+
+The tool has just encountered a fatal error:
+
+If you encountered this fatal error when using the most recent
+Synopsys release, submit the above stack trace and a test case that
+reproduces the problem to the Synopsys Support Center by using
+Enter A Call at http://solvnet.synopsys.com/EnterACall.
+
+* For information about the latest software releases, go to the Synopsys
+  SolvNet Release Library at http://solvnet.synopsys.com/ReleaseLibrary.
+
+* For information about required Operating System patches, go to
+  http://www.synopsys.com/support
 
 
-Information: Starting place_opt / initial_place / Initial Placement (FLW-8000)
-Information: Time: 2026-06-28 20:48:20 / Session: 0.00 hr / Command: 0.00 hr / Memory: 615 MB (FLW-8100)
-Information: The RC mode used is VR for design 'static_pg_top'. (NEX-022)
-Information: Update timing completed net estimation for all the timing graph nets (TIM-111)
-Information: Net estimation statistics: timing graph nets = 1121, routed nets = 0, across physical hierarchy nets = 0, parasitics cached nets = 0, delay annotated nets = 0, parasitics annotated nets = 0, multi-voltage nets = 0. (TIM-112)
-************************************************************
+Fatal: Internal system error, cannot recover.
+Error code=11
+CPU time=36
+
+Release = 'U-2022.12-SP5'  Architecture = 'linux64'  Program = 'IC Compiler II'
+Exec = '/usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/dgcom_exec'
+
+'1013683749 975061102 140003745134128 1087872023 1087853522 975029510 1083842829 489770410 489752557 486476150 1009310397 247712473 247720139 140001919542613 247636009'
+******
 Timer Settings:
 Delay Calculation Style:                   auto
 Signal Integrity Analysis:                 disabled
@@ -254,81 +275,80 @@ Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDL
 Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FSDPQM4_V2Y2_1' and will be excluded from sequential mapping. (SQM-1061)
 Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FSDPSYNRBQM4_V2LPY2_1' and will be excluded from sequential mapping. (SQM-1061)
 Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FSDPSYNRBQM4_V2Y2_1' and will be excluded from sequential mapping. (SQM-1061)
-Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_SRRDPQ4_1' and will be excluded from sequential mapping. (SQM-1061)
-Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_SRRDPQ4_2' and will be excluded from sequential mapping. (SQM-1061)
-Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FDNRBSBQ_V2_0P5' and will be excluded from sequential mapping. (SQM-1061)
-Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FDNRBSBQ_V2_1' and will be excluded from sequential mapping. (SQM-1061)
-Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FDNRBSBQ_V2_2' and will be excluded from sequential mapping. (SQM-1061)
-Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_FDNRBSBQ_V2_4' and will be excluded from sequential mapping. (SQM-1061)
+Warning: Cannot infer functionality of libcell 'saed14lvt_frame_timing_ccs/SAEDLVT14_SRRDPQ4_1' and will be excluded from sequential mapping. Maximum memory usage for this session: 578.96 MB
+Maximum memory usage for this session including child processes: 578.96 MB
+CPU usage for this session:     16 seconds (  0.00 hoSNPSee_72fe6ee5e6adf88ac107a01d196ffb8ed40842348ffb0f8b+36
+SNPSee_9ea8dbbd5e74784445edf9ed12a0bc4777b489dcaefdb88f6aa47f4097fccf5e+156
+SNPSee_9ea8dbbd5e74784484d3cce2fced02c05a3783bc3b9f8fad49ba3bacacc1ac73ecf347a38534d06f+2085
+SNPSee_3da1e8e388eef22c4cad96049bb507e323902e731626b6f85a1de23e01dcfb84+775
+_L_unlock_13+52
+SNPSee_6e69fbe5cd64cca1c6703629b1e895f8+7
+SNPSee_d37906b5b637f25b+18
+SNPSee_5d373cd896410e630e5be4cb01b4f045+1318
+SNPSee_84819e9227b2e0aa9cae34dc8be3b8a5cd8f264d30f37d0c6a8e358e8cb885004984e24a8c4868b7af29ce1919d3f9852683413c29440db5024a1d284b194ff1+141
+SNPSee_3ed686e8d4a659b5b71ddd12e447f33917cbb8a33ac076760fc4c1bbbacc2de678ec65c28e5937c601c2ef47280b3679+122
+SNPSee_e52978fb95288b35702010462a2fb7521b19e6c7de02e749f68bb351c5fdf77d77dcb6d7ca3d86dfab86a645dee82a58b2bd32436fe9252678dfa79a3e0c83bf+189
+SNPSee_b81f4656f0d7d3ca1b0bca755b60caea2cb50375ef5e9df280c2a7ba1e2ca19f7750e3d580600edd04a01dc4363d697fcd6b18c4d0ab558c+710
+SNPSee_b3a63ca9beb66366a2beecdfa325f5f850e37c16b964335ba934f8a7afefeaf1+989
+SNPSee_6188b3f9a7e769c7eb2dc22ab181ff5c0260e7bf3c6e6c5b6dd310362dd3e58b19a33122e2a80c1014bca5a076370ba0686492d474ef148ca36ababef5945158a888f7e536545dec88d039942c447aad829ec3c9a13ccf1352c7f068f1dc0d713b949058f841385ce96831542394be36f2ec7e463409336ff9646fa385cc5a553529ff78d8277054cb68eca1e74b2650bc52a0a187546145fe12efa21abc06a8+19225
+SNPSee_5a24f30b88271223+2027
+__libc_start_main+245
+SNPSee_d06eed713327be76+41
 
-Merging equivalent ICGs......
+A detailed stack trace has been captured in /home/st160/VLSI-Project/vlsi-project/Synopsys_stack_trace_22236.txt.
 
-Clearing settings of clock gate merging......
-Clearing enable all modes setting.
+The tool has just encountered a fatal error:
 
-Information: Total 0 ICGs are not considered in merging for reasons: don't touch - 0; fixed - 0; other reasons - 0. (CTS-124)
- - message 'CTS-125' limit is (10).
+If you encountered this fatal error when using the most recent
+Synopsys release, submit the above stack trace and a test case that
+reproduces the problem to the Synopsys Support Center by using
+Enter A Call at http://solvnet.synopsys.com/EnterACall.
 
-Information: Total 0 ICGs are unique in the design. (CTS-126)
- - message 'CTS-127' limit is (10).
+* For information about the latest software releases, go to the Synopsys
+  SolvNet Release Library at http://solvnet.synopsys.com/ReleaseLibrary.
 
-************************************************************
-* CTS STEP: Summary
-************************************************************
-merge_clock_gates Statistics: Total
-    ICG                       0
-    Merged                    0
-    Survived                  0
-    Removed                   0
-    ICG at the end            0
+* For information about required Operating System patches, go to
+  http://www.synopsys.com/support
 
 
-Summary of messages during CTS:
-===============================================================
-  Tag   Count  Type           Description
----------------------------------------------------------------
- No error or warning message.
-Number of Site types in the design = 1
-Setting up Chip Core
-Chip Core shape: (0 0) (299700 300000)
-Number of VARs = 1
-Number of unique PDs = 1
-Number of Power Domains = 1
-Number of Voltage Areas = 1
-Number of supply Nets = 2
-Number of used supplies = 0
-Blocked VAs: 
-INFO: sweep stats: 0 gates / 0 nets gobbled, 0 gates (0 seq) simplified
-Running initial placement
-----------------------------------------------------------------
-running create_placement
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
-Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
+Fatal: Internal system error, cannot recover.
+Error code=11
+CPU time=45
+
+Release = 'U-2022.12-SP5'  Architecture = 'linux64'  Program = 'IC Compiler II'
+Exec = '/usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/dgcom_exec'
+
+'1013683749 975061102 139720773248560 1087872023 1087853522 975029510 1083842829 489770410 489752557 486476150 1009310397 247712473 247720139 139718947657045 247636009'
+22e2a80c1014bca5a076370ba0686492d474ef148ca36ababef5945158a888f7e536545dec88d039942c447aad829ec3c9a13ccf1352c7f068f1dc0d713b949058f841385ce96831542394be36f2ec7e463409336ff9646fa385cc5a553529ff78d8277054cb68eca1e74b2650bc52a0a187546145fe12efa21abc06a8+19225
+SNPSee_5a24f30b88271223+2027
+__libc_start_main+245
+SNPSee_d06eed713327be76+41
+
+A detailed stack trace has been captured in /home/st160/VLSI-Project/vlsi-project/Synopsys_stack_trace_37312.txt.
+
+The tool has just encountered a fatal error:
+
+If you encountered this fatal error when using the most recent
+Synopsys release, submit the above stack trace and a test case that
+reproduces the problem to the Synopsys Support Center by using
+Enter A Call at http://solvnet.synopsys.com/EnterACall.
+
+* For information about the latest software releases, go to the Synopsys
+  SolvNet Release Library at http://solvnet.synopsys.com/ReleaseLibrary.
+
+* For information about required Operating System patches, go to
+  http://www.synopsys.com/support
+
+
+Fatal: Internal system error, cannot recover.
+Error code=11
+CPU time=85
+
+Release = 'U-2022.12-SP5'  Architecture = 'linux64'  Program = 'IC Compiler II'
+Exec = '/usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/dgcom_exec'
+
+'1013683749 975061102 139691117381168 1087872023 1087853522 975029510 1083842829 489770410 489752557 486476150 1009310397 247712473 247720139 139689291789653 247636009'
+ayer 'MRDL' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'M1' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'M2' setting 'pitch' is not valid (NEX-001)
 Warning: Technology layer 'MRDL' setting 'pitch' is not valid (NEX-001)
@@ -17849,3 +17869,50 @@ CPU usage for this session:    457 seconds (  0.13 hours)
 Elapsed time for this session:    456 seconds (  0.13 hours)
 Thank you for using IC Compiler II.
 
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    
+Segmentation fault encountered. (Bad read from 0x2ac)
+
+Stack trace for crashing thread
+-------------------------------
+SNPSee_72fe6ee5e6adf88ac107a01d196ffb8ed40842348ffb0f8b+36
+SNPSee_9ea8dbbd5e74784445edf9ed12a0bc4777b489dcaefdb88f6aa47f4097fccf5e+156
+SNPSee_9ea8dbbd5e74784484d3cce2fced02c05a3783bc3b9f8fad49ba3bacacc1ac73ecf347a38534d06f+2085
+SNPSee_3da1e8e388eef22c4cad96049bb507e323902e731626b6f85a1de23e01dcfb84+775
+_L_unlock_13+52
+SNPSee_6e69fbe5cd64cca1c6703629b1e895f8+7
+SNPSee_d37906b5b637f25b+18
+SNPSee_5d373cd896410e630e5be4cb01b4f045+1318
+SNPSee_84819e9227b2e0aa9cae34dc8be3b8a5cd8f264d30f37d0c6a8e358e8cb885004984e24a8c4868b7af29ce1919d3f9852683413c29440db5024a1d284b194ff1+141
+SNPSee_3ed686e8d4a659b5b71ddd12e447f33917cbb8a33ac076760fc4c1bbbacc2de678ec65c28e5937c601c2ef47280b3679+122
+SNPSee_e52978fb95288b35702010462a2fb7521b19e6c7de02e749f68bb351c5fdf77d77dcb6d7ca3d86dfab86a645dee82a58b2bd32436fe9252678dfa79a3e0c83bf+189
+SNPSee_b81f4656f0d7d3ca1b0bca755b60caea2cb50375ef5e9df280c2a7ba1e2ca19f7750e3d580600edd04a01dc4363d697fcd6b18c4d0ab558c+710
+SNPSee_b3a63ca9beb66366a2beecdfa325f5f850e37c16b964335ba934f8a7afefeaf1+989
+SNPSee_6188b3f9a7e769c7eb2dc22ab181ff5c0260e7bf3c6e6c5b6dd310362dd3e58b19a33122e2a80c1014bca5a076370ba0686492d474ef148ca36ababef5945158a888f7e536545dec88d039942c447aad829ec3c9a13ccf1352c7f068f1dc0d713b949058f841385ce96831542394be36f2ec7e463409336ff9646fa385cc5a553529ff78d8277054cb68eca1e74b2650bc52a0a187546145fe12efa21abc06a8+19225
+SNPSee_5a24f30b88271223+2027
+__libc_start_main+245
+SNPSee_d06eed713327be76+41
+
+A detailed stack trace has been captured in /home/st160/VLSI-Project/vlsi-project/Synopsys_stack_trace_48897.txt.
+
+The tool has just encountered a fatal error:
+
+If you encountered this fatal error when using the most recent
+Synopsys release, submit the above stack trace and a test case that
+reproduces the problem to the Synopsys Support Center by using
+Enter A Call at http://solvnet.synopsys.com/EnterACall.
+
+* For information about the latest software releases, go to the Synopsys
+  SolvNet Release Library at http://solvnet.synopsys.com/ReleaseLibrary.
+
+* For information about required Operating System patches, go to
+  http://www.synopsys.com/support
+
+
+Fatal: Internal system error, cannot recover.
+Error code=11
+CPU time=561
+
+Release = 'U-2022.12-SP5'  Architecture = 'linux64'  Program = 'IC Compiler II'
+Exec = '/usr/synopsys/icc2/U-2022.12-SP5/linux64/nwtn/bin/dgcom_exec'
+
+'1013683749 975061102 139828458075696 1087872023 1087853522 975029510 1083842829 489770410 489752557 486476150 1009310397 247712473 247720139 139826632484181 247636009'
