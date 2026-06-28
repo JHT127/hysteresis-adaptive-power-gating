@@ -1,6 +1,6 @@
 #@ # 
 #@ # Running dc_shell Version R-2020.09-SP5-5 for linux64 -- Jan 19, 2022
-#@ # Date:   Sun Jun 28 18:11:57 2026
+#@ # Date:   Sun Jun 28 18:16:48 2026
 #@ # Run by: st160@synopsys.stbzu.edu
 #@ 
 
@@ -6841,7 +6841,7 @@ source -echo -verbose /home/st160/VLSI-Project/vlsi-project/scripts/dc_synthesis
 #@ set_max_fanout    8 [current_design]
 #@ set_max_transition 0.4 [current_design]
 #@ set_clock_gating_style -sequential_cell latch -minimum_bitwidth 3
-#@ insert_clock_gates [current_design]
+#@ insert_clock_gating [current_design]
 #@ set_leakage_optimization true
 #@ compile_ultra -no_autoungroup
 #@ report_timing -path full -delay max -max_paths 5 > $RPT_DIR/timing_lp.rpt
@@ -6861,7 +6861,7 @@ source -echo -verbose /home/st160/VLSI-Project/vlsi-project/scripts/dc_synthesis
 #@ set_max_fanout    6 [current_design]
 #@ set_max_transition 0.3 [current_design]
 #@ set_clock_gating_style -sequential_cell latch -minimum_bitwidth 3
-#@ insert_clock_gates [current_design]
+#@ insert_clock_gating [current_design]
 #@ compile_ultra -no_autoungroup -timing_high_effort_script
 #@ report_timing -path full -delay max -max_paths 5 > $RPT_DIR/timing_hs.rpt
 #@ report_area                                       > $RPT_DIR/area_hs.rpt

@@ -28,12 +28,7 @@ initialize_floorplan \
 
 create_net -power  VDD
 create_net -ground VSS
-create_pg_ring_pattern ring_pat \
-    [list [list -net VDD -layer M8 -width 0.8] \
-          [list -net VSS -layer M8 -width 0.8]]
-set_pg_strategy ring_s -core \
-    -pattern [list [list -pattern ring_pat -offset {0.5 0.5}]]
-compile_pg -strategies ring_s
+connect_pg_net -automatic
 
 place_opt
 report_timing  -max_paths 5          > $RPT_DIR/timing_place.rpt
