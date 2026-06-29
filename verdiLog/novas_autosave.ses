@@ -27,7 +27,7 @@ fdb_tool =
 [hb]
 postSimFile = /home/st160/VLSI-Project/vlsi-project/tb_comparison.vcd.fsdb
 syncTime = 0
-viewport = 0 23 1366 705 0 0 191 702
+viewport = 0 23 1366 705 0 0 384 1364
 interactiveMode = False
 viewType = Source
 simulatorMode = False
@@ -55,7 +55,7 @@ WaveformFile = /home/st160/VLSI-Project/vlsi-project/tb_comparison.vcd.fsdb
 UserActionNum = 0
 nMemWindowNum = 0
 [wave.0]
-viewPort = 0 25 1366 224 167 1
+viewPort = 0 25 1366 412 225 1
 primaryWindow = TRUE
 SessionFile = /home/st160/VLSI-Project/vlsi-project/verdiLog/novas_autosave.ses.wave.0
 displayGrid = FALSE

@@ -2,7 +2,7 @@ Magic 271485
 Revision Verdi_T-2022.06-SP2
 
 ; Window Layout <x> <y> <width> <height> <signalwidth> <valuewidth>
-viewPort 0 25 1366 224 167 1
+viewPort 0 25 1366 412 225 1
 
 ; File list:
 ; openDirFile [-d delimiter] [-s time_offset] [-rf auto_bus_rule_file] path_name file_name
@@ -18,16 +18,37 @@ signalSpacing 5
 windowTimeUnit 1ns
 
 ; waveform viewport range
-zoom 781.607083 1907.770447 1n
+zoom 965.041117 2013.617117 1n
 cursor 0.000000
 marker 0.000000
 
 ; user define markers
 ; userMarker time_pos marker_name color linestyle
 ; visible top row signal index
-top 1
+top 0
 ; marker line index
 markerPos 4
+
+; rename signal list
+; addRenameSig new_name org_name
+activeDirFile "" "/home/st160/VLSI-Project/vlsi-project/tb_comparison.vcd.fsdb"
+
+addRenameSig "/tb_comparison/dut_baseline/power_mode (baseline)" "/tb_comparison/dut_baseline/power_mode[1:0]"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/tb_comparison/dut_proposed/power_mode (proposed)" "/tb_comparison/dut_proposed/power_mode[1:0]"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/tb_comparison/dut_baseline/sleep_n (baseline)" "/tb_comparison/dut_baseline/sleep_n"
+
+; rename signal list
+; addRenameSig new_name org_name
+
+addRenameSig "/tb_comparison/dut_proposed/sleep_n (proposed)" "/tb_comparison/dut_proposed/sleep_n"
 
 ; event list
 ; addEvent event_name event_expression
@@ -49,10 +70,10 @@ curSTATUS ByChange
 
 addGroup "G1"
 activeDirFile "" "/home/st160/VLSI-Project/vlsi-project/tb_comparison.vcd.fsdb"
-addSignal -h 15 -UNSIGNED -HEX /tb_comparison/dut_baseline/power_mode[1:0]
-addSignal -h 15 -UNSIGNED -HEX /tb_comparison/dut_proposed/power_mode[1:0]
-addSignal -h 15 /tb_comparison/dut_baseline/sleep_n
-addSignal -h 15 /tb_comparison/dut_proposed/sleep_n
+addSignal -h 15 -UNSIGNED -HEX /tb_comparison/dut_baseline/power_mode (baseline)
+addSignal -h 15 -UNSIGNED -HEX /tb_comparison/dut_proposed/power_mode (proposed)
+addSignal -h 15 /tb_comparison/dut_baseline/sleep_n (baseline)
+addSignal -h 15 /tb_comparison/dut_proposed/sleep_n (proposed)
 addGroup "G2"
 
 ; getSignalForm Scope Hierarchy Status

@@ -378,12 +378,13 @@ saveWaveformStat = TRUE
 savePropStat = FALSE
 savePropDtl = TRUE
 [QtDialog]
-capturePreview_SaveAs = 410,165,590,340
+Verdi_OpenFile = 378,165,590,340
+capturePreview_SaveAs = 388,183,590,340
 QwUserAskDlg = 511,249,324,134
-qWaveSignalDialog = 390,115,800,463
+qWaveSignalDialog = 283,144,800,463
 SetWindowTimeUnitDialog = 466,333,433,84
-capturePreview = 30,140,1370,470
-loadFile = 714,205,595,357
+capturePreview = 8,83,1370,620
+loadFile = 385,197,595,357
 [Relationship]
 hideRecursiceNode = FALSE
 [Safety]
@@ -670,33 +671,33 @@ isOneSearchVisible = TRUE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0]
 parRuleSets = ""
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column0]
-name = Time
+name = Severity
 width = 60
-visualIndex = 0
+visualIndex = 1
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column1]
-name = Code
-width = 60
-visualIndex = 2
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
-name = Type
-width = 60
-visualIndex = 3
-isHidden = TRUE
-isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
 name = Message
 width = 2000
 visualIndex = 4
 isHidden = FALSE
 isUserChangeColumnVisible = FALSE
-[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
-name = Severity
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column2]
+name = Time
 width = 60
-visualIndex = 1
+visualIndex = 0
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column3]
+name = Code
+width = 60
+visualIndex = 2
+isHidden = TRUE
+isUserChangeColumnVisible = FALSE
+[VIA.oneSearch.preference.vgifColumnSettingRC.setting0.column4]
+name = Type
+width = 60
+visualIndex = 3
 isHidden = TRUE
 isUserChangeColumnVisible = FALSE
 [Vi]
@@ -780,8 +781,8 @@ AutoApplySeverityColor = TRUE
 scope_to_save_with_macro
 open_file_dir
 open_rc_file_dir
-getSignalForm = 390 115 800 463 245 365 505 175
-viewPort = 0 25 1366 224 167 1
+getSignalForm = 283 144 800 463 245 365 505 175
+viewPort = 0 25 1366 412 225 1
 legendBackground = -c ID_BLACK
 valueBackground = -c ID_BLACK
 curveBackground = -c ID_BLACK
@@ -1310,7 +1311,7 @@ AddImportArgument = FALSE
 LineBreakWithScope = TRUE
 StopAfterCompileOption = -s
 [wave.0]
-viewPort = 0 25 1366 224 167 1
+viewPort = 0 25 1366 412 225 1
 [wave.1]
 viewPort = 127 219 960 332 100 65
 [wave.2]
