@@ -6,6 +6,8 @@
 # users' session data. Never worth versioning.
 # =============================================================================
 *.svf
+*.pvl
+*.syn
 crte_*.txt
 Synopsys_stack_trace_*.txt
 filenames_*.log
