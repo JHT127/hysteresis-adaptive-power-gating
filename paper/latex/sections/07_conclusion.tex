@@ -1,0 +1,9 @@
+\section{Conclusion}
+\label{sec:conclusion}
+
+This work presented a comparator-based, dual-condition adaptive hysteresis controller for multi-level power gating, evaluated against a fair, structurally matched fixed-threshold baseline at both RTL-simulation and post-route physical-implementation levels. The proposed design eliminates sleep-state thrashing under bursty traffic, preserving throughput at 59.3\% versus 19.3\% for the fixed-threshold baseline -- a 3.1$\times$ improvement at zero mode transitions versus nineteen. Under genuinely sparse idle conditions, leakage savings converge to within 1.8 percentage points (31.6\% vs.\ 33.4\%), confirming the design does not sacrifice savings when idle conditions are unambiguous. The real post-route area overhead is 13.6\%, bounded and materially lower than the pre-layout synthesis estimate of 20--26\%. Timing closure is fully met at both LP (5\,ns) and HS (2\,ns) corners. The complete RTL-to-GDSII implementation was validated through Synopsys VCS functional simulation, DC Ultra synthesis, and Fusion Compiler place-and-route, with 0 open nets and a post-route worst-case slack of 3.25\,ns.
+
+Future work includes extending the activity-rate gate to additional functional-block types beyond the ALU, multi-corner PVT physical verification, SPICE-level energy measurement to replace the derived transition-cost proxy metric, and validation against real application traces rather than synthetic workloads.
+
+\subsection*{Code Availability}
+The RTL, testbench, UPF power intent, and synthesis/place-and-route scripts used in this work are available at \url{https://github.com/JHT127/hysteresis-adaptive-power-gating}.

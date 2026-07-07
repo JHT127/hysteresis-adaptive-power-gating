@@ -1,0 +1,49 @@
+\documentclass[journal]{IEEEtran}
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{textcomp}
+\usepackage{booktabs}
+\usepackage{url}
+\usepackage{placeins}
+
+\graphicspath{{figures/}}
+
+\begin{document}
+
+
+\title{An Activity-Rate-Aware Hysteresis Controller for Lightweight Adaptive Power Gating in SoC Functional Blocks}
+
+\author{
+\IEEEauthorblockA{
+\textbf{Authors:} Joud Thaher \& Layan Salem\\
+\textbf{Supervisor:} Dr.\ Khader Mohammed\\
+\textbf{Department:} Electrical and Computer Engineering\\
+\textbf{University:} Birzeit University, Palestine\\
+\textbf{GitHub Repository:} \url{https://github.com/JHT127/hysteresis-adaptive-power-gating}
+}
+}
+
+\maketitle
+
+
+\begin{abstract}
+Conventional power-gating controllers for small SoC functional blocks typically select sleep states using idle-cycle count alone, a policy that is vulnerable to thrashing -- repeated, costly sleep/wake transitions -- under bursty workloads. This work proposes a lightweight power-gating controller for a 32-bit ALU block that gates sleep-state entry on the conjunction of consecutive idle-cycle count and a rolling-window activity rate, with adaptive widening of entry thresholds during high-activity periods. The controller is implemented in synthesizable RTL with three power states (ON, Light Sleep, Deep Sleep) and is evaluated against a fixed-threshold baseline representative of prior multi-level power-gating work, using an identical ALU, isolation strategy, and UPF power intent for both designs. Functional simulation across burst, sparse, and mixed workloads shows the proposed controller eliminates thrashing under bursty traffic (zero mode transitions vs.\ nineteen for the baseline, preserving throughput at 59.3\% vs.\ 19.3\%), while converging to comparable leakage savings under unambiguous idle conditions (31.6\% vs.\ 33.4\%). Synthesis at two clock corners (5\,ns and 2\,ns) and full place-and-route in a 14\,nm standard-cell library using Synopsys Fusion Compiler show a real post-route area overhead of 13.6\% with identical, fully met timing closure on both designs and zero open nets after routing. Results indicate that the proposed dual-condition policy trades a bounded, modest area cost for a substantial improvement in throughput stability under realistic bursty traffic -- a trade-off not previously quantified for comparator-based (non-machine-learning) adaptive power-gating controllers at this scale.
+\end{abstract}
+
+\begin{IEEEkeywords}
+power gating, adaptive power management, leakage power, low-power VLSI, hysteresis control, multi-level sleep, RTL design, ASIC implementation, SAED 14nm
+\end{IEEEkeywords}
+
+\input{sections/01_introduction}
+\input{sections/02_related_work}
+\input{sections/03_architecture}
+\input{sections/04_methodology}
+\input{sections/05_results}
+\input{sections/06_discussion}
+\input{sections/07_conclusion}
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}

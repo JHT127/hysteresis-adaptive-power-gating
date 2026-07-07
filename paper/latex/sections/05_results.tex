@@ -1,0 +1,173 @@
+\section{Results}
+\label{sec:results}
+
+\subsection{Functional Comparison}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig3_functional_comparison.pdf}
+\caption{(a) Mode transitions and (b) valid-result throughput, baseline vs.\ proposed, across the three evaluated workloads.}
+\label{fig:functional}
+\end{figure*}
+
+Table~\ref{tab:cycles} reports per-mode cycle distribution across the three workloads; Table~\ref{tab:functional} reports transition counts, throughput, and leakage savings; Fig.~\ref{fig:functional} visualizes the key results.
+
+%% ── Table I: Cycle distribution ──────────────────────────────────────────
+\begin{table*}[t]
+\centering
+\small
+\caption{Per-Mode Cycle Distribution Across Workloads (Baseline vs.\ Proposed)}
+\label{tab:cycles}
+\setlength{\tabcolsep}{6pt}
+\begin{tabular}{l rr rr rr}
+\toprule
+ & \multicolumn{2}{c}{\textbf{BURST}} & \multicolumn{2}{c}{\textbf{SPARSE}} & \multicolumn{2}{c}{\textbf{MIXED}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Power State & Base. & Prop. & Base. & Prop. & Base. & Prop. \\
+\midrule
+Cycles ON              & 78  & 135 & 8   & 16  & 92  & 104 \\
+Cycles Light Sleep     & 57  & 0   & 10  & 11  & 10  & 9   \\
+Cycles Deep Sleep      & 0   & 0   & 155 & 146 & 81  & 70  \\
+Total cycles           & 135 & 135 & 173 & 173 & 183 & 183 \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+%% ── Table II: Functional metrics ─────────────────────────────────────────
+\begin{table*}[t]
+\centering
+\small
+\caption{Functional Performance Metrics Across Workloads (Baseline vs.\ Proposed)}
+\label{tab:functional}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{@{}l rr rr rr@{}}
+\toprule
+ & \multicolumn{2}{c}{\textbf{BURST}} & \multicolumn{2}{c}{\textbf{SPARSE}} & \multicolumn{2}{c}{\textbf{MIXED}} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}
+Metric & Base. & Prop. & Base. & Prop. & Base. & Prop. \\
+\midrule
+Mode transitions       & 19   & \textbf{0}    & 26   & 23   & 20   & 17   \\
+Wake-up events         & 9    & \textbf{0}    & 8    & 7    & 7    & 6    \\
+Leakage saving (\%)    & 8.8  & 0.7  & 33.4 & \textbf{31.6} & 17.0 & 14.7 \\
+Throughput (\%)        & 19.3 & \textbf{59.3} & 0.0  & 0.6  & 38.3 & 38.8 \\
+Output mismatches      & 0    & 0    & 0    & 0    & 0    & 0    \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+Under bursty traffic, the baseline controller's idle-cycle-only policy enters Light Sleep on every gap exceeding its fixed 3-cycle threshold, producing 19 mode transitions and 9 full wake-up events across the workload. Each transition incurs up to 3~cycles of wake-up latency ($19 \times 3 = 57$ cycle-equivalents of overhead), reducing valid-result throughput to 19.3\%. The proposed controller's activity-rate gate, widened by the workload's sustained high duty cycle, suppresses sleep entry entirely (zero transitions), preserving throughput at 59.3\% -- a $3.1\times$ improvement. Under sparse traffic, where idle periods are long and unambiguous, both controllers correctly progress to Deep Sleep with comparable leakage savings (33.4\% baseline, 31.6\% proposed), confirming the proposed design's added caution does not cost savings when idle conditions are genuine. Zero output mismatches were recorded across all workloads, confirming functional correctness of the single-module substitution.
+
+\subsection{Physical Implementation Results}
+
+\begin{figure*}[t]
+\centering
+\includegraphics[width=\textwidth]{fig4_area_comparison.pdf}
+\caption{(a) Pre-layout synthesis estimate vs.\ real post-route area at the low-power corner, and (b) DC synthesis area at both corners, baseline vs.\ proposed.}
+\label{fig:area}
+\end{figure*}
+
+Tables~\ref{tab:area} \ref{tab:leakage} present the synthesis and post-route PPA results decomposed by metric category; Fig.~\ref{fig:area} visualizes the area trade-off.
+
+%% ── Table III: Area ──────────────────────────────────────────────────────
+\begin{table}[t]
+\centering
+\footnotesize
+\caption{Cell Area Summary (DC Synthesis and Post-Route)}
+\label{tab:area}
+\setlength{\tabcolsep}{4pt}
+\begin{tabular}{@{}l rrr@{}}
+\toprule
+Design point & Baseline ($\mu$m$^2$) & Proposed ($\mu$m$^2$) & Overhead \\
+\midrule
+DC synthesis, LP (5\,ns) & 350.98 & 422.51 & $+$20.4\% \\
+DC synthesis, HS (2\,ns) & 351.25 & 442.76 & $+$26.1\% \\
+Post-route (LP corner)   & 361.50 & 410.61 & $+$13.6\% \\
+Post-route instances     & 1,014  & 1,118  & $+$10.3\% \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+%% ── Table IV: Timing ─────────────────────────────────────────────────────
+\begin{table}[t]
+\centering
+\small
+\caption{Timing Closure Summary (DC Synthesis and Post-Route)}
+\label{tab:timing}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{l rr rr}
+\toprule
+ & \multicolumn{2}{c}{Baseline} & \multicolumn{2}{c}{Proposed} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+Corner & WNS (ns) & TNS (ns) & WNS (ns) & TNS (ns) \\
+\midrule
+DC, LP (5\,ns) & $+$2.44 & 0.00 & $+$2.51 & 0.00 \\
+DC, HS (2\,ns) & $+$0.01 & 0.00 & $+$0.01 & 0.00 \\
+Post-route, LP & $+$3.25 & 0.00 & $+$3.25 & 0.00 \\
+\bottomrule
+\multicolumn{5}{l}{\footnotesize WNS: worst negative slack (positive = timing met).} \\
+\multicolumn{5}{l}{\footnotesize TNS: total negative slack (0.00 = no violations).} \\
+\end{tabular}
+\end{table}
+
+%% ── Table V: Power ───────────────────────────────────────────────────────
+\begin{table}[t]
+\centering
+\small
+\caption{Power Summary -- DC Synthesis, LP Corner (5\,ns)}
+\label{tab:power}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{l rr r}
+\toprule
+Power metric & Baseline & Proposed & Overhead \\
+\midrule
+Cell internal power ($\mu$W)   & 7.09  & 13.54 & $+$91.0\% \\
+Net switching power ($\mu$W)   & 4.71  & 5.64  & $+$19.7\% \\
+Total dynamic power ($\mu$W)   & 11.80 & 19.18 & $+$62.5\% \\
+Cell leakage power (nW)        & 627.2 & 991.3 & $+$58.0\% \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize Dynamic power at LP corner; leakage reflects always-on} \\
+\multicolumn{4}{l}{\footnotesize controller cost, not runtime savings during sleep.} \\
+\end{tabular}
+\end{table}
+
+%% ── Table VI: Post-route leakage ─────────────────────────────────────────
+\begin{table}[t]
+\centering
+\small
+\caption{Post-Route Static Leakage (LP Corner)}
+\label{tab:leakage}
+\setlength{\tabcolsep}{5pt}
+\begin{tabular}{l rr r}
+\toprule
+Metric & Baseline & Proposed & Overhead \\
+\midrule
+Static leakage (pW)  & 115,164 & 138,428 & $+$20.2\% \\
+Runtime saving, SPARSE (\%)  & 33.4 & 31.6 & $-$1.8\,pp \\
+Runtime saving, MIXED (\%)   & 17.0 & 14.7 & $-$2.3\,pp \\
+Runtime saving, BURST (\%)   & 8.8  & 0.7  & $-$8.1\,pp \\
+\bottomrule
+\multicolumn{4}{l}{\footnotesize Static leakage: full-power cost of controller logic.} \\
+\multicolumn{4}{l}{\footnotesize Runtime saving: cycle-weighted leakage reduction during} \\
+\multicolumn{4}{l}{\footnotesize actual workload execution (simulation measurement).} \\
+\end{tabular}
+\end{table}
+
+The area results (Table~\ref{tab:area}) show a 13.6\% real post-route overhead, materially lower than the 20.4--26.1\% suggested by pre-layout DC estimation, reflecting tighter placement achieved by the Fusion Compiler router versus the wireload interconnect model. At the HS (2\,ns) corner, area overhead increases from 20.4\% to 26.1\% as DC inserts stronger drive-strength cells; both corners achieve positive worst-case slack (Table~\ref{tab:timing}), confirming timing feasibility across the explored frequency range. Post-route timing improves relative to DC estimates (WNS $+$3.25\,ns post-route vs.\ $+$2.51\,ns at DC synthesis) due to the router achieving shorter interconnect paths than the wireload model predicts.
+
+The dynamic power overhead (Table~\ref{tab:power}) reflects the additional combinational logic in the always-on \textsf{PD\_TOP} domain: cell internal power increases by 91.0\% and switching power by 19.7\%, for a total dynamic overhead of 62.5\%. This is the at-speed cost of the controller logic itself. The post-route static leakage overhead of 20.2\% (Table~\ref{tab:leakage}) similarly measures the always-on controller cost at full supply; the realized runtime leakage savings -- 31.6\% under sparse, 14.7\% under mixed -- are the operational benefit, measured separately via the cycle-weighted simulation model. The cell placement across the 30$\times$30\,$\mu$m$^2$ floorplan is shown in Fig.~\ref{fig:placement}; the fully routed layout in Fig.~\ref{fig:layout}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig10_layout_zoomed_nets.png}
+\caption{Zoomed-in post-route view of the \texttt{u\_alu} region showing individual routed net labels (e.g., \texttt{u\_alu/n707}, \texttt{u\_alu/n517}) and standard-cell boundaries within a SAED14LVT \texttt{AOI21\_0P75} frame, illustrating the interconnect density resolved by the Fusion Compiler router.}
+\label{fig:zoomed_nets}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig11_layout_zoomed_cell_instances.png}
+\caption{Zoomed-in cell-level view with instance labels (e.g., \texttt{U451}, \texttt{U401}, \texttt{U520}) overlaid on their corresponding SAED14LVT standard-cell footprints, illustrating instance-level placement density within the 30$\times$30\,$\mu$m$^2$ core.}
+\label{fig:zoomed_cells}
+\end{figure}
+
+Figs.~\ref{fig:zoomed_nets} and \ref{fig:zoomed_cells} provide magnified detail of the post-route database underlying Fig.~\ref{fig:layout} and Fig.~\ref{fig:placement}: the former resolves individual net names and routing on a subset of the \texttt{u\_alu} datapath, and the latter isolates standard-cell instance boundaries and identifiers, confirming that the 1,118 placed instances are non-overlapping and legally aligned to the SAED 14\,nm LVT placement grid.

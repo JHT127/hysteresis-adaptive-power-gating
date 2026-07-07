@@ -1,0 +1,18 @@
+\section{Introduction}
+
+Leakage power has become a dominant component of total power dissipation as CMOS technology scales into deep-submicron and nanometer nodes, particularly for blocks that spend significant fractions of their operating lifetime idle \cite{shiva2025,sahu2025}. Power gating -- disconnecting idle logic from its supply rail via sleep transistors -- remains one of the most widely deployed leakage-reduction techniques in commercial SoC design, but the \emph{policy} governing when to gate is frequently static: a fixed number of idle cycles triggers sleep entry, regardless of how that idle period arose \cite{agarwal2006}.
+
+This static-threshold approach has a known failure mode. A workload composed of short, frequent bursts separated by gaps that individually exceed the sleep-entry threshold will cause the controller to repeatedly enter and exit sleep states -- thrashing -- even though the block is, in aggregate, far from idle. Each entry/exit cycle incurs a wake-up latency penalty and, in deep-submicron designs, a rush-current and ground-bounce cost during reactivation \cite{chang2012}. The leakage saved by sleeping briefly can be outweighed by the throughput and energy cost of waking up repeatedly.
+
+Recent work has approached this problem from two directions. Multi-level sleep-mode controllers \cite{agarwal2006} introduce intermediate power states with different leakage/wake-up-latency trade-offs, but still gate transitions on idle-cycle count alone. Workload-adaptive controllers using machine-learning techniques -- clustering and recurrent prediction -- have been proposed for multi-core systems \cite{karthikeyan2025}, achieving strong adaptivity at the cost of prediction-hardware overhead that is difficult to justify for a single small functional block.
+
+This work proposes a middle path: a comparator-based (non-machine-learning) hysteresis controller that gates sleep-state entry on the \emph{conjunction} of idle-cycle count and a rolling-window activity rate, widening its entry thresholds when recent activity indicates a bursty rather than genuinely idle workload. This work makes the following contributions:
+
+\begin{itemize}
+\item A dual-condition sleep-entry policy combining idle-cycle count and activity rate, implemented with a 16-cycle shift-register popcount and simple comparators -- no multipliers, no learned models.
+\item Adaptive threshold widening that suppresses sleep entry during bursty operation without per-cycle software classification.
+\item A fair, single-module-substitution comparison methodology against a fixed-threshold baseline sharing identical ALU, isolation, retention, and UPF infrastructure, isolating the decision-logic contribution as the sole experimental variable.
+\item A quantitative characterization, at both RTL-simulation and post-route physical-implementation levels, of the throughput-stability/area trade-off this policy introduces.
+\end{itemize}
+
+The remainder of this paper is organized as follows. Section~\ref{sec:related} reviews related power-gating and adaptive power-management work. Section~\ref{sec:architecture} describes the proposed architecture. Section~\ref{sec:methodology} details the implementation and experimental methodology. Section~\ref{sec:results} presents results. Section~\ref{sec:discussion} discusses findings and limitations. Section~\ref{sec:conclusion} concludes.

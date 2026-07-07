@@ -1,0 +1,35 @@
+\section{Implementation and Methodology}
+\label{sec:methodology}
+
+\subsection{Baseline Design}
+To isolate the hysteresis predictor's contribution as the sole experimental variable, a baseline controller was constructed via single-module substitution: the hysteresis predictor is replaced with a fixed-threshold predictor implementing Agarwal et al.'s idle-cycle-count-only policy \cite{agarwal2006} -- no activity-rate input, no hysteresis band (entry and exit thresholds equal), no adaptive widening. Every other module -- the ALU, activity monitor, power-state FSM, sleep controller, isolation controller, and UPF power intent -- is shared, unmodified, between baseline and proposed designs (Fig.~\ref{fig:baseline_vs_proposed}). Threshold values are matched: $\theta_\text{LS,base}=3$ and $\theta_\text{DS,base}=8$ for the baseline predictor, equal to the proposed design's base thresholds before any widening.
+
+\subsection{RTL and Verification}
+Both designs are implemented in synthesizable Verilog and verified in Synopsys VCS (T-2022.06-SP2) against a shared, parameterized testbench applying identical stimulus to both designs under burst, sparse, and mixed workload patterns. A correctness checker confirms zero output mismatches between designs whenever both report valid results, confirming the substitution introduces no functional regression in the shared datapath. VCD waveform files were generated for validation; Fig.~\ref{fig:waveform} shows a representative waveform excerpt from the SPARSE workload.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig7_waveform.png}
+\caption{VCS simulation waveform (SPARSE workload, time 1.41.9\,ms). The controller enters Deep Sleep (\texttt{power\_mode}=2, \texttt{sleep\_n}=0, \texttt{iso\_en}=1) during long idle periods and executes the 8-cycle wake-up sequence (\texttt{power\_mode}: 2$\rightarrow$0$\rightarrow$1) when \texttt{req} is asserted. Isolation deasserts exactly one cycle after \texttt{sleep\_n} rises, confirming correct sequencing.}
+\label{fig:waveform}
+\end{figure}
+
+\subsection{Synthesis and Physical Implementation}
+Both designs were synthesized in Synopsys Design Compiler Ultra (R-2020.09-SP5) against a 14\,nm low-voltage-threshold standard-cell library (SAED14LVT, \texttt{saed14lvt\_tt0p8v25c}) at two clock corners: low-power (LP) at 5\,ns (200\,MHz) and high-speed (HS) at 2\,ns (500\,MHz), with clock-gating insertion enabled and leakage optimization active. Both designs were subsequently placed, clock-tree-synthesized, and routed in Synopsys Fusion Compiler (U-2022.12-SP5) at the 5\,ns corner. The floorplan was initialized at 30$\times$30\,$\mu$m$^2$ with 2\,$\mu$m core offset, achieving 45.83\% core utilization. Power and ground connections were established for 2,287 pins. Placement completed with zero violations; routing completed with zero open nets and 9,873\,$\mu$m total wire length. Post-route worst negative slack is 3.25\,ns (MET). The post-route layout is shown in Fig.~\ref{fig:layout}.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig5_layout_full.png}
+\caption{Post-route layout of the proposed \texttt{adaptive\_pg\_top} design in SAED 14\,nm LVT (Synopsys Fusion Compiler U-2022.12-SP5). Die area: 30$\times$30\,$\mu$m$^2$, core utilization: 45.83\%, 1,118 standard-cell instances, 9,873\,$\mu$m total wire length, 0 open nets. Metal routing layers M1M9 are visible.}
+\label{fig:layout}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig6_layout_placement.png}
+\caption{Cell placement view with all routing layers hidden, showing the 1,118 SAED 14\,nm LVT standard-cell instances distributed across the 30$\times$30\,$\mu$m$^2$ core area at 45.83\% utilization.}
+\label{fig:placement}
+\end{figure}
+
+\subsection{Experimental Design}
+Three synthetic workloads -- burst (frequent short bursts with idle gaps exceeding the baseline's fixed threshold but maintaining duty cycle above the proposed design's activity-rate widening trigger), sparse (long, unambiguous idle periods), and mixed (alternating dense and sparse phases) -- were applied to both designs with identical pseudo-random operand stimulus, with per-mode cycle counts, transition counts, wake-up events, and valid-result throughput logged for each.

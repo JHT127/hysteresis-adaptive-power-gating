@@ -1,0 +1,65 @@
+\section{Proposed Architecture}
+\label{sec:architecture}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig1_architecture.pdf}
+\caption{Architecture of the adaptive multi-level power-gating controller, showing the two UPF power domains (\textsf{PD\_ALU}, power-gated; \textsf{PD\_TOP}, always-on) and inter-module signal flow.}
+\label{fig:architecture}
+\end{figure}
+
+The controller is organized into two power domains (Fig.~\ref{fig:architecture}), following the UPF power-intent model. \textsf{PD\_TOP}, the always-on domain, contains the activity monitor, hysteresis predictor, power-state finite state machine (FSM), and sleep controller. \textsf{PD\_ALU}, the power-gated domain, contains the 32-bit ALU functional block and its MTCMOS footer switch. Fig.~\ref{fig:baseline_vs_proposed} shows both the baseline and proposed top-level architectures side by side, highlighting the single substituted module.
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig1b_baseline_vs_proposed.png}
+\caption{Baseline vs.\ proposed controller architecture under the single-module substitution protocol. Every block is bit-for-bit identical between the two designs except the sleep-entry predictor (highlighted in red). Post-route instance counts and area are shown for reference.}
+\label{fig:baseline_vs_proposed}
+\end{figure}
+
+\subsection{Activity Monitor}
+The activity monitor implements a 16-cycle rolling window as a shift register, computing a consecutive-idle-cycle count and an activity rate (fraction of the window with observed activity, scaled to an 8-bit range) using only shift and population-count logic -- no multipliers. Every cycle, a 1 is shifted in if the ALU was active, or a 0 if idle. The population count of the window gives the activity rate.
+
+\subsection{Hysteresis Predictor}
+The hysteresis predictor is the controller's central novel contribution. It requests a sleep-state transition only when \emph{both} the idle-cycle count exceeds a mode-specific threshold \emph{and} the activity rate is below a corresponding ceiling; further, when the activity rate exceeds a configurable high-activity threshold (\texttt{HIGH\_RATE\_THRESH}~$= 192/255$), both entry thresholds are widened by a fixed offset (\texttt{ADAPT\_OFFSET}~$= 6$~cycles), suppressing sleep entry during workloads that are bursty rather than genuinely idle. Separate, narrower exit thresholds create hysteresis bands that prevent rapid oscillation between states.
+
+The dual-condition sleep-entry gate operates as follows:
+\begin{align}
+\text{enter\_LS} &= (\texttt{idle\_count} > \theta_\text{LS}) \wedge (\texttt{rate} < R_\text{LS}) \label{eq:ls}\\
+\text{enter\_DS} &= (\texttt{idle\_count} > \theta_\text{DS}) \wedge (\texttt{rate} < R_\text{DS}) \label{eq:ds}
+\end{align}
+where $\theta_\text{LS}$ and $\theta_\text{DS}$ are the adaptive thresholds:
+\begin{equation}
+\theta_i = \begin{cases} \theta_{i,\text{base}} + \Delta & \text{if } \texttt{rate} > T_\text{high} \\ \theta_{i,\text{base}} & \text{otherwise} \end{cases}
+\label{eq:adaptive}
+\end{equation}
+with $\theta_\text{LS,base}=4$, $\theta_\text{DS,base}=8$, $\Delta=6$, $R_\text{LS}=80$, $R_\text{DS}=32$, and $T_\text{high}=192$ (all in 8-bit counts or fractions of 255).
+
+Figs.~\ref{fig:baseline_gatelevel} and~\ref{fig:proposed_gatelevel} show the synthesized gate-level schematics of the baseline and proposed predictors respectively, extracted from the DC Ultra netlist. The baseline predictor (Fig.~\ref{fig:baseline_gatelevel}) uses only \texttt{idle\_count[7:0]} as input, implementing threshold comparison through an OR4NR2INVAO32 chain with two output flip-flops (FDP, FSDPQB) -- a total of approximately 6~standard cells. The proposed predictor (Fig.~\ref{fig:proposed_gatelevel}) adds \texttt{activity\_rate[7:0]} as a second input port, requiring additional NR2, AOI21, OAI21, and OR4 cells to implement the conjunction of both conditions and the hysteresis state -- approximately 16~standard cells. The 104-cell post-route overhead between the two designs includes this predictor difference plus the additional comparator and MUX logic implementing the adaptive threshold widening (Eq.~\ref{eq:adaptive}).
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig8_baseline_gatelevel.png}
+\caption{Synthesized gate-level schematic of the \emph{baseline} fixed-threshold predictor (DC Ultra, SAED 14\,nm LVT). Only \texttt{idle\_count[7:0]} is consumed; \texttt{activity\_rate} is not connected. The decision logic reduces to a single OR4NR2INVAO32 comparator chain followed by two output registers ($\approx$6 standard cells).}
+\label{fig:baseline_gatelevel}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig9_proposed_gatelevel.png}
+\caption{Synthesized gate-level schematic of the \emph{proposed} hysteresis predictor (DC Ultra, SAED 14\,nm LVT). Both \texttt{idle\_count[7:0]} and \texttt{activity\_rate[7:0]} are consumed. The additional NR2, AOI21, OAI21, and OR4 cells implement the dual-condition AND gate and hysteresis state logic ($\approx$16 standard cells), with output registered in FDP and FSDPQB flip-flops.}
+\label{fig:proposed_gatelevel}
+\end{figure}
+
+\begin{figure}[t]
+\centering
+\includegraphics[width=\columnwidth]{fig2_fsm.pdf}
+\caption{Power-state FSM, showing all seven states and the conditions governing transitions between them. Self-transitions are omitted for clarity.}
+\label{fig:fsm}
+\end{figure}
+
+\subsection{Power-State FSM}
+The power-state FSM (Fig.~\ref{fig:fsm}) mediates between the predictor's requested mode and the physically realized power state, inserting fixed wake-up-latency delays (3~cycles from Light Sleep, 8~cycles from Deep Sleep) and asserting isolation one cycle before the sleep signal to the power domain, ensuring no floating or undefined values propagate from the gated domain during a transition. The FSM has seven states: \texttt{S\_ON}, \texttt{S\_TO\_LS}, \texttt{S\_LIGHT\_SLEEP}, \texttt{S\_TO\_DS}, \texttt{S\_DEEP\_SLEEP}, \texttt{S\_WAKEUP\_LS}, and \texttt{S\_WAKEUP\_DS}. Leakage in Light Sleep is approximately 81\% of ON-state leakage; Deep Sleep reduces leakage to approximately 64\% of ON-state leakage.
+
+\subsection{Sleep Controller and Isolation}
+The sleep controller sequences the footer transistor's gate bias across four levels (active, two intermediate biases, full cutoff) and implements two-phase rush-current control during wake-up, following \cite{chang2012}. The isolation controller clamps the ALU's output and valid signal to a safe constant whenever the domain is not fully powered, modeled as the behavioral equivalent of standard-cell ISO\_AND isolation cells inserted automatically by the physical-design tool under UPF control.

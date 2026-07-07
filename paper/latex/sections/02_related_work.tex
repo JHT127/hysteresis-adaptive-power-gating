@@ -1,0 +1,65 @@
+\section{Background and Related Work}
+\label{sec:related}
+
+Agarwal et al. \cite{agarwal2006} established the multi-level sleep-mode concept this work builds on, defining sleep depths with different footer gate-bias levels and demonstrating that allowing an intermediate, state-retentive mode in addition to full cutoff yields a further 17\% leakage reduction over single-mode gating, with the retentive mode itself saving 19\% leakage while preserving circuit state. Their decision policy, however, selects mode purely from idle-cycle count against fixed thresholds; the present work adopts their mode-hierarchy concept directly but replaces the decision logic.
+
+Chang et al. \cite{chang2012} address a complementary problem: once a sleep-mode transition has been decided, how to execute the wake-up safely. Their two-phase footer activation -- enabling a small transistor fraction before the full width -- reduces wake-up time by approximately 10\% while bounding power-supply bounce. This work's sleep controller adopts the same two-phase activation principle for both the baseline and proposed designs, so it is held constant across the comparison reported here; the contribution of this work is orthogonal, addressing the entry-decision policy rather than the transition mechanism.
+
+Karthikeyan et al. \cite{karthikeyan2025} propose workload-adaptive power management for multi-core systems combining real-time monitoring, dynamic voltage and frequency scaling, and core-level gating, using K-means clustering and recurrent neural prediction to classify workload intensity. Reported savings of up to 35\% and meaningful thermal reduction demonstrate the value of activity-aware adaptation, but the prediction hardware is sized for multi-core systems and is difficult to justify for a single small block such as the one considered here. This work targets the same underlying goal -- workload-character-aware adaptation -- using a fixed-function comparator network rather than a learned model.
+
+Surveys by Shiva and Patil \cite{shiva2025} and Sahu et al. \cite{sahu2025} situate power gating within the broader landscape of low-power VLSI techniques (dynamic voltage scaling, clock gating, multi-threshold CMOS), both noting that AI-assisted predictive management is an emerging direction but that lightweight, non-learned alternatives remain comparatively underexplored for fine-grained blocks. Tong et al. \cite{tong2024} address adaptive energy management in an unrelated domain (mobile edge computing task offloading), offering a Lyapunov-based stability framework for resource allocation under stochastic load; while not directly applicable to gate-level power gating, the queue-stability framing motivates this work's attention to throughput preservation, not leakage savings alone, as an evaluation criterion.
+
+Table~\ref{tab:related} summarizes the approach, key strength, and remaining gap of each reviewed work relative to the present contribution.
+
+%% ── Table: Related work comparison ───────────────────────────────────────
+\begin{table*}[t]
+\centering
+\footnotesize
+\caption{Comparison of Related Work in Power Gating and Adaptive Power Management}
+\label{tab:related}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.3}
+\begin{tabular}{@{}p{2.3cm} p{3.3cm} p{3.6cm} p{3.6cm} p{3.9cm}@{}}
+\toprule
+\textbf{Reference} & \textbf{Approach} & \textbf{Key Strength} & \textbf{Key Limitation} & \textbf{Gap Addressed by This Work} \\
+\midrule
+Agarwal et al.\ \cite{agarwal2006} &
+MTCMOS multi-level power gating (Active/Light Sleep/Deep Sleep) with fixed idle-cycle thresholds &
+Proven leakage savings; retentive intermediate mode cuts leakage by a further 17\% &
+Static thresholds; no activity-rate check, prone to thrashing under bursty idle gaps &
+Adopts the mode hierarchy directly but replaces the fixed-threshold decision logic with a dual-condition, activity-rate-aware gate \\
+\addlinespace
+Chang et al.\ \cite{chang2012} &
+Two-phase footer activation for rush-current-controlled wake-up &
+Reduces wake-up time by $\sim$10\% while bounding supply bounce &
+Addresses only the wake-up transition mechanism; no sleep-entry decision logic &
+Adopts the wake-up mechanism unchanged in both baseline and proposed designs; contribution is orthogonal (entry policy, not transition) \\
+\addlinespace
+Karthikeyan et al.\ \cite{karthikeyan2025} &
+ML-based workload monitoring, DVFS, and core-level power gating for multi-core SoCs &
+Full-stack adaptive power management; reported savings up to 35\% &
+Clustering/recurrent-prediction hardware overhead is difficult to justify for a single small block &
+Achieves comparable qualitative adaptivity with a fixed-function comparator network -- no learned model, no inference hardware \\
+\addlinespace
+Shiva and Patil \cite{shiva2025} &
+Survey of DVS, power gating, and clock-gating optimization techniques &
+Comprehensive overview of the low-power VLSI landscape &
+No new architecture or hardware implementation proposed &
+Identifies lightweight, non-learned adaptive gating as underexplored, motivating this work's scope \\
+\addlinespace
+Sahu et al.\ \cite{sahu2025} &
+Design-optimization survey for low-power VLSI circuits in high-performance computing &
+Broad, practically grounded design-optimization perspective &
+No adaptive, rate-aware sleep-entry logic proposed &
+Reinforces the same gap; this work supplies a concrete circuit-level instantiation \\
+\addlinespace
+Tong et al.\ \cite{tong2024} &
+Lyapunov-based stability framework for resource allocation in IIoT task offloading &
+Principled queue-stability framing for throughput-aware adaptation &
+Different domain (network resource allocation); not applicable at gate level &
+Motivates evaluating throughput preservation, not leakage savings alone, as a first-class metric \\
+\bottomrule
+\end{tabular}
+\end{table*}
+
+No reviewed work combines a non-learned, comparator-based dual-condition (idle-count and activity-rate) sleep-entry policy with adaptive threshold widening, evaluated against a fair, structurally matched fixed-threshold baseline at both RTL-simulation and post-route physical-implementation levels. This is the contribution of the present work.
