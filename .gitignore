@@ -64,3 +64,15 @@ vlsi-papers-drive-link.txt
 .DS_Store
 Thumbs.db
 *.swp
+
+
+# LaTeX build artifacts
+paper/latex/*.aux
+paper/latex/*.log
+paper/latex/*.out
+paper/latex/*.toc
+paper/latex/*.synctex.gz
+paper/latex/*.fls
+paper/latex/*.fdb_latexmk
+paper/latex/*.bbl
+paper/latex/*.blg
