@@ -1,3 +1,0 @@
-Command Line: /usr/synopsys/verdi/T-2022.06-SP2/platform/LINUXAMD64/bin/vfast -silent -del . -o /home/st160/VLSI-Project/vlsi-project/tb_comparison.vcd.fsdb -ft verilog /home/st160/VLSI-Project/vlsi-project/tb_comparison.vcd
-uname(Linux synopsys.stbzu.edu 3.10.0-1160.83.1.el7.x86_64 #1 SMP Mon Dec 19 10:44:06 UTC 2022 x86_64)
-au time 0.034173 0.011250 0.010131 delta 24784896 24784896 total 140132352 140132352
