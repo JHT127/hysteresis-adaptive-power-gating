@@ -6,8 +6,8 @@
 sleep/wake thrashing under bursty workloads — designed, simulated, synthesized, and
 placed-and-routed end-to-end in a 14 nm standard-cell flow.**
 
-Joud Thaher · Layan Salem
-Supervised by Dr. Khader Mohammed
+Done by : Joud Thaher · Layan Salem  
+Supervised by Dr. Khader Mohammed  
 Department of Electrical and Computer Engineering, Birzeit University, Palestine
 
 📄 [Read the paper](paper/paper.pdf) · 📁 [LaTeX source](paper/latex) · 🎞️ [Presentations](presentations)
